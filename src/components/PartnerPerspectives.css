@@ -19,20 +19,20 @@
 }
 
 .partner-perspectives-text {
-  color: #f5e6d3;
+  color: #d4c5b0;
 }
 
 .section-title-light {
-  font-family: 'Georgia', serif;
+  font-family: 'Nanum Myeongjo', serif;
   font-size: 3rem;
-  color: #f5e6d3;
+  color: #3d2817;
   margin-bottom: 2rem;
 }
 
 .partner-perspectives-text p {
   font-size: 1.1rem;
   line-height: 1.8;
-  color: #f5e6d3;
+  color: #3d2817;
 }
 
 .testimonials-grid {
@@ -65,7 +65,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #f5e6d3;
+  color: #3d2817;
   font-size: 0.85rem;
   text-align: center;
   padding: 1rem;
@@ -80,14 +80,14 @@
 .testimonial-quote {
   font-size: 1rem;
   line-height: 1.7;
-  color: #f5e6d3;
+  color: #ffffff;
   margin-bottom: 1rem;
 }
 
 .testimonial-author {
   font-size: 1rem;
   font-weight: 600;
-  color: #f5e6d3;
+  color: #ffffff;
   margin: 0;
 }
 

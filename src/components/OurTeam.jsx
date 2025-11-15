@@ -37,8 +37,8 @@ function OurTeam() {
         <div className="our-team-header">
           <h2 className="section-title">Our Team</h2>
           <p className="our-team-intro">
-            Our team brings together global health, supply chain, and pharmacy experts from 
-            leading hospitals in emerging markets to Stanford.
+            Our team is a cross-continental collaboration between experts across Stanford and leading institutions, 
+            blending global health research, supply-chain innovation, and real-world clinical experience.
           </p>
         </div>
         <div className="team-grid">
