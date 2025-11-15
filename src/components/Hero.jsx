@@ -7,7 +7,6 @@ function Hero() {
       <div className="hero-image-container">
         <img src={heroImage} alt="Bustling market street in emerging market" className="hero-image" />
         <div className="hero-overlay">
-          <div className="hero-logo">Niora Systems</div>
           <div className="hero-title">Ending drug stockouts globally.</div>
         </div>
       </div>

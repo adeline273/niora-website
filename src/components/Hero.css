@@ -1,5 +1,5 @@
 .hero {
-  margin-top: 80px;
+  margin-top: 0;
 }
 
 .hero-image-container {
@@ -24,17 +24,10 @@
   bottom: 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   padding: 3rem;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1));
-}
-
-.hero-logo {
-  font-family: 'Nanum Myeongjo', serif;
-  font-size: 2rem;
-  color: white;
-  font-weight: bold;
 }
 
 .hero-title {
@@ -42,9 +35,9 @@
   font-size: 3.5rem;
   color: white;
   font-weight: bold;
-  align-self: flex-end;
-  text-align: right;
-  max-width: 60%;
+  text-align: center;
+  max-width: 80%;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .hero-intro {
@@ -72,15 +65,9 @@
     padding: 2rem 1.5rem;
   }
 
-  .hero-logo {
-    font-size: 1.5rem;
-  }
-
   .hero-title {
     font-size: 2rem;
     max-width: 100%;
-    align-self: flex-start;
-    text-align: left;
   }
 
   .hero-intro {

@@ -3,10 +3,18 @@
   top: 0;
   left: 0;
   right: 0;
+  background-color: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(0px);
+  box-shadow: none;
+  z-index: 1000;
+  padding: 1.5rem 0;
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navigation.scrolled {
   background-color: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
   padding: 1rem 0;
 }
 
@@ -23,12 +31,22 @@
   font-family: 'Nanum Myeongjo', serif;
   font-size: 1.5rem;
   font-weight: bold;
-  color: #3d2817;
+  color: white;
   cursor: pointer;
   transition: color 0.3s ease;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.navigation.scrolled .nav-logo {
+  color: #3d2817;
+  text-shadow: none;
 }
 
 .nav-logo:hover {
+  color: #f5e6d3;
+}
+
+.navigation.scrolled .nav-logo:hover {
   color: #5a3d2a;
 }
 
@@ -48,14 +66,24 @@
   background: none;
   border: none;
   font-size: 1rem;
-  color: #3d2817;
+  color: white;
   cursor: pointer;
   padding: 0.5rem 1rem;
   transition: color 0.3s ease;
   font-family: inherit;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.navigation.scrolled .nav-links button {
+  color: #3d2817;
+  text-shadow: none;
 }
 
 .nav-links button:hover {
+  color: #f5e6d3;
+}
+
+.navigation.scrolled .nav-links button:hover {
   color: #8b6f47;
 }
 

@@ -1,6 +1,19 @@
+import { useState, useEffect } from 'react';
 import './Navigation.css';
 
 function Navigation() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 50;
+      setScrolled(isScrolled);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -9,7 +22,7 @@ function Navigation() {
   };
 
   return (
-    <nav className="navigation">
+    <nav className={`navigation ${scrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
         <div className="nav-logo" onClick={() => scrollToSection('hero')}>
           Niora Systems
