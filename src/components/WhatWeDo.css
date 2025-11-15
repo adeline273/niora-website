@@ -1,0 +1,73 @@
+.what-we-do {
+  background-color: white;
+  padding: 6rem 2rem;
+}
+
+.what-we-do-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-family: 'Georgia', serif;
+  font-size: 3rem;
+  color: #3d2817;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-image-placeholder {
+  width: 100%;
+  height: 250px;
+  background: linear-gradient(135deg, #d4c5b0 0%, #b8a082 100%);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #5a3d2a;
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.service-title {
+  font-size: 1.5rem;
+  color: #3d2817;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.service-description {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .what-we-do {
+    padding: 4rem 1.5rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+

@@ -1,0 +1,135 @@
+.our-team {
+  background-color: #f5e6d3;
+  padding: 6rem 2rem;
+  border-top: 2px solid #d4c5b0;
+}
+
+.our-team-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.our-team-header {
+  margin-bottom: 4rem;
+}
+
+.section-title {
+  font-family: 'Georgia', serif;
+  font-size: 3rem;
+  color: #3d2817;
+  margin-bottom: 1.5rem;
+}
+
+.our-team-intro {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  max-width: 800px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.team-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.team-image,
+.team-image-placeholder {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+}
+
+.team-image {
+  object-fit: cover;
+  border: 4px solid #f5e6d3;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  background-color: #d4c5b0;
+}
+
+.team-image-placeholder {
+  background: linear-gradient(135deg, #a8d8ea 0%, #7bb3d1 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #3d2817;
+  font-size: 0.85rem;
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+}
+
+.team-image-placeholder.joining-soon {
+  background: linear-gradient(135deg, #f5e6d3 0%, #d4c5b0 100%);
+  border: 2px dashed #8b6f47;
+  color: #5a3d2a;
+}
+
+.joining-badge {
+  position: absolute;
+  bottom: -12px;
+  background-color: #8b6f47;
+  color: white;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.team-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #3d2817;
+  margin-bottom: 0.5rem;
+}
+
+.team-role {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #555;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .our-team {
+    padding: 4rem 1.5rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .our-team-intro {
+    font-size: 1rem;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .team-image,
+  .team-image-placeholder {
+    width: 150px;
+    height: 150px;
+  }
+}
+

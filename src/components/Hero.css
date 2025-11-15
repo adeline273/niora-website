@@ -1,0 +1,94 @@
+.hero {
+  margin-top: 80px;
+}
+
+.hero-image-container {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 3rem;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1));
+}
+
+.hero-logo {
+  font-family: 'Georgia', serif;
+  font-size: 2rem;
+  color: white;
+  font-weight: bold;
+}
+
+.hero-title {
+  font-family: 'Georgia', serif;
+  font-size: 3.5rem;
+  color: white;
+  font-weight: bold;
+  align-self: flex-end;
+  text-align: right;
+  max-width: 60%;
+}
+
+.hero-intro {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  background-color: white;
+}
+
+.hero-intro p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #333;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .hero-image-container {
+    height: 400px;
+  }
+
+  .hero-overlay {
+    padding: 2rem 1.5rem;
+  }
+
+  .hero-logo {
+    font-size: 1.5rem;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+    max-width: 100%;
+    align-self: flex-start;
+    text-align: left;
+  }
+
+  .hero-intro {
+    padding: 2rem 1.5rem;
+  }
+
+  .hero-intro p {
+    font-size: 1rem;
+  }
+}
+
