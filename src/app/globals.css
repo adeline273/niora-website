@@ -1,26 +1,22 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: #F4F1EA; color: #2A2521; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+::selection { background: #E6D9B8; color: #2A2521; }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@keyframes nioraDraw { from { stroke-dashoffset: 440 } to { stroke-dashoffset: 0 } }
+@keyframes nioraDrawLong { from { stroke-dashoffset: 880 } to { stroke-dashoffset: 0 } }
+@keyframes nioraTravel { from { offset-distance: 0% } to { offset-distance: 100% } }
+@keyframes nioraFade { from { opacity: 0 } to { opacity: 1 } }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1100ms cubic-bezier(.2,.65,.2,1), transform 1100ms cubic-bezier(.2,.65,.2,1);
+  will-change: opacity, transform;
 }
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+[data-reveal].revealed {
+  opacity: 1;
+  transform: none;
 }
