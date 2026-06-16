@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useCallback } from "react";
+import { useCallback, useEffect, useRef } from "react";
 
 const ACCENT = "#8E6C2E";
 
@@ -18,6 +18,31 @@ const annotations = [
 ];
 
 export default function PlatformFigure() {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+    const els = container.querySelectorAll<HTMLElement>("[data-reveal]");
+    const reveal = (el: HTMLElement) => {
+      const rd = el.getAttribute("data-rd") || "0";
+      el.style.transitionDelay = rd + "ms";
+      el.classList.add("revealed");
+    };
+    const io = new IntersectionObserver(
+      (entries) => entries.forEach((e) => { if (e.isIntersecting) { reveal(e.target as HTMLElement); io.unobserve(e.target); } }),
+      { threshold: 0.12, rootMargin: "0px 0px -7% 0px" }
+    );
+    els.forEach((el) => io.observe(el));
+    const check = () => els.forEach((el) => {
+      if (el.classList.contains("revealed")) return;
+      const r = el.getBoundingClientRect();
+      if (r.top < window.innerHeight * 0.94 && r.bottom > 0) { reveal(el); io.unobserve(el); }
+    });
+    check();
+    window.addEventListener("scroll", check, { passive: true });
+    return () => { io.disconnect(); window.removeEventListener("scroll", check); };
+  }, []);
   const setActive = useCallback((idx: string, on: boolean) => {
     document.querySelectorAll(`[data-spot="${idx}"]`).forEach((el) => {
       const e = el as HTMLElement;
@@ -47,7 +72,7 @@ export default function PlatformFigure() {
   }, []);
 
   return (
-    <div>
+    <div ref={containerRef}>
       {/* Annotation legend */}
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(220px,1fr))", gap: "clamp(20px,4vw,52px)", marginBottom: "clamp(34px,5vh,52px)" }}>
         {annotations.map(({ id, title, body }) => (

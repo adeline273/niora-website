@@ -94,7 +94,7 @@ export default function Nav() {
               textDecoration: "none",
               letterSpacing: ".02em",
               padding: "7px 15px",
-              border: "1px solid #8E6C2E",
+              border: "1px solid #000000",
               borderRadius: 12,
               transition: "background .3s ease, color .3s ease",
               whiteSpace: "nowrap",
