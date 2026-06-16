@@ -3,7 +3,7 @@
 import Nav from "@/components/Nav";
 import ScrollReveal from "@/components/ScrollReveal";
 import CoordinationDiagram from "@/components/CoordinationDiagram";
-import TimelineDiagram from "@/components/TimelineDiagram";
+import CompoundingNetwork from "@/components/CompoundingNetwork";
 import PlatformFigure from "@/components/PlatformFigure";
 
 const ACCENT = "#8E6C2E";
@@ -70,9 +70,7 @@ export default function Home() {
 
               <ScrollReveal delay={280}>
                 <div style={{ display: "flex", gap: 16, alignItems: "center", fontFamily: sans, fontSize: 11.5, letterSpacing: ".15em", textTransform: "uppercase", color: "#9A8E73" }}>
-                  <span>BUILT FROM ACCRA &amp; STANFORD</span>
-                  <span style={{ width: 4, height: 4, borderRadius: "50%", background: "#C9BD9E" }} />
-                  <span>DESIGNED FOR SCALE</span>
+                  <span>DEVELOPED FOR TRUST, RELIABILITY, AND SCALE</span>
                 </div>
               </ScrollReveal>
             </div>
@@ -86,23 +84,92 @@ export default function Home() {
 
       {/* The Problem */}
       <section style={{ padding: sectionPad, borderTop: "1px solid #DDD1B6" }}>
-        <div style={container}>
-          <div style={asymGrid}>
-            <ScrollReveal>
-              <p style={eyebrow}>The Problem</p>
+        <div style={{ maxWidth: 1180, margin: "0 auto" }}>
+          <ScrollReveal>
+            <div style={{ display: "flex", alignItems: "baseline", gap: 18, margin: "0 0 16px" }}>
+              <span style={{ fontFamily: serif, fontSize: 30, lineHeight: 1, color: ACCENT }}>01</span>
+              <span style={eyebrow}>The Problem</span>
+            </div>
+          </ScrollReveal>
+          <ScrollReveal delay={80}>
+            <h2 style={{ fontFamily: serif, fontWeight: 400, fontSize: "clamp(28px,3.5vw,44px)", lineHeight: 1.14, letterSpacing: "-.01em", color: "#28231E", margin: "0 0 clamp(40px,6vh,60px)", maxWidth: "22ch" }}>
+              When procurement becomes hard to predict, uncertainty spreads through the system.
+            </h2>
+          </ScrollReveal>
+
+          <div style={{ display: "flex", flexWrap: "wrap", alignItems: "stretch", justifyContent: "center", gap: 0 }}>
+            {/* Card 01 — Cause */}
+            <ScrollReveal delay={60} style={{ flex: "1 1 240px", minWidth: 208 }}>
+              <article style={{ background: "#ECE3CF", border: "1px solid #DBCDAE", borderRadius: 14, padding: "clamp(26px,2.4vw,34px)", display: "flex", flexDirection: "column", gap: 18, height: "100%" }}>
+                <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between" }}>
+                  <span style={{ fontFamily: serif, fontSize: 26, color: ACCENT }}>01</span>
+                  <span style={{ fontFamily: sans, fontSize: 11, fontWeight: 600, letterSpacing: ".16em", textTransform: "uppercase", color: "#9A8E73" }}>Cause</span>
+                </div>
+                <h3 style={{ fontFamily: serif, fontWeight: 400, fontSize: "clamp(22px,2vw,27px)", lineHeight: 1.18, color: "#28231E", margin: 0 }}>Planning is fragmented.</h3>
+                <p style={{ fontFamily: sans, fontSize: 15.5, lineHeight: 1.66, color: "#4C463D", margin: 0 }}>Demand, inventory, purchasing, and financing are often managed across disconnected systems and manual workflows. Institutions struggle to maintain a clear picture of future needs.</p>
+                <div style={{ marginTop: "auto", paddingTop: 18, borderTop: "1px solid #D6C8A8", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12 }}>
+                  <span style={{ fontFamily: sans, fontSize: 10.5, fontWeight: 600, letterSpacing: ".14em", textTransform: "uppercase", color: "#9A8E73" }}>Leads to</span>
+                  <span style={{ fontFamily: serif, fontStyle: "italic", fontSize: 16, color: "#5A5240" }}>Planning breaks down</span>
+                </div>
+              </article>
             </ScrollReveal>
-            <ScrollReveal delay={120}>
-              <h2 style={{ fontFamily: serif, fontWeight: 400, fontSize: "clamp(28px,3.5vw,44px)", lineHeight: 1.14, letterSpacing: "-.01em", color: "#28231E", margin: "0 0 26px", maxWidth: "20ch" }}>
-                When procurement becomes hard to predict, uncertainty spreads through the system.
-              </h2>
-              <p style={{ fontFamily: serif, fontWeight: 300, fontSize: "clamp(20px,2.2vw,26px)", lineHeight: 1.5, color: "#3A342C", margin: "0 0 24px", maxWidth: "32ch" }}>
-                Hospitals struggle to plan inventory. Suppliers face delayed payments and fluctuating demand. Purchasing turns reactive rather than proactive.
-              </p>
-              <p style={{ fontFamily: sans, fontSize: 18, lineHeight: 1.72, color: "#4C463D", margin: 0, maxWidth: "60ch" }}>
-                The result is a system that is less reliable for everyone who depends on it. Niora develops infrastructure that helps make pharmaceutical procurement more predictable, transparent, and accountable.
-              </p>
+
+            {/* Arrow 1→2 */}
+            <ScrollReveal delay={180}>
+              <div aria-hidden="true" style={{ flex: "0 0 auto", alignSelf: "center", position: "relative", width: "clamp(22px,2.4vw,56px)", height: 24 }}>
+                <span style={{ position: "absolute", left: 2, right: 12, top: "50%", height: 1, background: "linear-gradient(90deg,rgba(142,108,46,.15),rgba(142,108,46,.55))" }} />
+                <span style={{ position: "absolute", right: 6, top: "50%", width: 0, height: 0, borderTop: "4px solid transparent", borderBottom: "4px solid transparent", borderLeft: `7px solid ${ACCENT}`, animation: "nioraArrow 2.6s ease-in-out infinite" }} />
+                <span style={{ position: "absolute", top: "50%", marginTop: -2.5, width: 5, height: 5, borderRadius: "50%", background: ACCENT, animation: "nioraFlow 3.4s ease-in-out infinite .2s" }} />
+              </div>
+            </ScrollReveal>
+
+            {/* Card 02 — Effect */}
+            <ScrollReveal delay={260} style={{ flex: "1 1 240px", minWidth: 208 }}>
+              <article style={{ background: "#ECE3CF", border: "1px solid #DBCDAE", borderRadius: 14, padding: "clamp(26px,2.4vw,34px)", display: "flex", flexDirection: "column", gap: 18, height: "100%" }}>
+                <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between" }}>
+                  <span style={{ fontFamily: serif, fontSize: 26, color: ACCENT }}>02</span>
+                  <span style={{ fontFamily: sans, fontSize: 11, fontWeight: 600, letterSpacing: ".16em", textTransform: "uppercase", color: "#9A8E73" }}>Effect</span>
+                </div>
+                <h3 style={{ fontFamily: serif, fontWeight: 400, fontSize: "clamp(22px,2vw,27px)", lineHeight: 1.18, color: "#28231E", margin: 0 }}>Institutions lose their footing.</h3>
+                <p style={{ fontFamily: sans, fontSize: 15.5, lineHeight: 1.66, color: "#4C463D", margin: 0 }}>Hospitals struggle to plan inventory. Suppliers face delayed payments and fluctuating demand.</p>
+                <div style={{ marginTop: "auto", paddingTop: 18, borderTop: "1px solid #D6C8A8", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12 }}>
+                  <span style={{ fontFamily: sans, fontSize: 10.5, fontWeight: 600, letterSpacing: ".14em", textTransform: "uppercase", color: "#9A8E73" }}>Leads to</span>
+                  <span style={{ fontFamily: serif, fontStyle: "italic", fontSize: 16, color: "#5A5240" }}>Reactive purchasing</span>
+                </div>
+              </article>
+            </ScrollReveal>
+
+            {/* Arrow 2→3 */}
+            <ScrollReveal delay={380}>
+              <div aria-hidden="true" style={{ flex: "0 0 auto", alignSelf: "center", position: "relative", width: "clamp(22px,2.4vw,56px)", height: 24 }}>
+                <span style={{ position: "absolute", left: 2, right: 12, top: "50%", height: 1, background: "linear-gradient(90deg,rgba(142,108,46,.15),rgba(142,108,46,.55))" }} />
+                <span style={{ position: "absolute", right: 6, top: "50%", width: 0, height: 0, borderTop: "4px solid transparent", borderBottom: "4px solid transparent", borderLeft: `7px solid ${ACCENT}`, animation: "nioraArrow 2.6s ease-in-out infinite" }} />
+                <span style={{ position: "absolute", top: "50%", marginTop: -2.5, width: 5, height: 5, borderRadius: "50%", background: ACCENT, animation: "nioraFlow 3.4s ease-in-out infinite 1.9s" }} />
+              </div>
+            </ScrollReveal>
+
+            {/* Card 03 — Result (dark) */}
+            <ScrollReveal delay={460} style={{ flex: "1 1 240px", minWidth: 208 }}>
+              <article style={{ background: "#28231E", border: "1px solid #28231E", borderRadius: 14, padding: "clamp(26px,2.4vw,34px)", display: "flex", flexDirection: "column", gap: 18, height: "100%" }}>
+                <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between" }}>
+                  <span style={{ fontFamily: serif, fontSize: 26, color: "#D8B477" }}>03</span>
+                  <span style={{ fontFamily: sans, fontSize: 11, fontWeight: 600, letterSpacing: ".16em", textTransform: "uppercase", color: "#A99B82" }}>Result</span>
+                </div>
+                <h3 style={{ fontFamily: serif, fontWeight: 400, fontSize: "clamp(22px,2vw,27px)", lineHeight: 1.18, color: "#F4EFE2", margin: 0 }}>Purchasing turns reactive.</h3>
+                <p style={{ fontFamily: sans, fontSize: 15.5, lineHeight: 1.66, color: "#C7BCA6", margin: 0 }}>Buying becomes reactive rather than proactive — leaving a system that is less reliable for everyone who depends on it.</p>
+                <div style={{ marginTop: "auto", paddingTop: 18, borderTop: "1px solid #463E33", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12 }}>
+                  <span style={{ fontFamily: sans, fontSize: 10.5, fontWeight: 600, letterSpacing: ".14em", textTransform: "uppercase", color: "#A99B82" }}>Outcome</span>
+                  <span style={{ fontFamily: serif, fontStyle: "italic", fontSize: 16, color: "#D8B477" }}>Lower reliability</span>
+                </div>
+              </article>
             </ScrollReveal>
           </div>
+
+          <ScrollReveal delay={200}>
+            <p style={{ fontFamily: serif, fontWeight: 300, fontSize: "clamp(20px,2.2vw,27px)", lineHeight: 1.5, color: "#3A342C", margin: "clamp(40px,6vh,60px) auto 0", maxWidth: "46ch", textAlign: "center" }}>
+              Niora develops infrastructure that helps make procurement more predictable, transparent, and accountable.
+            </p>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -211,25 +278,27 @@ export default function Home() {
               <h2 style={{ fontFamily: serif, fontWeight: 400, fontSize: "clamp(28px,3.5vw,44px)", lineHeight: 1.14, letterSpacing: "-.01em", color: "#28231E", margin: "0 0 26px", maxWidth: "18ch" }}>
                 A long-term infrastructure problem.
               </h2>
-              <p style={{ fontFamily: sans, fontSize: 18, lineHeight: 1.72, color: "#4C463D", margin: "0 0 18px", maxWidth: "60ch" }}>
+              <p style={{ fontFamily: sans, fontSize: 18, lineHeight: 1.72, color: "#4C463D", margin: "0 0 18px", maxWidth: "54ch" }}>
                 Reliable procurement is foundational to effective health systems. Over time, it shapes how medicines move, how suppliers allocate resources, how hospitals manage uncertainty, and how systems respond to changing demand.
               </p>
-              <p style={{ fontFamily: sans, fontSize: 18, lineHeight: 1.72, color: "#4C463D", margin: "0 0 48px", maxWidth: "60ch" }}>
-                Lasting improvements in medicine availability require more than better data or better forecasting alone. They require procurement systems that participants can plan around, trust, and operate within consistently.
+              <p style={{ fontFamily: sans, fontSize: 18, lineHeight: 1.72, color: "#4C463D", margin: 0, maxWidth: "54ch" }}>
+                Lasting improvement isn't better forecasting alone. It is infrastructure that participants can plan around, trust, and operate within.
               </p>
-              <TimelineDiagram />
             </ScrollReveal>
           </div>
+        </div>
+        <div style={{ maxWidth: 1180, margin: "0 auto" }}>
+          <CompoundingNetwork />
         </div>
       </section>
 
       {/* Contact */}
       <section id="contact" style={{ padding: "clamp(80px,14vh,160px) clamp(34px,6vw,96px)", borderTop: "1px solid #D8CBA8", background: "#ECE3CF", scrollMarginTop: 72 }}>
         <div style={{ maxWidth: 980, margin: "0 auto" }}>
-          <ScrollReveal><p style={{ ...eyebrow, marginBottom: 26 }}>What we are building</p></ScrollReveal>
+          <ScrollReveal><p style={{ ...eyebrow, marginBottom: 26 }}>Partnerships and Institutional Engagement</p></ScrollReveal>
           <ScrollReveal delay={80}>
             <h2 style={{ fontFamily: serif, fontWeight: 400, fontSize: "clamp(34px,5.2vw,66px)", lineHeight: 1.06, letterSpacing: "-.016em", color: "#23201B", margin: "0 0 30px", maxWidth: "18ch" }}>
-              Niora is building for that objective.
+              The foundation of reliable health systems.
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={160}>
