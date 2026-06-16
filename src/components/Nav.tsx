@@ -102,10 +102,12 @@ export default function Nav() {
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.background = "#8E6C2E";
+              e.currentTarget.style.borderColor = "#8E6C2E";
               e.currentTarget.style.color = "#F4EFE2";
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.background = "#000000";
+              e.currentTarget.style.borderColor = "#000000";
               e.currentTarget.style.color = "#ffffff";
             }}
           >
