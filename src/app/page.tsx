@@ -97,9 +97,9 @@ export default function Home() {
             </h2>
           </ScrollReveal>
 
-          <div style={{ display: "flex", flexWrap: "wrap", alignItems: "stretch", justifyContent: "center", gap: 0 }}>
+          <div className="problem-cards" style={{ display: "flex", flexWrap: "wrap", alignItems: "stretch", justifyContent: "center", gap: 0 }}>
             {/* Card 01 — Cause */}
-            <ScrollReveal delay={60} style={{ flex: "1 1 240px", minWidth: 208 }}>
+            <ScrollReveal delay={60} className="problem-card" style={{ flex: "1 1 240px", minWidth: 208 }}>
               <article style={{ background: "#ECE3CF", border: "1px solid #DBCDAE", borderRadius: 14, padding: "clamp(26px,2.4vw,34px)", display: "flex", flexDirection: "column", gap: 18, height: "100%" }}>
                 <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between" }}>
                   <span style={{ fontFamily: serif, fontSize: 26, color: ACCENT }}>01</span>
@@ -115,7 +115,7 @@ export default function Home() {
             </ScrollReveal>
 
             {/* Arrow 1→2 */}
-            <ScrollReveal delay={180}>
+            <ScrollReveal delay={180} className="problem-arrow">
               <div aria-hidden="true" style={{ flex: "0 0 auto", alignSelf: "center", position: "relative", width: "clamp(22px,2.4vw,56px)", height: 24 }}>
                 <span style={{ position: "absolute", left: 2, right: 12, top: "50%", height: 1, background: "linear-gradient(90deg,rgba(142,108,46,.15),rgba(142,108,46,.55))" }} />
                 <span style={{ position: "absolute", right: 6, top: "50%", width: 0, height: 0, borderTop: "4px solid transparent", borderBottom: "4px solid transparent", borderLeft: `7px solid ${ACCENT}`, animation: "nioraArrow 2.6s ease-in-out infinite" }} />
@@ -124,7 +124,7 @@ export default function Home() {
             </ScrollReveal>
 
             {/* Card 02 — Effect */}
-            <ScrollReveal delay={260} style={{ flex: "1 1 240px", minWidth: 208 }}>
+            <ScrollReveal delay={260} className="problem-card" style={{ flex: "1 1 240px", minWidth: 208 }}>
               <article style={{ background: "#ECE3CF", border: "1px solid #DBCDAE", borderRadius: 14, padding: "clamp(26px,2.4vw,34px)", display: "flex", flexDirection: "column", gap: 18, height: "100%" }}>
                 <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between" }}>
                   <span style={{ fontFamily: serif, fontSize: 26, color: ACCENT }}>02</span>
@@ -140,7 +140,7 @@ export default function Home() {
             </ScrollReveal>
 
             {/* Arrow 2→3 */}
-            <ScrollReveal delay={380}>
+            <ScrollReveal delay={380} className="problem-arrow">
               <div aria-hidden="true" style={{ flex: "0 0 auto", alignSelf: "center", position: "relative", width: "clamp(22px,2.4vw,56px)", height: 24 }}>
                 <span style={{ position: "absolute", left: 2, right: 12, top: "50%", height: 1, background: "linear-gradient(90deg,rgba(142,108,46,.15),rgba(142,108,46,.55))" }} />
                 <span style={{ position: "absolute", right: 6, top: "50%", width: 0, height: 0, borderTop: "4px solid transparent", borderBottom: "4px solid transparent", borderLeft: `7px solid ${ACCENT}`, animation: "nioraArrow 2.6s ease-in-out infinite" }} />
@@ -149,7 +149,7 @@ export default function Home() {
             </ScrollReveal>
 
             {/* Card 03 — Result (dark) */}
-            <ScrollReveal delay={460} style={{ flex: "1 1 240px", minWidth: 208 }}>
+            <ScrollReveal delay={460} className="problem-card" style={{ flex: "1 1 240px", minWidth: 208 }}>
               <article style={{ background: "#28231E", border: "1px solid #28231E", borderRadius: 14, padding: "clamp(26px,2.4vw,34px)", display: "flex", flexDirection: "column", gap: 18, height: "100%" }}>
                 <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between" }}>
                   <span style={{ fontFamily: serif, fontSize: 26, color: "#D8B477" }}>03</span>
@@ -176,7 +176,7 @@ export default function Home() {
       {/* Approach */}
       <section id="approach" style={{ padding: sectionPad, borderTop: "1px solid #DDD1B6", scrollMarginTop: 72 }}>
         <div style={container}>
-          <div style={asymGrid}>
+          <div className="asym-grid" style={asymGrid}>
             <ScrollReveal>
               <div style={{ fontFamily: serif, fontSize: 30, fontWeight: 400, lineHeight: 1, color: ACCENT, margin: "0 0 12px" }}>02</div>
               <p style={eyebrow}>Our Approach</p>
@@ -243,7 +243,7 @@ export default function Home() {
       {/* Research */}
       <section id="research" style={{ padding: sectionPad, borderTop: "1px solid #DDD1B6", scrollMarginTop: 72 }}>
         <div style={container}>
-          <div style={asymGrid}>
+          <div className="asym-grid" style={asymGrid}>
             <ScrollReveal>
               <div style={{ fontFamily: serif, fontSize: 30, fontWeight: 400, lineHeight: 1, color: ACCENT, margin: "0 0 12px" }}>03</div>
               <p style={eyebrow}>Research</p>
@@ -272,7 +272,7 @@ export default function Home() {
       {/* The Horizon */}
       <section style={{ padding: sectionPad, borderTop: "1px solid #DDD1B6" }}>
         <div style={container}>
-          <div style={asymGrid}>
+          <div className="asym-grid" style={asymGrid}>
             <ScrollReveal>
               <div style={{ fontFamily: serif, fontSize: 30, fontWeight: 400, lineHeight: 1, color: ACCENT, margin: "0 0 12px" }}>04</div>
               <p style={eyebrow}>The Horizon</p>
@@ -314,6 +314,7 @@ export default function Home() {
               <span style={{ fontFamily: sans, fontSize: 15, color: "#6F665B" }}>For collaboration and inquiries</span>
               <a
                 href="mailto:operations@niorasystems.com"
+                className="contact-email"
                 style={{ fontFamily: serif, fontSize: "clamp(22px,2.6vw,30px)", color: ACCENT, textDecoration: "none", borderBottom: "1px solid rgba(142,108,46,.4)", paddingBottom: 2, transition: "border-color .3s ease" }}
                 onMouseEnter={(e) => (e.currentTarget.style.borderBottomColor = "rgba(142,108,46,.95)")}
                 onMouseLeave={(e) => (e.currentTarget.style.borderBottomColor = "rgba(142,108,46,.4)")}
@@ -334,7 +335,7 @@ export default function Home() {
             </div>
             <p style={{ fontFamily: sans, fontSize: 14, lineHeight: 1.6, color: "#857B6C", margin: 0 }}>Infrastructure for reliable medicine procurement.</p>
           </div>
-          <nav style={{ display: "flex", gap: "clamp(28px,5vw,64px)", flexWrap: "wrap" }}>
+          <nav className="footer-nav" style={{ display: "flex", gap: "clamp(28px,5vw,64px)", flexWrap: "wrap" }}>
             <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
               {[["#approach", "Approach"], ["#research", "Research"], ["#contact", "Contact"]].map(([href, label]) => (
                 <FooterLink key={href} href={href}>{label}</FooterLink>
@@ -360,13 +361,14 @@ function ResearchRow({ year, title }: { year: string; title: string }) {
   return (
     <a
       href="#contact"
+      className="research-row"
       style={{ display: "grid", gridTemplateColumns: "78px 1fr auto", gap: 24, alignItems: "baseline", padding: "20px 4px", borderBottom: "1px solid #DDD1B6", textDecoration: "none", color: "#2A2521", transition: "background .3s ease" }}
       onMouseEnter={(e) => (e.currentTarget.style.background = "#EEE6D5")}
       onMouseLeave={(e) => (e.currentTarget.style.background = "")}
     >
       <span style={{ fontFamily: sans, fontSize: 14, color: "#9A8E73", letterSpacing: ".04em" }}>{year}</span>
       <span style={{ fontFamily: serif, fontSize: 20, fontWeight: 400, color: "#28231E" }}>{title}</span>
-      <span style={{ fontFamily: sans, fontSize: 14, color: ACCENT, whiteSpace: "nowrap" }}>Working note →</span>
+      <span className="research-tag" style={{ fontFamily: sans, fontSize: 14, color: ACCENT, whiteSpace: "nowrap" }}>Working note →</span>
     </a>
   );
 }
