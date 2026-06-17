@@ -39,13 +39,14 @@ export default function Nav() {
         background: "rgba(244,241,234,0)",
         borderBottom: "1px solid transparent",
         transition: "background .45s ease, border-color .45s ease",
+        padding: "0 clamp(34px,6vw,96px)",
       }}
     >
       <div
         style={{
           maxWidth: 1180,
           margin: "0 auto",
-          padding: "20px clamp(34px,6vw,96px)",
+          padding: "20px 0",
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",

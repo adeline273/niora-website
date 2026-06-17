@@ -25,8 +25,8 @@ const container: React.CSSProperties = { maxWidth: 1180, margin: "0 auto" };
 
 const asymGrid: React.CSSProperties = {
   display: "grid",
-  gridTemplateColumns: "minmax(130px,210px) minmax(0,1fr)",
-  columnGap: "clamp(36px,6vw,100px)",
+  gridTemplateColumns: "minmax(160px,290px) minmax(0,1fr)",
+  columnGap: "clamp(40px,6vw,120px)",
   rowGap: 24,
   alignItems: "start",
 };
@@ -178,6 +178,7 @@ export default function Home() {
         <div style={container}>
           <div style={asymGrid}>
             <ScrollReveal>
+              <div style={{ fontFamily: serif, fontSize: 30, fontWeight: 400, lineHeight: 1, color: ACCENT, margin: "0 0 12px" }}>02</div>
               <p style={eyebrow}>Our Approach</p>
             </ScrollReveal>
             <ScrollReveal delay={120}>
@@ -244,6 +245,7 @@ export default function Home() {
         <div style={container}>
           <div style={asymGrid}>
             <ScrollReveal>
+              <div style={{ fontFamily: serif, fontSize: 30, fontWeight: 400, lineHeight: 1, color: ACCENT, margin: "0 0 12px" }}>03</div>
               <p style={eyebrow}>Research</p>
             </ScrollReveal>
             <ScrollReveal delay={120}>
@@ -272,6 +274,7 @@ export default function Home() {
         <div style={container}>
           <div style={asymGrid}>
             <ScrollReveal>
+              <div style={{ fontFamily: serif, fontSize: 30, fontWeight: 400, lineHeight: 1, color: ACCENT, margin: "0 0 12px" }}>04</div>
               <p style={eyebrow}>The Horizon</p>
             </ScrollReveal>
             <ScrollReveal delay={120}>
