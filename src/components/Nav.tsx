@@ -12,13 +12,16 @@ const LINKS = [
 export default function Nav() {
   const navRef = useRef<HTMLElement>(null);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const nav = navRef.current;
     if (!nav) return;
 
     const onScroll = () => {
-      if (window.scrollY > 8) {
+      const isScrolled = window.scrollY > 8;
+      setScrolled(isScrolled);
+      if (isScrolled) {
         nav.style.background = "rgba(244,241,234,0.82)";
         nav.style.backdropFilter = "saturate(120%) blur(10px)";
         (nav.style as CSSStyleDeclaration & { webkitBackdropFilter: string }).webkitBackdropFilter = "saturate(120%) blur(10px)";
@@ -46,13 +49,17 @@ export default function Nav() {
     <header
       ref={navRef}
       style={{
-        position: "sticky",
+        position: "fixed",
         top: 0,
+        left: 0,
+        right: 0,
         zIndex: 50,
         background: "rgba(244,241,234,0)",
         borderBottom: "1px solid transparent",
         transition: "background .45s ease, border-color .45s ease",
         padding: "0 clamp(24px,6vw,96px)",
+        transform: "translateZ(0)",
+        willChange: "background",
       }}
     >
       <div
@@ -75,7 +82,8 @@ export default function Nav() {
               fontSize: 25,
               fontWeight: 400,
               letterSpacing: ".005em",
-              color: "#2A2521",
+              color: scrolled ? "#2A2521" : "#F4EFE2",
+              transition: "color .45s ease",
             }}
           >
             Niora
@@ -89,9 +97,9 @@ export default function Nav() {
               <Link
                 key={href}
                 href={href}
-                style={{ fontSize: 15, color: "#4A443B", textDecoration: "none", letterSpacing: ".01em", transition: "color .3s ease" }}
+                style={{ fontSize: 15, color: scrolled ? "#4A443B" : "#EFE7D4", textDecoration: "none", letterSpacing: ".01em", transition: "color .45s ease" }}
                 onMouseEnter={(e) => (e.currentTarget.style.color = "#8E6C2E")}
-                onMouseLeave={(e) => (e.currentTarget.style.color = "#4A443B")}
+                onMouseLeave={(e) => (e.currentTarget.style.color = scrolled ? "#4A443B" : "#EFE7D4")}
               >
                 {label}
               </Link>
@@ -149,17 +157,17 @@ export default function Nav() {
             }}
           >
             <span style={{
-              display: "block", width: 22, height: 1.5, background: "#2A2521",
-              transition: "transform .25s ease, opacity .25s ease", transformOrigin: "center",
+              display: "block", width: 22, height: 1.5, background: scrolled ? "#2A2521" : "#F4EFE2",
+              transition: "transform .25s ease, opacity .25s ease, background .45s ease", transformOrigin: "center",
               transform: menuOpen ? "translateY(6.5px) rotate(45deg)" : "none",
             }} />
             <span style={{
-              display: "block", width: 22, height: 1.5, background: "#2A2521",
-              transition: "opacity .2s ease", opacity: menuOpen ? 0 : 1,
+              display: "block", width: 22, height: 1.5, background: scrolled ? "#2A2521" : "#F4EFE2",
+              transition: "opacity .2s ease, background .45s ease", opacity: menuOpen ? 0 : 1,
             }} />
             <span style={{
-              display: "block", width: 22, height: 1.5, background: "#2A2521",
-              transition: "transform .25s ease, opacity .25s ease", transformOrigin: "center",
+              display: "block", width: 22, height: 1.5, background: scrolled ? "#2A2521" : "#F4EFE2",
+              transition: "transform .25s ease, opacity .25s ease, background .45s ease", transformOrigin: "center",
               transform: menuOpen ? "translateY(-6.5px) rotate(-45deg)" : "none",
             }} />
           </button>

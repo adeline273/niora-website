@@ -1,10 +1,11 @@
 "use client";
 
+import React from "react";
 import Nav from "@/components/Nav";
 import ScrollReveal from "@/components/ScrollReveal";
-import CoordinationDiagram from "@/components/CoordinationDiagram";
 import CompoundingNetwork from "@/components/CompoundingNetwork";
 import PlatformFigure from "@/components/PlatformFigure";
+import Image from "next/image";
 
 const ACCENT = "#8E6C2E";
 
@@ -38,46 +39,72 @@ export default function Home() {
     <div style={{ background: "#F4F1EA", color: "#2A2521", fontFamily: sans, minHeight: "100vh" }}>
       <Nav />
 
-      {/* Hero */}
-      <section id="top" style={{ padding: "clamp(54px,10vh,118px) clamp(34px,6vw,96px) clamp(48px,8vh,92px)" }}>
-        <div style={container}>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(330px,1fr))", gap: "clamp(40px,6vw,84px)", alignItems: "center" }}>
-            <div>
-              <ScrollReveal delay={80}>
-                <h1 style={{ fontFamily: serif, fontWeight: 400, fontSize: "clamp(40px,4.8vw,74px)", lineHeight: 1.05, letterSpacing: "-.018em", color: "#23201B", margin: "0 0 30px", maxWidth: "15ch", textWrap: "balance" as React.CSSProperties["textWrap"] }}>
-                  Infrastructure for reliable medicine procurement.
-                </h1>
-              </ScrollReveal>
+      {/* Hero — full-screen video */}
+      <section id="top" style={{ position: "relative", overflow: "hidden", minHeight: "100vh", display: "flex", alignItems: "center", background: "#15110D" }}>
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          poster="/assets/hero-poster.png"
+          aria-hidden="true"
+          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", zIndex: 0, filter: "saturate(.92) contrast(1.04) brightness(.9)" }}
+        >
+          <source src="/assets/hero-video.mp4" type="video/mp4" />
+        </video>
+        {/* Gradient overlays */}
+        <div aria-hidden="true" style={{ position: "absolute", inset: 0, zIndex: 1, background: "linear-gradient(95deg,rgba(21,17,13,.93) 0%,rgba(21,17,13,.74) 38%,rgba(21,17,13,.4) 70%,rgba(21,17,13,.2) 100%)" }} />
+        <div aria-hidden="true" style={{ position: "absolute", inset: 0, zIndex: 1, background: "linear-gradient(180deg,rgba(21,17,13,.66) 0%,rgba(21,17,13,.1) 24%,rgba(21,17,13,.1) 55%,rgba(21,17,13,.88) 100%)" }} />
 
-              <ScrollReveal delay={160}>
-                <p style={{ fontFamily: serif, fontStyle: "italic", fontWeight: 300, fontSize: "clamp(19px,1.9vw,25px)", lineHeight: 1.5, color: "#3A342C", margin: "0 0 34px", paddingLeft: 20, borderLeft: `2px solid ${ACCENT}`, maxWidth: "40ch" }}>
-                  Niora is the coordination layer between institutions and suppliers — connecting procurement, financing, and delivery into a more reliable system.
-                </p>
-              </ScrollReveal>
+        <div style={{ position: "relative", zIndex: 2, width: "100%", maxWidth: 1180, margin: "0 auto", padding: "clamp(124px,20vh,210px) clamp(34px,6vw,96px) clamp(96px,16vh,168px)" }}>
+          <ScrollReveal>
+            <p style={{ display: "flex", alignItems: "center", gap: 14, fontFamily: sans, fontSize: 12.5, fontWeight: 600, letterSpacing: ".2em", textTransform: "uppercase", color: "#D8B477", margin: "0 0 30px" }}>
+              <span style={{ width: 26, height: 1, background: "#D8B477", opacity: 0.75 }} />
+              building predictable systems for procurement.
+            </p>
+          </ScrollReveal>
 
-              <ScrollReveal delay={220}>
-                <p style={{ margin: "0 0 30px" }}>
-                  <a
-                    href="#approach"
-                    style={{ color: ACCENT, textDecoration: "none", fontFamily: sans, fontWeight: 500, fontSize: 16, letterSpacing: ".01em" }}
-                    onMouseEnter={(e) => { e.currentTarget.style.textDecoration = "underline"; e.currentTarget.style.textUnderlineOffset = "5px"; }}
-                    onMouseLeave={(e) => { e.currentTarget.style.textDecoration = "none"; }}
-                  >
-                    Read our approach&nbsp;&nbsp;→
-                  </a>
-                </p>
-              </ScrollReveal>
+          <ScrollReveal delay={90}>
+            <h1 style={{ fontFamily: serif, fontWeight: 400, fontSize: "clamp(44px,6vw,88px)", lineHeight: 1.02, letterSpacing: "-.02em", color: "#F7F2E7", margin: "0 0 32px", maxWidth: "17ch", textWrap: "balance" as React.CSSProperties["textWrap"] }}>
+              Infrastructure for reliable medicine procurement.
+            </h1>
+          </ScrollReveal>
 
-              <ScrollReveal delay={280}>
-                <div style={{ display: "flex", gap: 16, alignItems: "center", fontFamily: sans, fontSize: 11.5, letterSpacing: ".15em", textTransform: "uppercase", color: "#9A8E73" }}>
-                  <span>DEVELOPED FOR TRUST, RELIABILITY, AND SCALE</span>
-                </div>
-              </ScrollReveal>
+          <ScrollReveal delay={180}>
+            <p style={{ fontFamily: serif, fontWeight: 300, fontSize: "clamp(19px,2vw,26px)", lineHeight: 1.5, color: "#D8CEBC", margin: "0 0 42px", maxWidth: "48ch", textWrap: "pretty" as React.CSSProperties["textWrap"] }}>
+              Across the world&rsquo;s fastest-growing economies, Niora connects procurement, financing, and delivery into one coordinated system — so the institutions and suppliers building the future can rely on the medicine beneath it.
+            </p>
+          </ScrollReveal>
+
+          <ScrollReveal delay={260}>
+            <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "18px 26px" }}>
+              <a
+                href="#approach"
+                className="hero-cta-primary"
+                style={{ display: "inline-flex", alignItems: "center", gap: 10, fontFamily: sans, fontWeight: 600, fontSize: 15, letterSpacing: ".01em", color: "#15110D", background: "#E9C589", padding: "13px 25px", borderRadius: 13, textDecoration: "none", transition: "background .3s ease" }}
+                onMouseEnter={(e) => (e.currentTarget.style.background = "#F2D69E")}
+                onMouseLeave={(e) => (e.currentTarget.style.background = "#E9C589")}
+              >
+                See how the system works&nbsp;→
+              </a>
+              <a
+                href="#contact"
+                style={{ fontFamily: sans, fontWeight: 500, fontSize: 15, letterSpacing: ".01em", color: "#EFE7D4", textDecoration: "none", borderBottom: "1px solid rgba(239,231,212,.4)", paddingBottom: 3, transition: "border-color .3s ease" }}
+                onMouseEnter={(e) => (e.currentTarget.style.borderBottomColor = "rgba(239,231,212,.95)")}
+                onMouseLeave={(e) => (e.currentTarget.style.borderBottomColor = "rgba(239,231,212,.4)")}
+              >
+                Partner with us
+              </a>
             </div>
+          </ScrollReveal>
+        </div>
 
-            <ScrollReveal delay={180} style={{ justifySelf: "center", width: "100%", maxWidth: 480 }}>
-              <CoordinationDiagram />
-            </ScrollReveal>
+        {/* Scroll indicator */}
+        <div aria-hidden="true" style={{ position: "absolute", zIndex: 2, left: 0, right: 0, bottom: "clamp(22px,4vh,40px)", display: "flex", justifyContent: "center" }}>
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 9, fontFamily: sans, fontSize: 10.5, fontWeight: 600, letterSpacing: ".22em", textTransform: "uppercase", color: "rgba(239,231,212,.6)" }}>
+            <span>Scroll</span>
+            <span style={{ width: 1, height: 34, background: "linear-gradient(180deg,rgba(239,231,212,.7),rgba(239,231,212,0))", animation: "nioraPulse 2.8s ease-in-out infinite" }} />
           </div>
         </div>
       </section>
@@ -92,7 +119,7 @@ export default function Home() {
             </div>
           </ScrollReveal>
           <ScrollReveal delay={80}>
-            <h2 style={{ fontFamily: serif, fontWeight: 400, fontSize: "clamp(28px,3.5vw,44px)", lineHeight: 1.14, letterSpacing: "-.01em", color: "#28231E", margin: "0 0 clamp(40px,6vh,60px)", maxWidth: "22ch" }}>
+            <h2 style={{ fontFamily: serif, fontWeight: 400, fontSize: "clamp(28px,3.5vw,44px)", lineHeight: 1.14, letterSpacing: "-.01em", color: "#28231E", margin: "0 0 clamp(40px,6vh,60px)", maxWidth: "22ch", textWrap: "balance" as React.CSSProperties["textWrap"] }}>
               When procurement becomes hard to predict, uncertainty spreads through the system.
             </h2>
           </ScrollReveal>
@@ -166,8 +193,36 @@ export default function Home() {
           </div>
 
           <ScrollReveal delay={200}>
-            <p style={{ fontFamily: serif, fontWeight: 300, fontSize: "clamp(20px,2.2vw,27px)", lineHeight: 1.5, color: "#3A342C", margin: "clamp(40px,6vh,60px) auto 0", maxWidth: "46ch", textAlign: "center" }}>
+            <p style={{ fontFamily: serif, fontWeight: 300, fontSize: "clamp(20px,2.2vw,27px)", lineHeight: 1.5, color: "#3A342C", margin: "clamp(40px,6vh,60px) auto 0", maxWidth: "46ch", textAlign: "center", textWrap: "balance" as React.CSSProperties["textWrap"] }}>
               Niora develops infrastructure that helps make procurement more predictable, transparent, and accountable.
+            </p>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* In the Field — photo section */}
+      <section aria-label="In the field" style={{ position: "relative", overflow: "hidden", background: "#28231E", borderTop: "1px solid #1F1B16" }}>
+        <Image
+          src="/assets/field-photo.png"
+          alt="Night distribution: stock being moved into a supply point"
+          fill
+          sizes="100vw"
+          style={{ objectFit: "cover", objectPosition: "center 46%", opacity: 0.66 }}
+          loading="lazy"
+        />
+        <div aria-hidden="true" style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg,rgba(28,23,18,.58) 0%,rgba(28,23,18,.34) 40%,rgba(28,23,18,.42) 64%,rgba(28,23,18,.82) 100%)" }} />
+        <div style={{ position: "relative", maxWidth: 1180, margin: "0 auto", padding: "clamp(118px,28vh,272px) clamp(34px,6vw,96px) clamp(110px,24vh,248px)" }}>
+          <ScrollReveal>
+            <p style={{ fontFamily: sans, fontSize: 12.5, fontWeight: 600, letterSpacing: ".2em", textTransform: "uppercase", color: "#D8B477", margin: "0 0 22px" }}>IN THE FIELD</p>
+          </ScrollReveal>
+          <ScrollReveal delay={100}>
+            <h2 style={{ fontFamily: serif, fontWeight: 400, fontSize: "clamp(32px,4.6vw,60px)", lineHeight: 1.08, letterSpacing: "-.014em", color: "#F4EFE2", margin: "0 0 22px", maxWidth: "16ch", textWrap: "balance" as React.CSSProperties["textWrap"] }}>
+              Stronger institutions are built on predictable systems.
+            </h2>
+          </ScrollReveal>
+          <ScrollReveal delay={180}>
+            <p style={{ fontFamily: serif, fontWeight: 300, fontStyle: "italic", fontSize: "clamp(18px,2vw,25px)", lineHeight: 1.5, color: "#D9CFBC", margin: 0, maxWidth: "44ch", textWrap: "pretty" as React.CSSProperties["textWrap"] }}>
+              Niora is the coordination layer between institutions and suppliers — connecting procurement, financing, and delivery into a more reliable system.
             </p>
           </ScrollReveal>
         </div>
@@ -182,6 +237,18 @@ export default function Home() {
                 <div className="section-num" style={{ fontFamily: serif, fontSize: 30, fontWeight: 400, lineHeight: 1, color: ACCENT, margin: "0 0 12px" }}>02</div>
                 <p style={eyebrow}>Our Approach</p>
               </div>
+              <figure className="approach-photo" style={{ margin: "clamp(22px,3vh,32px) 0 0" }}>
+                <div style={{ borderRadius: 6, overflow: "hidden", border: "1px solid #DDD1B6", boxShadow: "0 24px 52px -38px rgba(42,37,33,.6)" }}>
+                  <Image
+                    src="/assets/pharmacy-dakar.png"
+                    alt="A pharmacy at street level in Dakar, where reliable supply meets the people who depend on it"
+                    width={890}
+                    height={1124}
+                    style={{ display: "block", width: "100%", height: "auto", objectFit: "cover" }}
+                    loading="lazy"
+                  />
+                </div>
+              </figure>
             </ScrollReveal>
             <ScrollReveal delay={120}>
               <h2 style={{ fontFamily: serif, fontWeight: 400, fontSize: "clamp(28px,3.5vw,44px)", lineHeight: 1.14, letterSpacing: "-.01em", color: "#28231E", margin: "0 0 26px", maxWidth: "18ch" }}>
@@ -212,10 +279,10 @@ export default function Home() {
           <ScrollReveal delay={180}>
             <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "14px 26px", fontFamily: serif, fontSize: "clamp(16px,1.6vw,20px)", color: "#5A5240" }}>
               {["Korle-Bu Teaching Hospital", "The Trust Hospital", "Stanford University", "Open Contracting Partnership"].map((name, i, arr) => (
-                <>
-                  <span key={name}>{name}</span>
-                  {i < arr.length - 1 && <span key={`dot-${i}`} style={{ width: 5, height: 5, borderRadius: "50%", background: ACCENT, opacity: .6 }} />}
-                </>
+                <React.Fragment key={name}>
+                  <span>{name}</span>
+                  {i < arr.length - 1 && <span style={{ width: 5, height: 5, borderRadius: "50%", background: ACCENT, opacity: .6 }} />}
+                </React.Fragment>
               ))}
             </div>
           </ScrollReveal>
@@ -291,7 +358,7 @@ export default function Home() {
                 Reliable procurement is foundational to effective health systems. Over time, it shapes how medicines move, how suppliers allocate resources, how hospitals manage uncertainty, and how systems respond to changing demand.
               </p>
               <p className="body-text-lg" style={{ fontFamily: sans, fontSize: 18, lineHeight: 1.72, color: "#4C463D", margin: 0, maxWidth: "54ch" }}>
-                Lasting improvement isn't better forecasting alone. It is infrastructure that participants can plan around, trust, and operate within.
+                Lasting improvement isn&rsquo;t better forecasting alone. It is infrastructure that participants can plan around, trust, and operate within.
               </p>
             </ScrollReveal>
           </div>
@@ -301,29 +368,40 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Contact */}
-      <section id="contact" style={{ padding: "clamp(80px,14vh,160px) clamp(34px,6vw,96px)", borderTop: "1px solid #D8CBA8", background: "#ECE3CF", scrollMarginTop: 72 }}>
-        <div style={{ maxWidth: 980, margin: "0 auto" }}>
-          <ScrollReveal><p style={{ ...eyebrow, marginBottom: 26 }}>Partnerships and Institutional Engagement</p></ScrollReveal>
+      {/* Contact — dark photo section */}
+      <section id="contact" style={{ position: "relative", overflow: "hidden", padding: "clamp(96px,17vh,184px) clamp(34px,6vw,96px)", borderTop: "1px solid #1F1B16", background: "#241F1A", scrollMarginTop: 72 }}>
+        <Image
+          src="/assets/contact-bg.png"
+          alt=""
+          aria-hidden="true"
+          fill
+          sizes="100vw"
+          style={{ objectFit: "cover", objectPosition: "72% 38%", opacity: 0.5 }}
+          loading="lazy"
+        />
+        <div aria-hidden="true" style={{ position: "absolute", inset: 0, background: "linear-gradient(90deg,rgba(28,23,18,.92) 0%,rgba(28,23,18,.8) 46%,rgba(28,23,18,.5) 100%)" }} />
+        <div aria-hidden="true" style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg,rgba(28,23,18,.4) 0%,rgba(28,23,18,0) 38%,rgba(28,23,18,.55) 100%)" }} />
+        <div style={{ position: "relative", maxWidth: 980, margin: "0 auto" }}>
+          <ScrollReveal><p style={{ fontFamily: sans, fontSize: 12.5, fontWeight: 600, letterSpacing: ".18em", textTransform: "uppercase", color: "#D8B477", margin: "0 0 26px" }}>Partnerships and Institutional Engagement</p></ScrollReveal>
           <ScrollReveal delay={80}>
-            <h2 style={{ fontFamily: serif, fontWeight: 400, fontSize: "clamp(34px,5.2vw,66px)", lineHeight: 1.06, letterSpacing: "-.016em", color: "#23201B", margin: "0 0 30px", maxWidth: "18ch" }}>
+            <h2 style={{ fontFamily: serif, fontWeight: 400, fontSize: "clamp(34px,5.2vw,66px)", lineHeight: 1.06, letterSpacing: "-.016em", color: "#F4EFE2", margin: "0 0 30px", maxWidth: "18ch", textWrap: "balance" as React.CSSProperties["textWrap"] }}>
               The foundation of reliable health systems.
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={160}>
-            <p style={{ fontFamily: serif, fontWeight: 300, fontStyle: "italic", fontSize: "clamp(20px,2.2vw,27px)", lineHeight: 1.5, color: "#3A342C", margin: "0 0 44px", maxWidth: "40ch" }}>
+            <p style={{ fontFamily: serif, fontWeight: 300, fontStyle: "italic", fontSize: "clamp(20px,2.2vw,27px)", lineHeight: 1.5, color: "#D9CFBC", margin: "0 0 44px", maxWidth: "40ch" }}>
               Procurement systems that participants can plan around, trust, and operate within — consistently.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={220}>
             <div style={{ display: "flex", flexWrap: "wrap", alignItems: "baseline", gap: "14px 28px" }}>
-              <span style={{ fontFamily: sans, fontSize: 15, color: "#6F665B" }}>For collaboration and inquiries</span>
+              <span style={{ fontFamily: sans, fontSize: 15, color: "#B6AB97" }}>For collaboration and inquiries</span>
               <a
                 href="mailto:operations@niorasystems.com"
                 className="contact-email"
-                style={{ fontFamily: serif, fontSize: "clamp(22px,2.6vw,30px)", color: ACCENT, textDecoration: "none", borderBottom: "1px solid rgba(142,108,46,.4)", paddingBottom: 2, transition: "border-color .3s ease" }}
-                onMouseEnter={(e) => (e.currentTarget.style.borderBottomColor = "rgba(142,108,46,.95)")}
-                onMouseLeave={(e) => (e.currentTarget.style.borderBottomColor = "rgba(142,108,46,.4)")}
+                style={{ fontFamily: serif, fontSize: "clamp(22px,2.6vw,30px)", color: "#E9C589", textDecoration: "none", borderBottom: "1px solid rgba(233,197,137,.4)", paddingBottom: 2, transition: "border-color .3s ease" }}
+                onMouseEnter={(e) => (e.currentTarget.style.borderBottomColor = "rgba(233,197,137,.95)")}
+                onMouseLeave={(e) => (e.currentTarget.style.borderBottomColor = "rgba(233,197,137,.4)")}
               >
                 operations@niorasystems.com
               </a>
