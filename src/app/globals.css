@@ -15,10 +15,6 @@ body { margin: 0; background: #F4F1EA; color: #2A2521; -webkit-font-smoothing: a
 @keyframes nioraArrow { 0%, 100% { transform: translate(0,-50%) } 50% { transform: translate(4px,-50%) } }
 @keyframes nioraPulse { 0%, 100% { opacity: .2 } 50% { opacity: .6 } }
 
-/* Prevent GPU compositing bleed on sections with heavy backgrounds */
-section { isolation: isolate; }
-/* Stop hidden arrow animations from producing compositor artifacts */
-.problem-arrow { contain: strict; }
 
 [data-reveal] {
   opacity: 0;
