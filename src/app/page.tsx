@@ -178,8 +178,10 @@ export default function Home() {
         <div style={container}>
           <div className="asym-grid" style={asymGrid}>
             <ScrollReveal>
-              <div style={{ fontFamily: serif, fontSize: 30, fontWeight: 400, lineHeight: 1, color: ACCENT, margin: "0 0 12px" }}>02</div>
-              <p style={eyebrow}>Our Approach</p>
+              <div className="section-label" style={{ display: "flex", flexDirection: "column" }}>
+                <div className="section-num" style={{ fontFamily: serif, fontSize: 30, fontWeight: 400, lineHeight: 1, color: ACCENT, margin: "0 0 12px" }}>02</div>
+                <p style={eyebrow}>Our Approach</p>
+              </div>
             </ScrollReveal>
             <ScrollReveal delay={120}>
               <h2 style={{ fontFamily: serif, fontWeight: 400, fontSize: "clamp(28px,3.5vw,44px)", lineHeight: 1.14, letterSpacing: "-.01em", color: "#28231E", margin: "0 0 26px", maxWidth: "18ch" }}>
@@ -188,7 +190,7 @@ export default function Home() {
               <p style={{ fontFamily: serif, fontWeight: 300, fontSize: "clamp(20px,2.2vw,26px)", lineHeight: 1.5, color: "#3A342C", margin: "0 0 26px", maxWidth: "34ch" }}>
                 Procurement is often treated as an administrative process. In practice, it is one of the systems that determines whether medicines reach patients when they are needed.
               </p>
-              <p style={{ fontFamily: sans, fontSize: 18, lineHeight: 1.72, color: "#4C463D", margin: 0, maxWidth: "60ch" }}>
+              <p className="body-text-lg" style={{ fontFamily: sans, fontSize: 18, lineHeight: 1.72, color: "#4C463D", margin: 0, maxWidth: "60ch" }}>
                 We believe durable infrastructure emerges from understanding how procurement functions in practice, including how decisions are made, how constraints are managed, and where uncertainty enters the system. We work to understand existing processes and strengthen the mechanisms that support reliability.
               </p>
             </ScrollReveal>
@@ -245,14 +247,16 @@ export default function Home() {
         <div style={container}>
           <div className="asym-grid" style={asymGrid}>
             <ScrollReveal>
-              <div style={{ fontFamily: serif, fontSize: 30, fontWeight: 400, lineHeight: 1, color: ACCENT, margin: "0 0 12px" }}>03</div>
-              <p style={eyebrow}>Research</p>
+              <div className="section-label" style={{ display: "flex", flexDirection: "column" }}>
+                <div className="section-num" style={{ fontFamily: serif, fontSize: 30, fontWeight: 400, lineHeight: 1, color: ACCENT, margin: "0 0 12px" }}>03</div>
+                <p style={eyebrow}>Research</p>
+              </div>
             </ScrollReveal>
             <ScrollReveal delay={120}>
               <h2 style={{ fontFamily: serif, fontWeight: 400, fontSize: "clamp(28px,3.5vw,44px)", lineHeight: 1.14, letterSpacing: "-.01em", color: "#28231E", margin: "0 0 26px", maxWidth: "20ch" }}>
                 Studying procurement as it functions in practice.
               </h2>
-              <p style={{ fontFamily: sans, fontSize: 18, lineHeight: 1.72, color: "#4C463D", margin: "0 0 40px", maxWidth: "60ch" }}>
+              <p className="body-text-lg" style={{ fontFamily: sans, fontSize: 18, lineHeight: 1.72, color: "#4C463D", margin: "0 0 40px", maxWidth: "60ch" }}>
                 We document how procurement decisions are coordinated and executed, and publish selected findings from our work with health systems. Our research treats procurement as a systems problem requiring coordination, transparency, and trust.
               </p>
               <div style={{ borderTop: "1px solid #DDD1B6" }}>
@@ -274,17 +278,19 @@ export default function Home() {
         <div style={container}>
           <div className="asym-grid" style={asymGrid}>
             <ScrollReveal>
-              <div style={{ fontFamily: serif, fontSize: 30, fontWeight: 400, lineHeight: 1, color: ACCENT, margin: "0 0 12px" }}>04</div>
-              <p style={eyebrow}>The Horizon</p>
+              <div className="section-label" style={{ display: "flex", flexDirection: "column" }}>
+                <div className="section-num" style={{ fontFamily: serif, fontSize: 30, fontWeight: 400, lineHeight: 1, color: ACCENT, margin: "0 0 12px" }}>04</div>
+                <p style={eyebrow}>The Horizon</p>
+              </div>
             </ScrollReveal>
             <ScrollReveal delay={120}>
               <h2 style={{ fontFamily: serif, fontWeight: 400, fontSize: "clamp(28px,3.5vw,44px)", lineHeight: 1.14, letterSpacing: "-.01em", color: "#28231E", margin: "0 0 26px", maxWidth: "18ch" }}>
                 A long-term infrastructure problem.
               </h2>
-              <p style={{ fontFamily: sans, fontSize: 18, lineHeight: 1.72, color: "#4C463D", margin: "0 0 18px", maxWidth: "54ch" }}>
+              <p className="body-text-lg" style={{ fontFamily: sans, fontSize: 18, lineHeight: 1.72, color: "#4C463D", margin: "0 0 18px", maxWidth: "54ch" }}>
                 Reliable procurement is foundational to effective health systems. Over time, it shapes how medicines move, how suppliers allocate resources, how hospitals manage uncertainty, and how systems respond to changing demand.
               </p>
-              <p style={{ fontFamily: sans, fontSize: 18, lineHeight: 1.72, color: "#4C463D", margin: 0, maxWidth: "54ch" }}>
+              <p className="body-text-lg" style={{ fontFamily: sans, fontSize: 18, lineHeight: 1.72, color: "#4C463D", margin: 0, maxWidth: "54ch" }}>
                 Lasting improvement isn't better forecasting alone. It is infrastructure that participants can plan around, trust, and operate within.
               </p>
             </ScrollReveal>

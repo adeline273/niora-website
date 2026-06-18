@@ -25,3 +25,66 @@ body { margin: 0; background: #F4F1EA; color: #2A2521; -webkit-font-smoothing: a
   opacity: 1;
   transform: none;
 }
+
+/* ── Responsive ─────────────────────────────────── */
+@media (max-width: 640px) {
+  /* Nav: hamburger replaces links + CTA */
+  .nav-text-links { display: none !important; }
+  .nav-open-app { display: none !important; }
+  .nav-hamburger { display: flex !important; }
+
+  /* Section padding tighter on mobile */
+  .section-mobile-pad { padding-left: clamp(20px,5vw,34px) !important; padding-right: clamp(20px,5vw,34px) !important; }
+
+  /* Two-column index grid → single column */
+  .asym-grid {
+    grid-template-columns: 1fr !important;
+    column-gap: 0 !important;
+    row-gap: 0 !important;
+  }
+
+  /* Section label: number + eyebrow inline row */
+  .section-label {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: baseline !important;
+    gap: 12px !important;
+    margin-bottom: 20px !important;
+  }
+  .section-num { margin-bottom: 0 !important; font-size: 22px !important; }
+
+  /* Body text: slightly smaller on mobile */
+  .body-text-lg { font-size: 16px !important; }
+
+  /* Problem cards: stack vertically, hide arrows */
+  .problem-cards { flex-direction: column !important; }
+  .problem-arrow { display: none !important; }
+  .problem-card { flex: unset !important; min-width: unset !important; width: 100% !important; }
+
+  /* Research row: 2 columns (hide tag) */
+  .research-tag { display: none !important; }
+  .research-row { grid-template-columns: 52px 1fr !important; gap: 10px !important; }
+
+  /* Contact email: break gracefully */
+  .contact-email { font-size: clamp(18px, 5vw, 22px) !important; word-break: break-all; }
+
+  /* Footer nav */
+  .footer-nav { gap: 28px !important; flex-direction: column !important; }
+}
+
+@media (max-width: 860px) {
+  /* Asym grid collapses at tablet too */
+  .asym-grid {
+    grid-template-columns: 1fr !important;
+    column-gap: 0 !important;
+  }
+  /* Section label: number + eyebrow inline */
+  .section-label {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: baseline !important;
+    gap: 12px !important;
+    margin-bottom: 20px !important;
+  }
+  .section-num { margin-bottom: 0 !important; }
+}
