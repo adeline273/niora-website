@@ -49,11 +49,26 @@ export async function POST(req: NextRequest) {
       to: email,
       subject: "We received your access request — Niora Systems",
       html: `
-        <div style="font-family:system-ui,sans-serif;max-width:560px;margin:0 auto;color:#2A2521">
-          <h2 style="font-family:Georgia,serif;font-size:24px;font-weight:400;line-height:1.2;margin:0 0 18px;color:#28231E">Your request has been received, ${name.split(" ")[0]}.</h2>
-          <p style="font-size:16px;line-height:1.6;color:#4C463D;margin:0 0 16px">Thank you for applying for access to the Niora platform. Our team will review your organization's eligibility and reply to this address within two business days.</p>
-          <p style="font-size:16px;line-height:1.6;color:#4C463D;margin:0 0 24px">If your request is time-sensitive, you can reach our operations team directly at <a href="mailto:operations@niorasystems.com" style="color:#8E6C2E">operations@niorasystems.com</a>.</p>
-          <p style="font-size:14px;color:#9A8E73;border-top:1px solid #E4D9C2;padding-top:16px;margin:0">Niora Systems · Accra · San Francisco</p>
+        <div style="font-family:system-ui,sans-serif;max-width:580px;margin:0 auto;color:#2A2521">
+          <h2 style="font-family:Georgia,serif;font-size:24px;font-weight:400;line-height:1.2;margin:0 0 14px;color:#28231E">Your request has been received, ${name.split(" ")[0]}.</h2>
+          <p style="font-size:16px;line-height:1.6;color:#4C463D;margin:0 0 20px">Thank you for applying for access to the Niora platform. Our team will review your organization's eligibility and reply to this address within two business days.</p>
+
+          <div style="background:#F9F6EF;border:1px solid #E4D9C2;border-radius:10px;padding:20px 24px;margin:0 0 22px">
+            <p style="font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#9A8E73;margin:0 0 14px">Your submission</p>
+            <table style="width:100%;border-collapse:collapse;font-size:14.5px;line-height:1.6">
+              <tr><td style="padding:6px 0;color:#7C7263;width:150px;vertical-align:top">Name</td><td style="padding:6px 0;font-weight:500">${name}</td></tr>
+              <tr><td style="padding:6px 0;color:#7C7263;vertical-align:top">Organization</td><td style="padding:6px 0">${org}</td></tr>
+              <tr><td style="padding:6px 0;color:#7C7263;vertical-align:top">Org type</td><td style="padding:6px 0">${orgType}</td></tr>
+              <tr><td style="padding:6px 0;color:#7C7263;vertical-align:top">Role</td><td style="padding:6px 0">${role}</td></tr>
+              <tr><td style="padding:6px 0;color:#7C7263;vertical-align:top">Location</td><td style="padding:6px 0">${country}</td></tr>
+              <tr><td style="padding:6px 0;color:#7C7263;vertical-align:top">People served</td><td style="padding:6px 0">${orgSize}</td></tr>
+              <tr><td style="padding:6px 0;color:#7C7263;vertical-align:top;border-top:1px solid #E4D9C2;padding-top:10px">Use case</td><td style="padding:6px 0;border-top:1px solid #E4D9C2;padding-top:10px;white-space:pre-wrap">${useCase}</td></tr>
+              ${referral ? `<tr><td style="padding:6px 0;color:#7C7263;vertical-align:top">Referral</td><td style="padding:6px 0">${referral}</td></tr>` : ""}
+            </table>
+          </div>
+
+          <p style="font-size:15px;line-height:1.6;color:#4C463D;margin:0 0 22px">If your request is time-sensitive, reach our operations team directly at <a href="mailto:operations@niorasystems.com" style="color:#8E6C2E">operations@niorasystems.com</a>.</p>
+          <p style="font-size:13px;color:#9A8E73;border-top:1px solid #E4D9C2;padding-top:16px;margin:0">Niora Systems · Accra · San Francisco</p>
         </div>
       `,
     });
