@@ -21,7 +21,7 @@ export async function POST(req: NextRequest) {
   try {
     // Notify operations team
     await resend.emails.send({
-      from: "Niora Access Requests <no-reply@niorasystems.com>",
+      from: "Niora Access Requests <onboarding@resend.dev>",
       to: "operations@niorasystems.com",
       replyTo: email,
       subject: `Access request: ${name} — ${org}`,
@@ -45,7 +45,7 @@ export async function POST(req: NextRequest) {
 
     // Confirmation to applicant
     await resend.emails.send({
-      from: "Niora Systems <no-reply@niorasystems.com>",
+      from: "Niora Systems <onboarding@resend.dev>",
       to: email,
       subject: "We received your access request — Niora Systems",
       html: `

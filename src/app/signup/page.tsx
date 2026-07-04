@@ -189,7 +189,7 @@ export default function SignupPage() {
                   </label>
                   <label style={{ display: "flex", flexDirection: "column", gap: 8 }}>
                     <span style={labelStyle}>Organization type *</span>
-                    <select name="orgType" required
+                    <select name="orgType" required defaultValue=""
                       style={{ ...inputBase, ...focusStyle("orgType"), backgroundImage: `url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path d='M1 1l5 5 5-5' stroke='%238E6C2E' stroke-width='1.6' fill='none' stroke-linecap='round'/></svg>")`, backgroundRepeat: "no-repeat", backgroundPosition: "right 14px center", paddingRight: 38, cursor: "pointer" }}
                       onFocus={() => setFocusedField("orgType")} onBlur={() => setFocusedField(null)}>
                       <option value="" disabled>Select one…</option>
@@ -220,7 +220,7 @@ export default function SignupPage() {
 
                 <label style={{ display: "flex", flexDirection: "column", gap: 8 }}>
                   <span style={labelStyle}>How many people does your organization serve? *</span>
-                  <select name="orgSize" required
+                  <select name="orgSize" required defaultValue=""
                     style={{ ...inputBase, ...focusStyle("orgSize"), backgroundImage: `url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path d='M1 1l5 5 5-5' stroke='%238E6C2E' stroke-width='1.6' fill='none' stroke-linecap='round'/></svg>")`, backgroundRepeat: "no-repeat", backgroundPosition: "right 14px center", paddingRight: 38, cursor: "pointer" }}
                     onFocus={() => setFocusedField("orgSize")} onBlur={() => setFocusedField(null)}>
                     <option value="" disabled>Select a range…</option>
