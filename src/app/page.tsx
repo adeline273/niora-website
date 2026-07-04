@@ -61,7 +61,7 @@ export default function Home() {
           <ScrollReveal>
             <p style={{ display: "flex", alignItems: "center", gap: 14, fontFamily: sans, fontSize: 12.5, fontWeight: 600, letterSpacing: ".2em", textTransform: "uppercase", color: "#D8B477", margin: "0 0 30px" }}>
               <span style={{ width: 26, height: 1, background: "#D8B477", opacity: 0.75 }} />
-              building predictable systems for procurement.
+              building predictable systems for procurement
             </p>
           </ScrollReveal>
 
@@ -80,7 +80,7 @@ export default function Home() {
           <ScrollReveal delay={260}>
             <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "18px 26px" }}>
               <a
-                href="#approach"
+                href="/signup"
                 className="hero-cta-primary"
                 style={{ display: "inline-flex", alignItems: "center", gap: 10, fontFamily: sans, fontWeight: 600, fontSize: 15, letterSpacing: ".01em", color: "#15110D", background: "#E9C589", padding: "13px 25px", borderRadius: 13, textDecoration: "none", transition: "background .3s ease" }}
                 onMouseEnter={(e) => (e.currentTarget.style.background = "#F2D69E")}
