@@ -107,10 +107,8 @@ export default function Nav() {
           </div>
 
           {/* Desktop CTA */}
-          <a
-            href="https://app.niorasystems.com"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/signup"
             className="nav-open-app"
             style={{
               fontSize: 14,
@@ -135,8 +133,8 @@ export default function Nav() {
               e.currentTarget.style.color = "#ffffff";
             }}
           >
-            Open App
-          </a>
+            Sign Up
+          </Link>
 
           {/* Hamburger button — mobile only, shown via CSS */}
           <button
@@ -207,10 +205,8 @@ export default function Nav() {
               {label}
             </Link>
           ))}
-          <a
-            href="https://app.niorasystems.com"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/signup"
             onClick={() => setMenuOpen(false)}
             style={{
               marginTop: 18,
@@ -236,8 +232,8 @@ export default function Nav() {
               e.currentTarget.style.borderColor = "#000000";
             }}
           >
-            Open App
-          </a>
+            Sign Up
+          </Link>
         </div>
       </div>
     </header>
