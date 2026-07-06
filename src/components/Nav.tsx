@@ -179,7 +179,8 @@ export default function Nav() {
           overflow: "hidden",
           maxHeight: menuOpen ? 300 : 0,
           transition: "max-height .3s cubic-bezier(.4,0,.2,1)",
-          borderTop: menuOpen ? "1px solid #DDD1B6" : "1px solid transparent",
+          background: scrolled ? "rgba(244,241,234,0.97)" : "rgba(21,17,13,0.97)",
+          borderTop: menuOpen ? `1px solid ${scrolled ? "#DDD1B6" : "#3A332C"}` : "1px solid transparent",
         }}
       >
         <div style={{ display: "flex", flexDirection: "column", padding: "6px 0 20px" }}>
@@ -192,15 +193,15 @@ export default function Nav() {
                 fontFamily: "var(--font-newsreader), Georgia, serif",
                 fontSize: 22,
                 fontWeight: 400,
-                color: "#2A2521",
+                color: scrolled ? "#2A2521" : "#F4EFE2",
                 textDecoration: "none",
                 padding: "14px 0",
-                borderBottom: "1px solid #EDE5D0",
+                borderBottom: `1px solid ${scrolled ? "#EDE5D0" : "#3A332C"}`,
                 transition: "color .2s ease",
                 letterSpacing: "-.005em",
               }}
               onMouseEnter={(e) => (e.currentTarget.style.color = "#8E6C2E")}
-              onMouseLeave={(e) => (e.currentTarget.style.color = "#2A2521")}
+              onMouseLeave={(e) => (e.currentTarget.style.color = scrolled ? "#2A2521" : "#F4EFE2")}
             >
               {label}
             </Link>
