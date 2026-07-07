@@ -27,10 +27,10 @@ export default function Nav() {
         (nav.style as CSSStyleDeclaration & { webkitBackdropFilter: string }).webkitBackdropFilter = "saturate(120%) blur(10px)";
         nav.style.borderBottomColor = "#DDD1B6";
       } else {
-        nav.style.background = "rgba(244,241,234,0)";
+        nav.style.background = menuOpen ? "rgba(21,17,13,1)" : "rgba(244,241,234,0)";
         nav.style.backdropFilter = "none";
         (nav.style as CSSStyleDeclaration & { webkitBackdropFilter: string }).webkitBackdropFilter = "none";
-        nav.style.borderBottomColor = menuOpen ? "#DDD1B6" : "transparent";
+        nav.style.borderBottomColor = menuOpen ? "#3A332C" : "transparent";
       }
     };
 
