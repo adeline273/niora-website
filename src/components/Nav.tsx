@@ -179,7 +179,6 @@ export default function Nav() {
           overflow: "hidden",
           maxHeight: menuOpen ? 300 : 0,
           transition: "max-height .3s cubic-bezier(.4,0,.2,1)",
-          background: scrolled ? "rgba(244,241,234,0.97)" : "rgba(21,17,13,0.97)",
           borderTop: menuOpen ? `1px solid ${scrolled ? "#DDD1B6" : "#3A332C"}` : "1px solid transparent",
         }}
       >
