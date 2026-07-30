@@ -58,13 +58,6 @@ export default function Home() {
         <div aria-hidden="true" style={{ position: "absolute", inset: 0, zIndex: 1, background: "linear-gradient(180deg,rgba(21,17,13,.66) 0%,rgba(21,17,13,.1) 24%,rgba(21,17,13,.1) 55%,rgba(21,17,13,.88) 100%)" }} />
 
         <div style={{ position: "relative", zIndex: 2, width: "100%", maxWidth: 1180, margin: "0 auto", padding: "clamp(124px,20vh,210px) clamp(34px,6vw,96px) clamp(96px,16vh,168px)" }}>
-          <ScrollReveal>
-            <p style={{ display: "flex", alignItems: "center", gap: 14, fontFamily: sans, fontSize: 12.5, fontWeight: 600, letterSpacing: ".2em", textTransform: "uppercase", color: "#D8B477", margin: "0 0 30px" }}>
-              <span style={{ width: 26, height: 1, background: "#D8B477", opacity: 0.75 }} />
-              building predictable systems for procurement
-            </p>
-          </ScrollReveal>
-
           <ScrollReveal delay={90}>
             <h1 style={{ fontFamily: serif, fontWeight: 400, fontSize: "clamp(44px,6vw,88px)", lineHeight: 1.02, letterSpacing: "-.02em", color: "#F7F2E7", margin: "0 0 32px", maxWidth: "17ch", textWrap: "balance" as React.CSSProperties["textWrap"] }}>
               Infrastructure for reliable medicine procurement.
