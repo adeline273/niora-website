@@ -321,10 +321,10 @@ export default function Home() {
             </ScrollReveal>
             <ScrollReveal delay={120}>
               <h2 style={{ fontFamily: serif, fontWeight: 400, fontSize: "clamp(28px,3.5vw,44px)", lineHeight: 1.14, letterSpacing: "-.01em", color: "#28231E", margin: "0 0 26px", maxWidth: "20ch" }}>
-                Studying procurement as it functions in practice.
+                Evidence Through Implementation
               </h2>
               <p className="body-text-lg" style={{ fontFamily: sans, fontSize: 18, lineHeight: 1.72, color: "#4C463D", margin: "0 0 40px", maxWidth: "60ch" }}>
-                We document how procurement decisions are coordinated and executed, and publish selected findings from our work with health systems. Our research treats procurement as a systems problem requiring coordination, transparency, and trust.
+                We work alongside health systems and academic collaborators to study pharmaceutical procurement as it functions in practice. By combining real-world implementation with research, we generate evidence that informs both better products and stronger procurement systems.
               </p>
               <div style={{ borderTop: "1px solid #DDD1B6" }}>
                 {[
