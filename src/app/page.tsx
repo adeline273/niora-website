@@ -321,7 +321,7 @@ export default function Home() {
             </ScrollReveal>
             <ScrollReveal delay={120}>
               <h2 style={{ fontFamily: serif, fontWeight: 400, fontSize: "clamp(28px,3.5vw,44px)", lineHeight: 1.14, letterSpacing: "-.01em", color: "#28231E", margin: "0 0 26px", maxWidth: "20ch" }}>
-                Evidence Through Implementation
+                Evidence through implementation
               </h2>
               <p className="body-text-lg" style={{ fontFamily: sans, fontSize: 18, lineHeight: 1.72, color: "#4C463D", margin: "0 0 40px", maxWidth: "60ch" }}>
                 We work alongside health systems and academic collaborators to study pharmaceutical procurement as it functions in practice. By combining real-world implementation with research, we generate evidence that informs both better products and stronger procurement systems.
