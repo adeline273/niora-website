@@ -328,11 +328,12 @@ export default function Home() {
               </p>
               <div style={{ borderTop: "1px solid #DDD1B6" }}>
                 {[
-                  { year: "2026", title: "On the predictability of hospital procurement" },
-                  { year: "2025", title: "Coordinating demand and supply across health systems" },
-                  { year: "2025", title: "Financing, delays, and the reliability of access" },
-                ].map(({ year, title }) => (
-                  <ResearchRow key={title} year={year} title={title} />
+                  { publisher: "Niora Systems", title: "On the predictability of hospital procurement" },
+                  { publisher: "Niora Systems", title: "Coordinating demand and supply across health systems" },
+                  { publisher: "Niora Systems", title: "Financing, delays, and the reliability of access" },
+                  { publisher: "World Bank", title: "The enforcement of commercial contracts in Ghana", href: "https://documents.worldbank.org/en/publication/documents-reports/documentdetail/243141468251416080" },
+                ].map(({ publisher, title, href }) => (
+                  <ResearchRow key={title} publisher={publisher} title={title} href={href} />
                 ))}
               </div>
             </ScrollReveal>
@@ -439,18 +440,20 @@ export default function Home() {
   );
 }
 
-function ResearchRow({ year, title }: { year: string; title: string }) {
+function ResearchRow({ publisher, title, href }: { publisher: string; title: string; href?: string }) {
   const sans = "var(--font-source-sans), system-ui, sans-serif";
   const serif = "var(--font-newsreader), Georgia, serif";
+  const isExternal = !!href;
   return (
     <a
-      href="#contact"
+      href={href ?? "#contact"}
+      {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
       className="research-row"
       style={{ display: "grid", gridTemplateColumns: "78px 1fr auto", gap: 24, alignItems: "baseline", padding: "20px 4px", borderBottom: "1px solid #DDD1B6", textDecoration: "none", color: "#2A2521", transition: "background .3s ease" }}
       onMouseEnter={(e) => (e.currentTarget.style.background = "#EEE6D5")}
       onMouseLeave={(e) => (e.currentTarget.style.background = "")}
     >
-      <span style={{ fontFamily: sans, fontSize: 14, color: "#9A8E73", letterSpacing: ".04em" }}>{year}</span>
+      <span style={{ fontFamily: sans, fontSize: 14, color: "#9A8E73", letterSpacing: ".04em" }}>{publisher}</span>
       <span style={{ fontFamily: serif, fontSize: 20, fontWeight: 400, color: "#28231E" }}>{title}</span>
       <span className="research-tag" style={{ fontFamily: sans, fontSize: 14, color: ACCENT, whiteSpace: "nowrap" }}>Working note →</span>
     </a>
