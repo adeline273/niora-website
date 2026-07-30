@@ -328,10 +328,8 @@ export default function Home() {
               </p>
               <div style={{ borderTop: "1px solid #DDD1B6" }}>
                 {[
-                  { publisher: "Niora Systems", title: "On the predictability of hospital procurement" },
-                  { publisher: "Niora Systems", title: "Coordinating demand and supply across health systems" },
-                  { publisher: "Niora Systems", title: "Financing, delays, and the reliability of access" },
                   { publisher: "World Bank", title: "The enforcement of commercial contracts in Ghana", href: "https://documents.worldbank.org/en/publication/documents-reports/documentdetail/243141468251416080" },
+                  { publisher: "Ghana Ministry of Health", title: "Ghana Health Supply Chain Master Plan 2025–2029", href: "https://www.moh.gov.gh/wp-content/uploads/2025/02/Ghana_HSCMP_2025-2029_Final-Print-Version_17January2025.pdf" },
                 ].map(({ publisher, title, href }) => (
                   <ResearchRow key={title} publisher={publisher} title={title} href={href} />
                 ))}
