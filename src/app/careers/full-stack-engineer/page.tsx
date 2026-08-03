@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 
 const serif = "var(--font-newsreader), Georgia, serif";
