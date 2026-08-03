@@ -284,6 +284,9 @@ export default function SignupPage() {
                 <p style={{ fontFamily: sans, fontSize: 13.5, lineHeight: 1.55, color: "#7C7263", margin: 0 }}>{body}</p>
               </div>
             ))}
+            <p style={{ fontFamily: sans, fontSize: 13.5, color: "#9A8E73", margin: "6px 0 0" }}>
+              Already a member? Check your email for your sign-in link.
+            </p>
           </div>
 
         </div>
