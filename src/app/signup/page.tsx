@@ -15,7 +15,7 @@ const labelStyle: React.CSSProperties = {
 
 const inputBase: React.CSSProperties = {
   fontFamily: sans, fontSize: 16, color: "#2A2521",
-  background: "#FBF9F3", border: "none",
+  background: "#FBF9F3", border: "1px solid #D8CBA8",
   borderRadius: 9, padding: "12px 14px", outline: "none",
   width: "100%", transition: "border-color .2s ease, box-shadow .2s ease",
   appearance: "none" as React.CSSProperties["appearance"],
