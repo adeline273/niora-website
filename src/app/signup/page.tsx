@@ -2,9 +2,10 @@
 
 import React, { useState, useRef } from "react";
 import Link from "next/link";
+import Nav from "@/components/Nav";
 
 const serif = "var(--font-newsreader), Georgia, serif";
-const sans = "var(--font-source-sans), system-ui, sans-serif";
+const sans = "var(--font-franklin), system-ui, sans-serif";
 const ACCENT = "#8E6C2E";
 
 const labelStyle: React.CSSProperties = {
@@ -14,7 +15,7 @@ const labelStyle: React.CSSProperties = {
 
 const inputBase: React.CSSProperties = {
   fontFamily: sans, fontSize: 16, color: "#2A2521",
-  background: "#FFFFFF", border: "1px solid #DDD1B6",
+  background: "#FBF9F3", border: "none",
   borderRadius: 9, padding: "12px 14px", outline: "none",
   width: "100%", transition: "border-color .2s ease, box-shadow .2s ease",
   appearance: "none" as React.CSSProperties["appearance"],
@@ -104,25 +105,14 @@ export default function SignupPage() {
   };
 
   return (
-    <div style={{ minHeight: "100vh", background: "#F4F1EA", color: "#2A2521", fontFamily: sans, WebkitFontSmoothing: "antialiased" }}>
-      <div style={{ maxWidth: 1120, margin: "0 auto", padding: "clamp(26px,4vh,44px) clamp(22px,4vw,48px) clamp(48px,7vh,80px)" }}>
-
-        {/* Top bar */}
-        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 16, marginBottom: "clamp(30px,5vh,52px)", flexWrap: "wrap" }}>
-          <Link href="/" style={{ display: "inline-flex", alignItems: "center", textDecoration: "none" }}>
-            <span style={{ fontFamily: serif, fontSize: 24, fontWeight: 400, letterSpacing: ".005em", color: "#2A2521" }}>Niora</span>
-          </Link>
-          <div style={{ display: "flex", alignItems: "center", gap: "clamp(16px,3vw,28px)", flexWrap: "wrap" }}>
-            <Link href="/" style={{ fontFamily: sans, fontSize: 14, color: "#857B6C", textDecoration: "none" }}>← Back to niorasystems.com</Link>
-            <span style={{ fontFamily: sans, fontSize: 13.5, color: "#9A8E73" }}>Already a member? Check your email for your sign-in link.</span>
-          </div>
-        </div>
+    <div style={{ minHeight: "100vh", background: "#F4F1EA", color: "#2A2521", fontFamily: sans }}>
+      <Nav forceSolid />
+      <div style={{ maxWidth: 1120, margin: "0 auto", padding: "clamp(108px,14vh,140px) clamp(22px,4vw,48px) clamp(48px,7vh,80px)" }}>
 
         {/* Heading */}
         <div style={{ maxWidth: "60ch", marginBottom: "clamp(26px,4vh,40px)" }}>
-          <p style={{ fontFamily: sans, fontSize: 12.5, fontWeight: 600, letterSpacing: ".18em", textTransform: "uppercase", color: ACCENT, margin: "0 0 14px" }}>Request platform access</p>
-          <h1 style={{ fontFamily: serif, fontWeight: 400, fontSize: "clamp(30px,3.8vw,46px)", lineHeight: 1.06, letterSpacing: "-.018em", color: "#28231E", margin: "0 0 16px" }}>
-            Create your Niora account.
+          <h1 style={{ fontFamily: sans, fontWeight: 700, fontSize: "clamp(38px,5.5vw,64px)", letterSpacing: "-.02em", color: "#221D18", margin: "0 0 16px" }}>
+            Request access
           </h1>
           <p style={{ fontFamily: sans, fontSize: 16.5, lineHeight: 1.6, color: "#6A6152", margin: 0, maxWidth: "56ch" }}>
             The Niora platform is granted to verified organizations only. Complete the form and our team will confirm your eligibility before providing access.
@@ -133,7 +123,7 @@ export default function SignupPage() {
         <div style={{ display: "grid", gridTemplateColumns: "minmax(0,1fr) 290px", gap: "clamp(22px,2.6vw,34px)", alignItems: "start" }} className="access-grid">
 
           {/* Form card */}
-          <div style={{ background: "#FCFBF7", border: "1px solid #DAD0BA", borderRadius: 16, boxShadow: "0 18px 44px -34px rgba(42,37,33,.4)", padding: "clamp(26px,3.4vw,44px)" }}>
+          <div style={{ background: "#FCFBF7", borderRadius: 16, boxShadow: "0 18px 44px -34px rgba(42,37,33,.4)", padding: "clamp(26px,3.4vw,44px)" }}>
 
             {submitted ? (
               <div style={{ animation: "nioraAFade .5s ease both" }}>
@@ -258,7 +248,7 @@ export default function SignupPage() {
                 {errors.consent && <span style={{ ...errStyle, marginTop: -14 }}>{errors.consent}</span>}
 
                 {serverError && (
-                  <p style={{ fontFamily: sans, fontSize: 14, color: "#B4462F", background: "#FDF2F0", border: "1px solid #EECDC6", borderRadius: 8, padding: "12px 16px", margin: 0 }}>
+                  <p style={{ fontFamily: sans, fontSize: 14, color: "#B4462F", background: "#FDF2F0", borderRadius: 8, padding: "12px 16px", margin: 0 }}>
                     {serverError}
                   </p>
                 )}
@@ -286,7 +276,7 @@ export default function SignupPage() {
               { title: "Reviewed within two business days", body: "Our team confirms eligibility and follows up by email with next steps." },
               { title: "Used only to verify eligibility", body: "Your details are never shared and are used solely to assess your request." },
             ].map(({ title, body }) => (
-              <div key={title} style={{ background: "#FFFFFF", border: "1px solid #E4D9C2", borderRadius: 13, padding: "18px 20px" }}>
+              <div key={title} style={{ background: "#EDE8DC", borderRadius: 13, padding: "18px 20px" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: 9, marginBottom: 7 }}>
                   <span aria-hidden="true" style={{ flex: "none", width: 7, height: 7, borderRadius: "50%", background: "#E9C589" }} />
                   <p style={{ fontFamily: sans, fontSize: 14.5, fontWeight: 600, color: "#28231E", margin: 0 }}>{title}</p>
