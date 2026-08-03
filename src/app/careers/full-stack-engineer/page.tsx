@@ -57,7 +57,7 @@ export default function FullStackEngineerPage() {
 
           {/* What you'll do */}
           <h3 style={{ fontFamily: sans, fontWeight: 700, fontSize: 15, letterSpacing: ".02em", color: "#221D18", margin: "0 0 14px" }}>What you'll do</h3>
-          <ul style={{ margin: "0 0 clamp(32px,4.5vh,44px)", padding: "0 0 0 20px", fontFamily: sans, fontSize: 16.5, lineHeight: 1.75, color: "#4C463D" }}>
+          <ul style={{ margin: "0 0 clamp(32px,4.5vh,44px)", padding: "0 0 0 20px", fontFamily: sans, fontSize: 16.5, lineHeight: 1.75, color: "#4C463D", listStyleType: "disc" }}>
             <li>Contribute to the design and development of Niora's core platform, including procurement workflows, supplier management, payment orchestration, contract enforcement, and role-based access controls.</li>
             <li>Design and build frontend features while collaborating on full-stack architecture and backend integrations with our Lead Engineer.</li>
             <li>Work closely with operations and hospital stakeholders to translate real-world workflows into robust software.</li>
@@ -68,7 +68,7 @@ export default function FullStackEngineerPage() {
 
           {/* What we're looking for */}
           <h3 style={{ fontFamily: sans, fontWeight: 700, fontSize: 15, letterSpacing: ".02em", color: "#221D18", margin: "0 0 14px" }}>What we're looking for</h3>
-          <ul style={{ margin: "0 0 clamp(32px,4.5vh,44px)", padding: "0 0 0 20px", fontFamily: sans, fontSize: 16.5, lineHeight: 1.75, color: "#4C463D" }}>
+          <ul style={{ margin: "0 0 clamp(32px,4.5vh,44px)", padding: "0 0 0 20px", fontFamily: sans, fontSize: 16.5, lineHeight: 1.75, color: "#4C463D", listStyleType: "disc" }}>
             <li>Strong experience building production software (full-stack with frontend-heavy expertise).</li>
             <li>Collaborative and able to work closely with a team and other developers.</li>
             <li>Comfort owning ambiguous problems and designing systems from first principles.</li>
@@ -81,7 +81,7 @@ export default function FullStackEngineerPage() {
 
           {/* Work Environment */}
           <h3 style={{ fontFamily: sans, fontWeight: 700, fontSize: 15, letterSpacing: ".02em", color: "#221D18", margin: "0 0 14px" }}>Work Environment</h3>
-          <ul style={{ margin: "0 0 clamp(40px,6vh,56px)", padding: "0 0 0 20px", fontFamily: sans, fontSize: 16.5, lineHeight: 1.75, color: "#4C463D" }}>
+          <ul style={{ margin: "0 0 clamp(40px,6vh,56px)", padding: "0 0 0 20px", fontFamily: sans, fontSize: 16.5, lineHeight: 1.75, color: "#4C463D", listStyleType: "disc" }}>
             <li>Primarily remote/hybrid, with in-person work sessions and on-the-ground responsibilities in Accra, Ghana.</li>
             <li>Small team, high trust, high autonomy.</li>
             <li>Direct collaboration with the founder, operators, and hospital partners.</li>
