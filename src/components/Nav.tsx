@@ -19,22 +19,29 @@ export default function Nav() {
     const nav = navRef.current;
     if (!nav) return;
 
-    const onScroll = () => {
-      const isScrolled = window.scrollY > 8;
-      setScrolled(isScrolled);
-      if (isScrolled) {
-        nav.style.background = "#F4F1EA";
-        nav.style.backdropFilter = "none";
-        (nav.style as CSSStyleDeclaration & { webkitBackdropFilter: string }).webkitBackdropFilter = "none";
-        nav.style.borderBottomColor = "#DDD1B6";
-      } else {
+    const applyHeader = (overHero: boolean) => {
+      setScrolled(!overHero);
+      if (overHero) {
         nav.style.background = menuOpen ? "rgba(21,17,13,1)" : "rgba(244,241,234,0)";
-        nav.style.backdropFilter = "none";
-        (nav.style as CSSStyleDeclaration & { webkitBackdropFilter: string }).webkitBackdropFilter = "none";
         nav.style.borderBottomColor = menuOpen ? "#3A332C" : "transparent";
+      } else {
+        nav.style.background = "#F4F1EA";
+        nav.style.borderBottomColor = "transparent";
       }
     };
 
+    const hero = document.querySelector("#top") as HTMLElement | null;
+    if (hero && "IntersectionObserver" in window) {
+      const observer = new IntersectionObserver(
+        (entries) => entries.forEach((e) => applyHeader(e.isIntersecting)),
+        { rootMargin: "-72px 0px 0px 0px", threshold: 0 }
+      );
+      observer.observe(hero);
+      return () => observer.disconnect();
+    }
+
+    // Fallback for browsers without IntersectionObserver
+    const onScroll = () => applyHeader(window.scrollY < 80);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -213,7 +220,7 @@ export default function Nav() {
               marginTop: 18,
               display: "inline-block",
               alignSelf: "flex-start",
-              fontFamily: "var(--font-source-sans), system-ui, sans-serif",
+              fontFamily: "var(--font-franklin), system-ui, sans-serif",
               fontSize: 14,
               letterSpacing: ".04em",
               color: "#ffffff",
