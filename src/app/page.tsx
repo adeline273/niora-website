@@ -103,7 +103,7 @@ export default function Home() {
       </section>
 
       {/* The Problem */}
-      <section style={{ padding: sectionPad, borderTop: "1px solid #DDD1B6" }}>
+      <section style={{ padding: sectionPad }}>
         <div style={{ maxWidth: 1180, margin: "0 auto" }}>
           <ScrollReveal>
             <div style={{ display: "flex", alignItems: "baseline", gap: 18, margin: "0 0 16px" }}>
@@ -194,7 +194,7 @@ export default function Home() {
       </section>
 
       {/* In the Field — photo section */}
-      <section aria-label="In the field" style={{ position: "relative", overflow: "hidden", background: "#28231E", borderTop: "1px solid #1F1B16" }}>
+      <section aria-label="In the field" style={{ position: "relative", overflow: "hidden", background: "#28231E" }}>
         <Image
           src="/assets/field-photo.png"
           alt="Night distribution: stock being moved into a supply point"
@@ -222,7 +222,7 @@ export default function Home() {
       </section>
 
       {/* Approach */}
-      <section id="approach" style={{ padding: sectionPad, borderTop: "1px solid #DDD1B6", scrollMarginTop: 72 }}>
+      <section id="approach" style={{ padding: sectionPad, scrollMarginTop: 72 }}>
         <div style={container}>
           <div className="asym-grid" style={asymGrid}>
             <ScrollReveal>
@@ -259,7 +259,7 @@ export default function Home() {
       </section>
 
       {/* Advisors band */}
-      <section style={{ background: "#ECE3CF", borderTop: "1px solid #D8CBA8", borderBottom: "1px solid #D8CBA8", padding: "clamp(52px,8vh,86px) clamp(34px,6vw,96px)" }}>
+      <section style={{ background: "#ECE3CF", padding: "clamp(52px,8vh,86px) clamp(34px,6vw,96px)" }}>
         <div style={container}>
           <ScrollReveal>
             <p style={{ ...eyebrow, marginBottom: 24 }}>Advisors &amp; Collaborators</p>
@@ -283,7 +283,7 @@ export default function Home() {
       </section>
 
       {/* The System in Practice */}
-      <section style={{ padding: sectionPad, borderTop: "1px solid #DDD1B6" }}>
+      <section style={{ padding: sectionPad }}>
         <div style={container}>
           <div style={{ maxWidth: 680, marginBottom: "clamp(40px,6vh,64px)" }}>
             <ScrollReveal><p style={eyebrow}>The System in Practice</p></ScrollReveal>
@@ -303,7 +303,7 @@ export default function Home() {
       </section>
 
       {/* Research */}
-      <section id="research" style={{ padding: sectionPad, borderTop: "1px solid #DDD1B6", scrollMarginTop: 72 }}>
+      <section id="research" style={{ padding: sectionPad, scrollMarginTop: 72 }}>
         <div style={container}>
           <div className="asym-grid" style={asymGrid}>
             <ScrollReveal>
@@ -334,7 +334,7 @@ export default function Home() {
       </section>
 
       {/* The Horizon */}
-      <section style={{ padding: sectionPad, borderTop: "1px solid #DDD1B6" }}>
+      <section style={{ padding: sectionPad }}>
         <div style={container}>
           <div className="asym-grid" style={asymGrid}>
             <ScrollReveal>
@@ -362,7 +362,7 @@ export default function Home() {
       </section>
 
       {/* Contact — dark photo section */}
-      <section id="contact" style={{ position: "relative", overflow: "hidden", padding: "clamp(96px,17vh,184px) clamp(34px,6vw,96px)", borderTop: "1px solid #1F1B16", background: "#241F1A", scrollMarginTop: 72 }}>
+      <section id="contact" style={{ position: "relative", overflow: "hidden", padding: "clamp(96px,17vh,184px) clamp(34px,6vw,96px)", background: "#241F1A", scrollMarginTop: 72 }}>
         <Image
           src="/assets/contact-bg.png"
           alt=""

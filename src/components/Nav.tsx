@@ -23,9 +23,9 @@ export default function Nav() {
       const isScrolled = window.scrollY > 8;
       setScrolled(isScrolled);
       if (isScrolled) {
-        nav.style.background = "rgba(244,241,234,0.82)";
-        nav.style.backdropFilter = "saturate(120%) blur(10px)";
-        (nav.style as CSSStyleDeclaration & { webkitBackdropFilter: string }).webkitBackdropFilter = "saturate(120%) blur(10px)";
+        nav.style.background = "#F4F1EA";
+        nav.style.backdropFilter = "none";
+        (nav.style as CSSStyleDeclaration & { webkitBackdropFilter: string }).webkitBackdropFilter = "none";
         nav.style.borderBottomColor = "#DDD1B6";
       } else {
         nav.style.background = menuOpen ? "rgba(21,17,13,1)" : "rgba(244,241,234,0)";
