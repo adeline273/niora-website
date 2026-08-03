@@ -4,16 +4,21 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 
 const LINKS = [
-  { href: "#approach", label: "Approach" },
-  { href: "#research", label: "Research" },
-  { href: "/careers", label: "Careers" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#approach", label: "Approach", key: "approach" },
+  { href: "/#research", label: "Research", key: "research" },
+  { href: "/careers", label: "Careers", key: "careers" },
+  { href: "/#contact", label: "Contact", key: "contact" },
 ];
 
-export default function Nav() {
+interface NavProps {
+  forceSolid?: boolean;
+  activeLink?: string;
+}
+
+export default function Nav({ forceSolid = false, activeLink }: NavProps) {
   const navRef = useRef<HTMLElement>(null);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState(forceSolid);
 
   useEffect(() => {
     const nav = navRef.current;
@@ -30,6 +35,12 @@ export default function Nav() {
       }
     };
 
+    if (forceSolid) {
+      nav.style.background = "#F4F1EA";
+      nav.style.borderBottomColor = "transparent";
+      return;
+    }
+
     const hero = document.querySelector("#top") as HTMLElement | null;
     if (hero && "IntersectionObserver" in window) {
       const observer = new IntersectionObserver(
@@ -45,7 +56,7 @@ export default function Nav() {
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, [menuOpen]);
+  }, [menuOpen, forceSolid]);
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setMenuOpen(false); };
@@ -62,7 +73,7 @@ export default function Nav() {
         left: 0,
         right: 0,
         zIndex: 50,
-        background: "rgba(244,241,234,0)",
+        background: forceSolid ? "#F4F1EA" : "rgba(244,241,234,0)",
         borderBottom: "1px solid transparent",
         transition: "background .45s ease, border-color .45s ease",
         padding: "0 clamp(24px,6vw,96px)",
@@ -81,7 +92,7 @@ export default function Nav() {
         }}
       >
         <Link
-          href="#top"
+          href="/"
           style={{ display: "flex", alignItems: "center", gap: 11, textDecoration: "none" }}
         >
           <span
@@ -101,17 +112,27 @@ export default function Nav() {
         <nav style={{ display: "flex", alignItems: "center", gap: "clamp(22px,3vw,40px)" }}>
           {/* Desktop text links */}
           <div className="nav-text-links" style={{ display: "flex", alignItems: "center", gap: "clamp(22px,3vw,40px)" }}>
-            {LINKS.map(({ href, label }) => (
-              <Link
-                key={href}
-                href={href}
-                style={{ fontSize: 15, color: scrolled ? "#4A443B" : "#EFE7D4", textDecoration: "none", letterSpacing: ".01em", transition: "color .45s ease" }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = "#8E6C2E")}
-                onMouseLeave={(e) => (e.currentTarget.style.color = scrolled ? "#4A443B" : "#EFE7D4")}
-              >
-                {label}
-              </Link>
-            ))}
+            {LINKS.map(({ href, label, key }) => {
+              const isActive = activeLink === key;
+              return (
+                <Link
+                  key={href}
+                  href={href}
+                  style={{
+                    fontSize: 15,
+                    color: isActive ? "#221D18" : (scrolled ? "#4A443B" : "#EFE7D4"),
+                    fontWeight: isActive ? 600 : 400,
+                    textDecoration: "none",
+                    letterSpacing: ".01em",
+                    transition: "color .45s ease",
+                  }}
+                  onMouseEnter={(e) => (e.currentTarget.style.color = "#8E6C2E")}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = isActive ? "#221D18" : (scrolled ? "#4A443B" : "#EFE7D4"))}
+                >
+                  {label}
+                </Link>
+              );
+            })}
           </div>
 
           {/* Desktop CTA */}
@@ -120,25 +141,22 @@ export default function Nav() {
             className="nav-open-app"
             style={{
               fontSize: 14,
-              color: "#ffffff",
+              color: "#F4EFE2",
               textDecoration: "none",
               letterSpacing: ".02em",
-              padding: "7px 15px",
-              border: "1px solid #000000",
-              borderRadius: 12,
-              transition: "background .3s ease, color .3s ease, border-color .3s ease",
+              padding: "8px 20px",
+              borderRadius: 999,
+              transition: "background .3s ease, color .3s ease",
               whiteSpace: "nowrap",
-              backgroundColor: "#000000",
+              backgroundColor: "#15110D",
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.background = "#8E6C2E";
-              e.currentTarget.style.borderColor = "#8E6C2E";
               e.currentTarget.style.color = "#F4EFE2";
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.background = "#000000";
-              e.currentTarget.style.borderColor = "#000000";
-              e.currentTarget.style.color = "#ffffff";
+              e.currentTarget.style.background = "#15110D";
+              e.currentTarget.style.color = "#F4EFE2";
             }}
           >
             Sign Up
@@ -191,28 +209,31 @@ export default function Nav() {
         }}
       >
         <div style={{ display: "flex", flexDirection: "column", padding: "6px 0 20px" }}>
-          {LINKS.map(({ href, label }) => (
-            <Link
-              key={href}
-              href={href}
-              onClick={() => setMenuOpen(false)}
-              style={{
-                fontFamily: "var(--font-newsreader), Georgia, serif",
-                fontSize: 22,
-                fontWeight: 400,
-                color: scrolled ? "#2A2521" : "#F4EFE2",
-                textDecoration: "none",
-                padding: "14px 0",
-                borderBottom: `1px solid ${scrolled ? "#EDE5D0" : "#3A332C"}`,
-                transition: "color .2s ease",
-                letterSpacing: "-.005em",
-              }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = "#8E6C2E")}
-              onMouseLeave={(e) => (e.currentTarget.style.color = scrolled ? "#2A2521" : "#F4EFE2")}
-            >
-              {label}
-            </Link>
-          ))}
+          {LINKS.map(({ href, label, key }) => {
+            const isActive = activeLink === key;
+            return (
+              <Link
+                key={href}
+                href={href}
+                onClick={() => setMenuOpen(false)}
+                style={{
+                  fontFamily: "var(--font-newsreader), Georgia, serif",
+                  fontSize: 22,
+                  fontWeight: isActive ? 600 : 400,
+                  color: isActive ? "#221D18" : (scrolled ? "#2A2521" : "#F4EFE2"),
+                  textDecoration: "none",
+                  padding: "14px 0",
+                  borderBottom: `1px solid ${scrolled ? "#EDE5D0" : "#3A332C"}`,
+                  transition: "color .2s ease",
+                  letterSpacing: "-.005em",
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = "#8E6C2E")}
+                onMouseLeave={(e) => (e.currentTarget.style.color = isActive ? "#221D18" : (scrolled ? "#2A2521" : "#F4EFE2"))}
+              >
+                {label}
+              </Link>
+            );
+          })}
           <Link
             href="/signup"
             onClick={() => setMenuOpen(false)}
@@ -223,22 +244,15 @@ export default function Nav() {
               fontFamily: "var(--font-franklin), system-ui, sans-serif",
               fontSize: 14,
               letterSpacing: ".04em",
-              color: "#ffffff",
-              background: "#000000",
-              border: "1px solid #000000",
-              borderRadius: 10,
+              color: "#F4EFE2",
+              background: "#15110D",
+              borderRadius: 999,
               padding: "9px 20px",
               textDecoration: "none",
-              transition: "background .3s ease, border-color .3s ease",
+              transition: "background .3s ease",
             }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.background = "#8E6C2E";
-              e.currentTarget.style.borderColor = "#8E6C2E";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.background = "#000000";
-              e.currentTarget.style.borderColor = "#000000";
-            }}
+            onMouseEnter={(e) => { e.currentTarget.style.background = "#8E6C2E"; }}
+            onMouseLeave={(e) => { e.currentTarget.style.background = "#15110D"; }}
           >
             Sign Up
           </Link>
