@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Newsreader, Source_Sans_3 } from "next/font/google";
+import { Newsreader, Libre_Franklin } from "next/font/google";
 import "./globals.css";
 
 const newsreader = Newsreader({
@@ -10,10 +10,10 @@ const newsreader = Newsreader({
   display: "swap",
 });
 
-const sourceSans = Source_Sans_3({
-  variable: "--font-source-sans",
+const libreFranklin = Libre_Franklin({
+  variable: "--font-franklin",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
+  weight: ["300", "400", "500", "600", "700"],
   style: ["normal", "italic"],
   display: "swap",
 });
@@ -28,7 +28,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${newsreader.variable} ${sourceSans.variable}`}>
+    <html lang="en" className={`${newsreader.variable} ${libreFranklin.variable}`}>
       <body>{children}</body>
     </html>
   );

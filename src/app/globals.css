@@ -2,7 +2,7 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { margin: 0; background: #F4F1EA; color: #2A2521; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+body { margin: 0; background: #F4F1EA; color: #2A2521; font-family: var(--font-franklin), system-ui, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
 ::selection { background: #E6D9B8; color: #2A2521; }
 
 @keyframes nioraDraw { from { stroke-dashoffset: 440 } to { stroke-dashoffset: 0 } }
@@ -33,6 +33,16 @@ body { margin: 0; background: #F4F1EA; color: #2A2521; -webkit-font-smoothing: a
   .nav-text-links { display: none !important; }
   .nav-open-app { display: none !important; }
   .nav-hamburger { display: flex !important; }
+
+  /* Approach: stack on mobile */
+  .approach-grid { grid-template-columns: 1fr !important; }
+  .approach-photo { margin-top: 24px !important; }
+
+  /* Platform demo: stack on mobile */
+  .platform-grid { grid-template-columns: 1fr !important; }
+
+  /* Footer: stack on mobile */
+  .footer-grid { grid-template-columns: 1fr !important; }
 
   /* Section padding tighter on mobile */
   .section-mobile-pad { padding-left: clamp(20px,5vw,34px) !important; padding-right: clamp(20px,5vw,34px) !important; }
@@ -78,10 +88,10 @@ body { margin: 0; background: #F4F1EA; color: #2A2521; -webkit-font-smoothing: a
 
 @media (max-width: 860px) {
   /* Asym grid collapses at tablet too */
-  .asym-grid {
-    grid-template-columns: 1fr !important;
-    column-gap: 0 !important;
-  }
+  .asym-grid { grid-template-columns: 1fr !important; column-gap: 0 !important; }
+  .approach-grid { grid-template-columns: 1fr !important; }
+  .platform-grid { grid-template-columns: 1fr !important; }
+  .footer-grid { grid-template-columns: 1fr 1fr !important; }
   /* Section label: number + eyebrow inline */
   .section-label {
     display: flex !important;
