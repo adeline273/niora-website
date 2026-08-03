@@ -361,100 +361,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Careers */}
-      <section id="careers" style={{ padding: sectionPad, borderTop: "1px solid #DDD1B6", scrollMarginTop: 72 }}>
-        <div style={container}>
-          <div className="asym-grid" style={asymGrid}>
-            <ScrollReveal>
-              <div className="section-label" style={{ display: "flex", flexDirection: "column" }}>
-                <div className="section-num" style={{ fontFamily: serif, fontSize: 30, fontWeight: 400, lineHeight: 1, color: ACCENT, margin: "0 0 12px" }}>05</div>
-                <p style={eyebrow}>Careers</p>
-              </div>
-            </ScrollReveal>
-            <ScrollReveal delay={120}>
-              <h2 style={{ fontFamily: serif, fontWeight: 400, fontSize: "clamp(28px,3.5vw,44px)", lineHeight: 1.14, letterSpacing: "-.01em", color: "#28231E", margin: "0 0 16px", maxWidth: "22ch" }}>
-                Open roles.
-              </h2>
-              <p className="body-text-lg" style={{ fontFamily: sans, fontSize: 18, lineHeight: 1.72, color: "#4C463D", margin: "0 0 40px", maxWidth: "54ch" }}>
-                We are a small team building infrastructure used in real institutions. We hire for ownership, judgment, and the ability to work close to users.
-              </p>
-
-              {/* Role listing */}
-              <div style={{ borderTop: "1px solid #DDD1B6" }}>
-                <div style={{ borderBottom: "1px solid #DDD1B6" }}>
-                  <details style={{ listStyle: "none" }}>
-                    <summary style={{ display: "grid", gridTemplateColumns: "1fr auto", alignItems: "center", gap: 24, padding: "24px 4px", cursor: "pointer", listStyle: "none" }}>
-                      <div>
-                        <p style={{ fontFamily: serif, fontSize: "clamp(18px,2vw,24px)", fontWeight: 400, color: "#28231E", margin: "0 0 6px" }}>Full-Stack Engineer</p>
-                        <div style={{ display: "flex", flexWrap: "wrap", gap: "6px 14px" }}>
-                          <span style={{ fontFamily: sans, fontSize: 13.5, color: "#7C7263" }}>Remote · Accra, Ghana</span>
-                          <span style={{ fontFamily: sans, fontSize: 13.5, color: "#B3A891" }}>·</span>
-                          <span style={{ fontFamily: sans, fontSize: 13.5, color: "#7C7263" }}>Full-time</span>
-                        </div>
-                      </div>
-                      <span style={{ fontFamily: sans, fontSize: 13.5, fontWeight: 600, letterSpacing: ".06em", color: ACCENT, whiteSpace: "nowrap" }}>View role ↓</span>
-                    </summary>
-
-                    <div style={{ padding: "0 4px 32px", maxWidth: "64ch" }}>
-                      <div style={{ height: 1, background: "#E4D9C2", margin: "0 0 28px" }} />
-
-                      <p style={{ fontFamily: sans, fontSize: 13, fontWeight: 600, letterSpacing: ".12em", textTransform: "uppercase", color: "#9A8E73", margin: "0 0 10px" }}>About Niora Systems</p>
-                      <p style={{ fontFamily: sans, fontSize: 15.5, lineHeight: 1.7, color: "#4C463D", margin: "0 0 28px" }}>
-                        Niora Systems is building institutional procurement, payments, and financing infrastructure for institutions in emerging markets, starting with healthcare. Our platform helps hospitals and suppliers manage procurement, contract enforcement, payments, and supplier coordination through a unified digital system — making purchasing more reliable, transparent, and auditable.
-                      </p>
-                      <p style={{ fontFamily: sans, fontSize: 15.5, lineHeight: 1.7, color: "#4C463D", margin: "0 0 28px" }}>
-                        We are currently deploying with healthcare partners in Ghana, including Korle-Bu Teaching Hospital and Trust Hospital. Our long-term vision is to build the infrastructure layer for institutional commerce across emerging markets, beginning with healthcare procurement.
-                      </p>
-
-                      <p style={{ fontFamily: sans, fontSize: 13, fontWeight: 600, letterSpacing: ".12em", textTransform: "uppercase", color: "#9A8E73", margin: "0 0 10px" }}>The Role</p>
-                      <p style={{ fontFamily: sans, fontSize: 15.5, lineHeight: 1.7, color: "#4C463D", margin: "0 0 28px" }}>
-                        We are looking for a Full-Stack Engineer to contribute to the design and execution of Niora's core platform. You will work with our Lead Engineer in a small, high-ownership team and be responsible for building and iterating on software used in our live deployments. This role is ideal for someone who wants end-to-end ownership of a real system, to work close to users and operations, and to build infrastructure used in real institutions.
-                      </p>
-
-                      <p style={{ fontFamily: sans, fontSize: 13, fontWeight: 600, letterSpacing: ".12em", textTransform: "uppercase", color: "#9A8E73", margin: "0 0 12px" }}>What You'll Do</p>
-                      <ul style={{ fontFamily: sans, fontSize: 15.5, lineHeight: 1.75, color: "#4C463D", margin: "0 0 28px", paddingLeft: 20, display: "flex", flexDirection: "column", gap: 6 }}>
-                        <li>Contribute to the design and development of Niora's core platform, including procurement workflows, supplier management, payment orchestration, contract enforcement, and role-based access controls.</li>
-                        <li>Design and build frontend features while collaborating on full-stack architecture and backend integrations with our Lead Engineer.</li>
-                        <li>Work closely with operations and hospital stakeholders to translate real-world workflows into robust software.</li>
-                        <li>Oversee testing, debugging, and stabilization during pilot deployments.</li>
-                      </ul>
-
-                      <p style={{ fontFamily: sans, fontSize: 13, fontWeight: 600, letterSpacing: ".12em", textTransform: "uppercase", color: "#9A8E73", margin: "0 0 12px" }}>What We're Looking For</p>
-                      <ul style={{ fontFamily: sans, fontSize: 15.5, lineHeight: 1.75, color: "#4C463D", margin: "0 0 28px", paddingLeft: 20, display: "flex", flexDirection: "column", gap: 6 }}>
-                        <li>Strong experience building production software (full-stack with frontend-heavy expertise).</li>
-                        <li>Collaborative and able to work closely with a team and other developers.</li>
-                        <li>Comfort owning ambiguous problems and designing systems from first principles.</li>
-                        <li>Interest or experience in enterprise software, procurement systems, fintech, logistics, healthcare, or emerging markets.</li>
-                        <li>Ability to write clean, maintainable, well-documented code.</li>
-                        <li>Good judgment: knowing when to build simply and when to design for scale.</li>
-                      </ul>
-
-                      <p style={{ fontFamily: sans, fontSize: 13, fontWeight: 600, letterSpacing: ".12em", textTransform: "uppercase", color: "#9A8E73", margin: "0 0 12px" }}>Work Environment</p>
-                      <ul style={{ fontFamily: sans, fontSize: 15.5, lineHeight: 1.75, color: "#4C463D", margin: "0 0 36px", paddingLeft: 20, display: "flex", flexDirection: "column", gap: 6 }}>
-                        <li>Primarily remote/hybrid, with in-person work sessions and on-the-ground responsibilities in Accra, Ghana.</li>
-                        <li>Small team, high trust, high autonomy.</li>
-                        <li>Direct collaboration with the founder, operators, and hospital partners.</li>
-                      </ul>
-
-                      <a
-                        href="https://forms.gle/hSLHo3yrvsGvEKb86"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        style={{ display: "inline-flex", alignItems: "center", gap: 10, fontFamily: sans, fontWeight: 600, fontSize: 15, letterSpacing: ".01em", color: "#F4EFE2", background: "#15110D", padding: "13px 26px", borderRadius: 12, textDecoration: "none", transition: "background .3s ease" }}
-                        onMouseEnter={(e) => (e.currentTarget.style.background = "#2A2019")}
-                        onMouseLeave={(e) => (e.currentTarget.style.background = "#15110D")}
-                      >
-                        Apply for this role →
-                      </a>
-                    </div>
-                  </details>
-                </div>
-              </div>
-            </ScrollReveal>
-          </div>
-        </div>
-      </section>
-
       {/* Contact — dark photo section */}
       <section id="contact" style={{ position: "relative", overflow: "hidden", padding: "clamp(96px,17vh,184px) clamp(34px,6vw,96px)", borderTop: "1px solid #1F1B16", background: "#241F1A", scrollMarginTop: 72 }}>
         <Image
@@ -508,7 +414,7 @@ export default function Home() {
           </div>
           <nav className="footer-nav" style={{ display: "flex", gap: "clamp(28px,5vw,64px)", flexWrap: "wrap" }}>
             <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-              {[["#approach", "Approach"], ["#research", "Research"], ["#careers", "Careers"], ["#contact", "Contact"]].map(([href, label]) => (
+              {[["#approach", "Approach"], ["#research", "Research"], ["/careers", "Careers"], ["#contact", "Contact"]].map(([href, label]) => (
                 <FooterLink key={href} href={href}>{label}</FooterLink>
               ))}
             </div>
