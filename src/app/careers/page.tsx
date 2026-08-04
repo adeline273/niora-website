@@ -44,7 +44,7 @@ const FAQ = [
     paragraphs: [
       "Ownership at Niora means leading problems from understanding to implementation.",
       "If you see a better way to solve something, we want to hear it. If you believe a product decision should change, you're expected to make the case for it. Engineers aren't here simply to implement specifications—they help shape what gets built in the first place.",
-      "As the company grows, we're also open to exceptional people becoming part of the founding team. For the right person, founding team equity is absolutely on the table.",
+      "For the right person, meaningful equity is absolutely on the table.",
     ],
   },
   {
