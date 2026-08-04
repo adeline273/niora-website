@@ -36,7 +36,7 @@ const FAQ = [
     paragraphs: [
       "Our team meets regularly to discuss company direction, product decisions, and strategy. Once we're aligned, each person has substantial autonomy over how they execute.",
       "Engineers design and build. Partnerships work directly with hospitals and stakeholders. Researchers and domain experts bring operational and economic insight into product decisions. Throughout the process, ideas move freely across disciplines because we believe better systems emerge when engineering, operations, and domain expertise inform one another.",
-      "There is very little micromanagement. Everyone knows what they own, and everyone is trusted to lead it.",
+      "We don't micromanage. Everyone knows what they own, and everyone is trusted to lead it.",
     ],
   },
   {
