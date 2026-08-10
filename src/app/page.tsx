@@ -169,7 +169,7 @@ export default function Home() {
               across health systems.
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "10px 40px", fontFamily: sans, fontSize: "clamp(15px,1.4vw,18px)", color: "#5A5240" }}>
-              {["Korle-Bu Teaching Hospital", "The Trust Hospital", "Stanford University", "Open Contracting Partnership"].map((name) => (
+              {["Korle-Bu Teaching Hospital", "The Trust Hospital", "Stanford University", "Palace Pharmacy"].map((name) => (
                 <span key={name}>{name}</span>
               ))}
             </div>
