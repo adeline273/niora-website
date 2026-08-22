@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Newsreader, Libre_Franklin } from "next/font/google";
+import { getRoute, routeMetadata, SITE_URL, SITE_NAME } from "@/lib/seo";
 import "./globals.css";
 
 const newsreader = Newsreader({
@@ -19,9 +20,16 @@ const libreFranklin = Libre_Franklin({
 });
 
 export const metadata: Metadata = {
-  title: "Niora Systems — Infrastructure for Reliable Medicine Procurement",
-  description:
-    "Niora develops infrastructure that helps make pharmaceutical procurement more predictable, transparent, and accountable.",
+  metadataBase: new URL(SITE_URL),
+  applicationName: SITE_NAME,
+  ...routeMetadata(getRoute("/")),
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/icon.png", type: "image/png" },
+    ],
+    apple: [{ url: "/icon.png", type: "image/png" }],
+  },
 };
 
 export default function RootLayout({

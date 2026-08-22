@@ -92,6 +92,7 @@ body { margin: 0; background: #F4F1EA; color: #2A2521; font-family: var(--font-f
   .approach-grid { grid-template-columns: 1fr !important; }
   .platform-grid { grid-template-columns: 1fr !important; }
   .footer-grid { grid-template-columns: 1fr 1fr !important; }
+  .seo-two-col { grid-template-columns: 1fr !important; }
   /* Section label: number + eyebrow inline */
   .section-label {
     display: flex !important;

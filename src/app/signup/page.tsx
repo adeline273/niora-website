@@ -134,7 +134,7 @@ export default function SignupPage() {
                   Your request has been received.
                 </h2>
                 <p style={{ fontFamily: serif, fontWeight: 300, fontSize: "clamp(17px,1.8vw,21px)", lineHeight: 1.5, color: "#4C463D", margin: "0 0 26px", maxWidth: "46ch" }}>
-                  Thank you, {submittedName}. Our team will review your organization's eligibility and reply to{" "}
+                  Thank you, {submittedName}. Our team will review your organization&apos;s eligibility and reply to{" "}
                   <strong style={{ fontWeight: 500, color: "#28231E" }}>{submittedEmail}</strong> within two business days.
                 </p>
                 <div style={{ borderTop: "1px solid #E4D9C2", paddingTop: 22, maxWidth: "48ch" }}>
@@ -263,7 +263,7 @@ export default function SignupPage() {
                   >
                     {loading ? "Submitting…" : "Submit request →"}
                   </button>
-                  <span style={{ fontFamily: sans, fontSize: 13, color: "#9A8E73" }}>We'll reply within two business days.</span>
+                  <span style={{ fontFamily: sans, fontSize: 13, color: "#9A8E73" }}>We&apos;ll reply within two business days.</span>
                 </div>
               </form>
             )}

@@ -45,20 +45,20 @@ export default function FullStackEngineerPage() {
           <div style={{ height: 1, background: "#E4D9C2", margin: "clamp(28px,4vh,40px) 0" }} />
 
           {/* The Role */}
-          <h3 style={{ fontFamily: sans, fontWeight: 700, fontSize: 15, letterSpacing: ".02em", color: "#221D18", margin: "0 0 14px" }}>The Role</h3>
+          <h2 style={{ fontFamily: sans, fontWeight: 700, fontSize: 15, letterSpacing: ".02em", color: "#221D18", margin: "0 0 14px" }}>The Role</h2>
           <p style={{ fontFamily: sans, fontSize: 16, lineHeight: 1.75, color: "#4C463D", margin: "0 0 20px" }}>
-            We are looking for a Full-Stack Engineer to contribute to the design and execution of Niora's core platform. You will be working with our Lead Engineer in a small, high-ownership team and responsible for building and iterating on software used in our live deployments.
+            We are looking for a Full-Stack Engineer to contribute to the design and execution of Niora&apos;s core platform. You will be working with our Lead Engineer in a small, high-ownership team and responsible for building and iterating on software used in our live deployments.
           </p>
           <p style={{ fontFamily: sans, fontSize: 16, lineHeight: 1.75, color: "#4C463D", margin: "0 0 clamp(32px,4.5vh,44px)" }}>
-            This role is ideal for someone who wants end-to-end ownership of a real system, to work close to users and operations, and to build infrastructure that is used in real institutions. You'll join at an early stage, helping shape the product itself. Engineers at Niora work directly with users, influence product direction, and see their work deployed in live operational environments.
+            This role is ideal for someone who wants end-to-end ownership of a real system, to work close to users and operations, and to build infrastructure that is used in real institutions. You&apos;ll join at an early stage, helping shape the product itself. Engineers at Niora work directly with users, influence product direction, and see their work deployed in live operational environments.
           </p>
 
           <div style={{ height: 1, background: "#E4D9C2", margin: "clamp(28px,4vh,40px) 0" }} />
 
-          {/* What you'll do */}
-          <h3 style={{ fontFamily: sans, fontWeight: 700, fontSize: 15, letterSpacing: ".02em", color: "#221D18", margin: "0 0 14px" }}>What you'll do</h3>
+          {/* What you will do */}
+          <h2 style={{ fontFamily: sans, fontWeight: 700, fontSize: 15, letterSpacing: ".02em", color: "#221D18", margin: "0 0 14px" }}>What you&apos;ll do</h2>
           <ul style={{ margin: "0 0 clamp(32px,4.5vh,44px)", padding: "0 0 0 20px", fontFamily: sans, fontSize: 16.5, lineHeight: 1.75, color: "#4C463D", listStyleType: "disc" }}>
-            <li>Contribute to the design and development of Niora's core platform, including procurement workflows, supplier management, payment orchestration, contract enforcement, and role-based access controls.</li>
+            <li>Contribute to the design and development of Niora&apos;s core platform, including procurement workflows, supplier management, payment orchestration, contract enforcement, and role-based access controls.</li>
             <li>Design and build frontend features while collaborating on full-stack architecture and backend integrations with our Lead Engineer.</li>
             <li>Work closely with operations and hospital stakeholders to translate real-world workflows into robust software.</li>
             <li>Oversee testing, debugging, and stabilization during pilot deployments.</li>
@@ -66,8 +66,8 @@ export default function FullStackEngineerPage() {
 
           <div style={{ height: 1, background: "#E4D9C2", margin: "clamp(28px,4vh,40px) 0" }} />
 
-          {/* What we're looking for */}
-          <h3 style={{ fontFamily: sans, fontWeight: 700, fontSize: 15, letterSpacing: ".02em", color: "#221D18", margin: "0 0 14px" }}>What we're looking for</h3>
+          {/* What we are looking for */}
+          <h2 style={{ fontFamily: sans, fontWeight: 700, fontSize: 15, letterSpacing: ".02em", color: "#221D18", margin: "0 0 14px" }}>What we&apos;re looking for</h2>
           <ul style={{ margin: "0 0 clamp(32px,4.5vh,44px)", padding: "0 0 0 20px", fontFamily: sans, fontSize: 16.5, lineHeight: 1.75, color: "#4C463D", listStyleType: "disc" }}>
             <li>Strong experience building production software (full-stack with frontend-heavy expertise).</li>
             <li>Collaborative and able to work closely with a team and other developers.</li>
@@ -80,7 +80,7 @@ export default function FullStackEngineerPage() {
           <div style={{ height: 1, background: "#E4D9C2", margin: "clamp(28px,4vh,40px) 0" }} />
 
           {/* Work Environment */}
-          <h3 style={{ fontFamily: sans, fontWeight: 700, fontSize: 15, letterSpacing: ".02em", color: "#221D18", margin: "0 0 14px" }}>Work Environment</h3>
+          <h2 style={{ fontFamily: sans, fontWeight: 700, fontSize: 15, letterSpacing: ".02em", color: "#221D18", margin: "0 0 14px" }}>Work Environment</h2>
           <ul style={{ margin: "0 0 clamp(40px,6vh,56px)", padding: "0 0 0 20px", fontFamily: sans, fontSize: 16.5, lineHeight: 1.75, color: "#4C463D", listStyleType: "disc" }}>
             <li>Primarily remote/hybrid, with in-person work sessions and on-the-ground responsibilities in Accra, Ghana.</li>
             <li>Small team, high trust, high autonomy.</li>

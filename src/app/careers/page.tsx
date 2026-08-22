@@ -127,7 +127,7 @@ export default function CareersPage() {
 
         {/* Footer note */}
         <p style={{ fontFamily: sans, fontSize: 14, lineHeight: 1.65, color: "#9A8E73", marginTop: "clamp(48px,7vh,72px)", maxWidth: "46ch" }}>
-          Don't see a role that fits? Reach us at{" "}
+          Don&apos;t see a role that fits? Reach us at{" "}
           <a href="mailto:operations@niorasystems.com" style={{ color: ACCENT, textDecoration: "none", borderBottom: "1px solid rgba(142,108,46,.35)" }}>
             operations@niorasystems.com
           </a>.

@@ -2,9 +2,8 @@
 
 import React, { useState } from "react";
 import Nav from "@/components/Nav";
-import CompoundingNetwork from "@/components/CompoundingNetwork";
-import PlatformFigure from "@/components/PlatformFigure";
 import Image from "next/image";
+import { organizationJsonLd, websiteJsonLd } from "@/lib/seo";
 
 const ACCENT = "#8E6C2E";
 const serif = "var(--font-newsreader), Georgia, serif";
@@ -38,6 +37,7 @@ const HORIZON_ITEMS = [
 export default function Home() {
   const [demoSelected, setDemoSelected] = useState(0);
   const [horizonSelected, setHorizonSelected] = useState(0);
+  const jsonLd = [organizationJsonLd(), websiteJsonLd()];
 
   const sel = DEMO_ITEMS[demoSelected];
   const highlightStyle: React.CSSProperties = {
@@ -55,6 +55,10 @@ export default function Home() {
 
   return (
     <div style={{ background: "#F4F1EA", color: "#2A2521", fontFamily: sans, minHeight: "100vh" }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Nav />
 
       {/* Hero */}
@@ -69,20 +73,20 @@ export default function Home() {
             Infrastructure for reliable medicine procurement.
           </h1>
           <p style={{ fontFamily: serif, fontWeight: 300, fontSize: "clamp(18px,1.8vw,23px)", lineHeight: 1.55, color: "#D8CEBC", margin: "0 0 40px", maxWidth: "48ch", textWrap: "pretty" as React.CSSProperties["textWrap"] }}>
-            Across the world's fastest-growing economies, Niora connects procurement, financing, and delivery into one coordinated system — so the institutions and suppliers building the future can rely on the medicine beneath it.
+            Niora builds pharmaceutical procurement infrastructure for hospitals and health systems, starting in Ghana. We connect inventory visibility, demand forecasting, purchasing, financing, supplier coordination, ordering, delivery, and accountability into one coordinated system.
           </p>
           <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "16px 30px" }}>
             <a href="/signup"
               style={{ fontFamily: sans, fontWeight: 600, fontSize: 15, letterSpacing: ".01em", color: "#15110D", background: "#E9C589", padding: "12px 24px", borderRadius: 8, textDecoration: "none", transition: "background .3s ease" }}
               onMouseEnter={(e) => (e.currentTarget.style.background = "#F2D69E")}
               onMouseLeave={(e) => (e.currentTarget.style.background = "#E9C589")}>
-              See how the system works
+              Request platform access
             </a>
-            <a href="#contact"
+            <a href="/platform"
               style={{ fontFamily: sans, fontWeight: 500, fontSize: 15, letterSpacing: ".01em", color: "#EFE7D4", textDecoration: "none", borderBottom: "1px solid rgba(239,231,212,.4)", paddingBottom: 3, transition: "border-color .3s ease" }}
               onMouseEnter={(e) => (e.currentTarget.style.borderBottomColor = "rgba(239,231,212,.95)")}
               onMouseLeave={(e) => (e.currentTarget.style.borderBottomColor = "rgba(239,231,212,.4)")}>
-              Partner with us
+              Explore the platform
             </a>
           </div>
         </div>
@@ -143,7 +147,7 @@ export default function Home() {
                 Built as market infrastructure.
               </h2>
               <p style={{ fontFamily: sans, fontSize: 19, lineHeight: 1.68, color: "#3A342C", margin: 0, maxWidth: "52ch", textWrap: "pretty" as React.CSSProperties["textWrap"] }}>
-                Pharmaceutical markets depend on reliable coordination between hospitals, pharmacies, suppliers, financiers, and regulators. We build the infrastructure that improves how those markets operate, beginning with procurement.
+                Pharmaceutical markets depend on reliable coordination between hospitals, pharmacies, suppliers, financiers, and regulators. We build the infrastructure that improves how those markets operate, beginning with medicine procurement in Ghana.
               </p>
             </div>
             <figure className="approach-photo" style={{ margin: 0 }}>
@@ -182,7 +186,8 @@ export default function Home() {
         <div style={container}>
           <div style={{ maxWidth: 900, marginBottom: "clamp(40px,6vh,64px)" }}>
             <p style={{ fontFamily: serif, fontWeight: 400, fontSize: "clamp(26px,3vw,38px)", lineHeight: 1.4, color: "#221D18", margin: 0, textWrap: "balance" as React.CSSProperties["textWrap"] }}>
-              Our system shows the{" "}
+              <a href="/platform" style={{ color: "inherit", textDecorationColor: "rgba(142,108,46,.45)", textUnderlineOffset: 5 }}>Our platform</a>{" "}
+              shows the{" "}
               <em style={{ fontStyle: "italic" }}>operational layer</em>{" "}
               of our infrastructure, where inventory, financing, and ordering are reconciled into a single, accountable record.
             </p>
@@ -229,7 +234,7 @@ export default function Home() {
             </div>
             <div>
               <h2 style={{ fontFamily: serif, fontWeight: 400, fontSize: "clamp(28px,3.5vw,44px)", lineHeight: 1.14, letterSpacing: "-.01em", color: "#28231E", margin: "0 0 26px", maxWidth: "20ch", textWrap: "balance" as React.CSSProperties["textWrap"] }}>
-                Evidence through implementation.
+                <a href="/research" style={{ color: "inherit", textDecorationColor: "rgba(142,108,46,.45)", textUnderlineOffset: 5 }}>Evidence through implementation.</a>
               </h2>
               <p style={{ fontFamily: sans, fontSize: 18, lineHeight: 1.72, color: "#4C463D", margin: "0 0 40px", maxWidth: "60ch", textWrap: "pretty" as React.CSSProperties["textWrap"] }}>
                 We work alongside health systems and academic collaborators to study pharmaceutical procurement as it functions in practice. By combining real-world implementation with research, we generate evidence that informs both better products and stronger procurement systems.
@@ -335,7 +340,7 @@ export default function Home() {
           <div>
             <p style={{ fontFamily: sans, fontWeight: 700, fontSize: 15, color: "#221D18", margin: "0 0 16px" }}>Site</p>
             <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-              {[["#approach", "Approach"], ["#research", "Research"], ["/careers", "Careers"], ["#contact", "Contact"]].map(([href, label]) => (
+              {[["/platform", "Platform"], ["/markets/ghana", "Ghana"], ["/research", "Research"], ["/careers", "Careers"], ["#contact", "Contact"]].map(([href, label]) => (
                 <FooterLink key={href} href={href}>{label}</FooterLink>
               ))}
             </div>
@@ -358,7 +363,7 @@ export default function Home() {
           <span style={{ fontFamily: sans, fontSize: 13, color: "#9A8E73" }}>© 2026 Niora Systems</span>
           <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
             {[
-              { href: "https://www.linkedin.com/company/niora-systems/", label: "LinkedIn", icon: <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.8 24 1.77 24h20.45C23.2 24 24 23.23 24 22.28V1.72C24 .77 23.2 0 22.22 0z"/></svg> },
+                  { href: "https://www.linkedin.com/company/niora-systems/", label: "LinkedIn", icon: <svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.8 24 1.77 24h20.45C23.2 24 24 23.23 24 22.28V1.72C24 .77 23.2 0 22.22 0z"/></svg> },
               { href: "https://www.instagram.com/niorasystems/", label: "Instagram", icon: <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg> },
               { href: "https://x.com/NioraSystems", label: "X", icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg> },
               { href: "https://www.youtube.com/@NioraSystems", label: "YouTube", icon: <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg> },
@@ -385,7 +390,7 @@ function ResearchRow({ publisher, title, href }: { publisher: string; title: str
       onMouseLeave={(e) => (e.currentTarget.style.background = "")}>
       <span style={{ fontFamily: "var(--font-franklin), system-ui, sans-serif", fontSize: 13.5, color: "#9A8E73", letterSpacing: ".02em", lineHeight: 1.4 }}>{publisher}</span>
       <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 20, fontWeight: 400, color: "#28231E" }}>{title}</span>
-      <span className="research-tag" style={{ fontFamily: "var(--font-franklin), system-ui, sans-serif", fontSize: 14, color: ACCENT, whiteSpace: "nowrap" }}>Working note →</span>
+      <span className="research-tag" style={{ fontFamily: "var(--font-franklin), system-ui, sans-serif", fontSize: 14, color: ACCENT, whiteSpace: "nowrap" }}>Reference →</span>
     </a>
   );
 }

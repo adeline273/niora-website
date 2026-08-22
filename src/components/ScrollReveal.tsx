@@ -1,16 +1,15 @@
 "use client";
 
-import { useEffect, useRef, ReactNode, ElementType } from "react";
+import { useEffect, useRef, ReactNode } from "react";
 
 interface Props {
   children: ReactNode;
   delay?: number;
   className?: string;
   style?: React.CSSProperties;
-  as?: ElementType;
 }
 
-export default function ScrollReveal({ children, delay = 0, className, style, as: Tag = "div" }: Props) {
+export default function ScrollReveal({ children, delay = 0, className, style }: Props) {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
