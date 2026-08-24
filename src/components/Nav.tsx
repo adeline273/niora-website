@@ -7,7 +7,7 @@ const LINKS = [
   { href: "/#approach", label: "Approach", key: "approach" },
   { href: "/#research", label: "Research", key: "research" },
   { href: "/careers", label: "Careers", key: "careers" },
-  { href: "/#contact", label: "Contact", key: "contact" },
+  { href: "/contact", label: "Contact", key: "contact" },
 ];
 
 interface NavProps {
