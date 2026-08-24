@@ -142,7 +142,7 @@ export default function ContactPage() {
             <p style={{ fontFamily: sans, fontSize: 14.5, lineHeight: 1.6, color: "#7C7264", margin: "0 0 32px", maxWidth: "52ch" }}>{cfg.formNote}</p>
 
             {sent ? (
-              <div style={{ border: "1px solid #D8CBA8", background: "#F4EFE2", borderRadius: 12, padding: 28 }}>
+              <div style={{ background: "#EDE8DC", borderRadius: 12, padding: 28 }}>
                 <span style={{ fontFamily: serif, fontSize: 22, color: "#221D18", display: "block", margin: "0 0 8px" }}>Thank you — your message is on its way.</span>
                 <span style={{ fontFamily: sans, fontSize: 14.5, lineHeight: 1.6, color: "#5C554A", display: "block" }}>We reply to every inquiry, usually within two business days.</span>
               </div>
