@@ -114,7 +114,7 @@ export default function SignupPage() {
           <h1 style={{ fontFamily: sans, fontWeight: 700, fontSize: "clamp(38px,5.5vw,64px)", letterSpacing: "-.02em", color: "#221D18", margin: "0 0 16px" }}>
             Request access
           </h1>
-          <p style={{ fontFamily: sans, fontSize: 16.5, lineHeight: 1.6, color: "#6A6152", margin: 0, maxWidth: "56ch" }}>
+          <p style={{ fontFamily: serif, fontSize: "clamp(19px,2vw,23px)", lineHeight: 1.55, color: "#4A443B", margin: 0, maxWidth: "56ch" }}>
             The Niora platform is granted to verified organizations only. Complete the form and our team will confirm your eligibility before providing access.
           </p>
         </div>
