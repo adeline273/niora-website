@@ -399,7 +399,7 @@ export default function ApproachPage() {
         <div style={{ maxWidth: 1180, margin: "0 auto", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 16 }}>
           <span style={{ fontFamily: sans, fontSize: 13, color: "#9A8E73" }}>© 2026 Niora Systems</span>
           <div style={{ display: "flex", gap: 26 }}>
-            {[["/approach", "Approach"], ["/#research", "Research"], ["/careers", "Careers"], ["/contact", "Contact"]].map(([href, label]) => (
+            {[["/approach", "Approach"], ["/research", "Research"], ["/careers", "Careers"], ["/contact", "Contact"]].map(([href, label]) => (
               <Link key={href} href={href} style={{ fontFamily: sans, fontSize: 14, color: "#857B6C", textDecoration: "none" }}>{label}</Link>
             ))}
           </div>
