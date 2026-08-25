@@ -62,7 +62,7 @@ export default function ResearchPage() {
       <Nav forceSolid activeLink="research" />
 
       {/* Hero */}
-      <section style={{ padding: "clamp(56px,9vh,104px) clamp(24px,5vw,64px) 0" }}>
+      <section style={{ padding: "clamp(108px,14vh,140px) clamp(24px,5vw,64px) 0" }}>
         <div style={{ maxWidth: 1180, margin: "0 auto" }}>
           <h1 style={{ fontFamily: sans, fontWeight: 700, fontSize: "clamp(38px,5.5vw,64px)", lineHeight: 1.1, letterSpacing: "-.02em", color: "#221D18", margin: "0 0 clamp(24px,4vh,34px)" }}>
             Our research
