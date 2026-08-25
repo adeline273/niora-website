@@ -103,10 +103,10 @@ export default function ApproachPage() {
       <Nav forceSolid activeLink="approach" />
 
       {/* Hero */}
-      <section style={{ padding: "clamp(108px,14vh,140px) clamp(24px,5vw,64px) clamp(64px,9vh,96px)" }}>
+      <section style={{ padding: "clamp(140px,18vh,180px) clamp(24px,5vw,64px) clamp(64px,9vh,96px)" }}>
         <div style={{ maxWidth: 720, margin: "0 auto 0 0" }}>
           <h1 style={{ fontFamily: sans, fontWeight: 700, fontSize: "clamp(38px,5.5vw,64px)", lineHeight: 1.04, letterSpacing: "-.025em", color: "#221D18", margin: "0 0 24px" }}>
-            Procurement that facilities can plan around.
+            Our system
           </h1>
           <p style={{ fontFamily: serif, fontSize: "clamp(19px,2vw,23px)", lineHeight: 1.55, color: "#4A443B", margin: 0 }}>
             Niora gives hospitals and pharmacies one place to see what they need, order it from qualified suppliers, and hold every step of the transaction to a record everyone shares.
