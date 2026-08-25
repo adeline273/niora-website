@@ -103,7 +103,7 @@ export default function ApproachPage() {
       <Nav forceSolid activeLink="approach" />
 
       {/* Hero */}
-      <section style={{ padding: "clamp(140px,18vh,180px) clamp(24px,5vw,64px) clamp(40px,5vh,56px)" }}>
+      <section style={{ padding: "clamp(140px,18vh,180px) clamp(34px,6vw,96px) clamp(40px,5vh,56px)" }}>
         <div style={{ maxWidth: 720, margin: "0 auto 0 0" }}>
           <h1 style={{ fontFamily: sans, fontWeight: 700, fontSize: "clamp(38px,5.5vw,64px)", lineHeight: 1.04, letterSpacing: "-.025em", color: "#221D18", margin: "0 0 24px" }}>
             Our system
@@ -122,10 +122,10 @@ export default function ApproachPage() {
           alt=""
           aria-hidden
           loading="lazy"
-          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 45%", opacity: 0.42 }}
+          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top", opacity: 0.55 }}
         />
-        <div aria-hidden style={{ position: "absolute", inset: 0, background: "rgba(28,23,18,.6)" }} />
-        <div style={{ position: "relative", maxWidth: 1180, margin: "0 auto", padding: "clamp(96px,18vh,180px) clamp(34px,6vw,96px)" }}>
+        <div aria-hidden style={{ position: "absolute", inset: 0, background: "rgba(28,23,18,.55)" }} />
+        <div style={{ position: "relative", maxWidth: 1180, margin: "0 auto", padding: "clamp(52px,7vh,80px) clamp(34px,6vw,96px)" }}>
           <h2 style={{ fontFamily: serif, fontWeight: 400, fontSize: "clamp(30px,4.2vw,54px)", lineHeight: 1.14, letterSpacing: "-.014em", color: "#F4EFE2", margin: "0 0 22px", maxWidth: "30ch" }}>
             Facilities are short on <em style={{ fontStyle: "italic", borderBottom: "1px solid rgb(216, 180, 119)", paddingBottom: 2 }}>visibility</em>.
           </h2>
