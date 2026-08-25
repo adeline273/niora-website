@@ -24,11 +24,7 @@ export const metadata: Metadata = {
   applicationName: SITE_NAME,
   ...routeMetadata(getRoute("/")),
   icons: {
-    icon: [
-      { url: "/favicon.svg", type: "image/svg+xml" },
-      { url: "/icon.png", type: "image/png" },
-    ],
-    apple: [{ url: "/icon.png", type: "image/png" }],
+    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
   },
 };
 

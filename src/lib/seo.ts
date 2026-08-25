@@ -176,7 +176,7 @@ export function organizationJsonLd() {
     "@id": `${SITE_URL}/#organization`,
     name: SITE_NAME,
     url: SITE_URL,
-    logo: `${SITE_URL}/icon.png`,
+    logo: `${SITE_URL}/favicon.svg`,
     description:
       "Niora Systems builds pharmaceutical procurement infrastructure for hospitals, health systems, suppliers and other institutional procurement stakeholders, starting in Ghana.",
     location: [
