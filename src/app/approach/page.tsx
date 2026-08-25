@@ -103,12 +103,12 @@ export default function ApproachPage() {
       <Nav forceSolid activeLink="approach" />
 
       {/* Hero */}
-      <section style={{ padding: "clamp(64px,10vh,120px) clamp(34px,6vw,96px) clamp(48px,7vh,80px)" }}>
-        <div style={{ maxWidth: 1180, margin: "0 auto" }}>
-          <h1 style={{ fontFamily: serif, fontWeight: 400, fontSize: "clamp(38px,5.4vw,72px)", lineHeight: 1.06, letterSpacing: "-.018em", color: "#221D18", margin: "0 0 30px", maxWidth: "22ch" }}>
+      <section style={{ padding: "clamp(108px,14vh,140px) clamp(24px,5vw,64px) clamp(64px,9vh,96px)" }}>
+        <div style={{ maxWidth: 720, margin: "0 auto 0 0" }}>
+          <h1 style={{ fontFamily: sans, fontWeight: 700, fontSize: "clamp(38px,5.5vw,64px)", lineHeight: 1.04, letterSpacing: "-.025em", color: "#221D18", margin: "0 0 24px" }}>
             Procurement that facilities can plan around.
           </h1>
-          <p style={{ fontFamily: serif, fontWeight: 300, fontSize: "clamp(19px,2vw,25px)", lineHeight: 1.52, color: "#4A443B", margin: 0, maxWidth: "56ch" }}>
+          <p style={{ fontFamily: serif, fontSize: "clamp(19px,2vw,23px)", lineHeight: 1.55, color: "#4A443B", margin: 0 }}>
             Niora gives hospitals and pharmacies one place to see what they need, order it from qualified suppliers, and hold every step of the transaction to a record everyone shares.
           </p>
         </div>
