@@ -201,7 +201,7 @@ export default function ResearchPage() {
       </section>
 
       {/* Investigators accordion */}
-      <section style={{ padding: "clamp(64px,10vh,110px) clamp(24px,5vw,64px) 0" }}>
+      <section style={{ background: "#EBE5D8", marginTop: "clamp(56px,8vh,96px)", padding: "clamp(64px,10vh,110px) clamp(24px,5vw,64px) clamp(64px,10vh,110px)" }}>
         <div style={{ maxWidth: 1180, margin: "0 auto" }}>
           <p style={{ fontSize: 13.5, fontWeight: 600, color: "#8A7F6C", margin: "0 0 clamp(28px,4vh,40px)" }}>Investigators</p>
           <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
