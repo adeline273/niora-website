@@ -116,12 +116,13 @@ export default function ApproachPage() {
 
       {/* Dark photo section */}
       <section style={{ position: "relative", overflow: "hidden", background: "#28231E" }}>
-        <Image
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
           src="/assets/ph-counter.png"
-          alt="A pharmacy counter where supply meets the people who depend on it"
-          fill
-          style={{ objectFit: "cover", objectPosition: "center 45%", opacity: 0.42 }}
-          priority={false}
+          alt=""
+          aria-hidden
+          loading="lazy"
+          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 45%", opacity: 0.42 }}
         />
         <div aria-hidden style={{ position: "absolute", inset: 0, background: "rgba(28,23,18,.6)" }} />
         <div style={{ position: "relative", maxWidth: 1180, margin: "0 auto", padding: "clamp(96px,18vh,180px) clamp(34px,6vw,96px)" }}>
