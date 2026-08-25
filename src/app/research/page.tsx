@@ -62,20 +62,23 @@ export default function ResearchPage() {
       <Nav forceSolid activeLink="research" />
 
       {/* Hero */}
-      <section style={{ padding: "clamp(108px,14vh,140px) clamp(34px,6vw,96px) 0" }}>
-        <div style={{ maxWidth: 1060, margin: "0 auto" }}>
-          <h1 style={{ fontFamily: serif, fontWeight: 300, fontSize: "clamp(34px,5vw,66px)", lineHeight: 1.08, letterSpacing: "-.016em", color: "#221D18", margin: "0 0 clamp(30px,5vh,44px)", maxWidth: "26ch" }}>
-            The effect of end-to-end procurement on <em style={{ fontStyle: "italic", fontWeight: 400 }}>medicine availability</em>.
+      <section style={{ padding: "clamp(56px,9vh,104px) clamp(24px,5vw,64px) 0" }}>
+        <div style={{ maxWidth: 1180, margin: "0 auto" }}>
+          <h1 style={{ fontFamily: sans, fontWeight: 700, fontSize: "clamp(38px,5.5vw,64px)", lineHeight: 1.1, letterSpacing: "-.02em", color: "#221D18", margin: "0 0 clamp(24px,4vh,34px)" }}>
+            Our research
           </h1>
-          <p style={{ fontFamily: serif, fontWeight: 300, fontSize: "clamp(18px,1.8vw,22px)", lineHeight: 1.56, color: "#4A443B", margin: "0 0 clamp(40px,6vh,60px)", maxWidth: "62ch" }}>
+          <p style={{ fontFamily: serif, fontWeight: 300, fontSize: "clamp(28px,4vw,50px)", lineHeight: 1.12, letterSpacing: "-.016em", color: "#221D18", margin: "0 0 clamp(26px,4vh,34px)", maxWidth: "26ch" }}>
+            The effect of end-to-end procurement on <em style={{ fontStyle: "italic", fontWeight: 400 }}>medicine availability</em>.
+          </p>
+          <p style={{ fontFamily: serif, fontSize: "clamp(18px,1.8vw,21px)", lineHeight: 1.5, color: "#4A443B", margin: "0 0 clamp(40px,6vh,60px)", maxWidth: "60ch" }}>
             A prospective implementation study examining whether better demand forecasting and more predictable payment systems can reduce procurement delays and medicine stockouts in Ghanaian hospitals.
           </p>
         </div>
       </section>
 
       {/* Metadata strip */}
-      <section style={{ padding: "0 clamp(34px,6vw,96px)" }}>
-        <div style={{ maxWidth: 1060, margin: "0 auto", borderTop: "1px solid #C9BCA4", borderBottom: "1px solid #C9BCA4" }}>
+      <section style={{ padding: "0 clamp(24px,5vw,64px)" }}>
+        <div style={{ maxWidth: 1180, margin: "0 auto" }}>
           <dl style={{ margin: 0, display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(190px,1fr))", gap: 0 }}>
             {[
               { label: "Study team", value: <>Dr. Charles Ofei-Palm<br />Dr. Joycelyn Dame<br />Chuck Aryeetey<br />Bright Kodua</> },
@@ -83,7 +86,7 @@ export default function ResearchPage() {
               { label: "Study period", value: "Beginning June 2026" },
               { label: "Niora's role", value: "Implementation partner" },
             ].map(({ label, value }, i, arr) => (
-              <div key={label} style={{ padding: `22px ${i < arr.length - 1 ? "26px" : "0"} 24px 0` }}>
+              <div key={label} style={{ borderTop: "1px solid #DDD1B6", padding: `18px ${i < arr.length - 1 ? "26px" : "0"} 24px 0` }}>
                 <dt style={{ fontSize: 13.5, fontWeight: 600, color: "#8A7F6C", margin: "0 0 10px" }}>{label}</dt>
                 <dd style={{ margin: 0, fontSize: 14.5, lineHeight: 1.6, color: "#3A342C" }}>{value}</dd>
               </div>
@@ -93,95 +96,52 @@ export default function ResearchPage() {
       </section>
 
       {/* Team photo */}
-      <section style={{ padding: "clamp(64px,10vh,120px) clamp(34px,6vw,96px) 0" }}>
-        <div style={{ maxWidth: 1060, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))", columnGap: "clamp(36px,5vw,64px)", rowGap: 28, alignItems: "end" }}>
+      <section style={{ padding: "clamp(64px,10vh,120px) clamp(24px,5vw,64px) 0" }}>
+        <div style={{ maxWidth: 1180, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))", columnGap: "clamp(36px,5vw,64px)", rowGap: 28, alignItems: "end" }}>
           <figure style={{ margin: 0 }}>
             <Image
               src="/assets/research-team-korlebu.jpg"
               alt="The study and implementation team at the Department of Pharmacy, Korle-Bu Teaching Hospital"
               width={800}
               height={600}
-              style={{ display: "block", width: "100%", height: "auto", filter: "saturate(.94)" }}
+              style={{ display: "block", width: "100%", height: "auto" }}
             />
           </figure>
           <figcaption style={{ paddingBottom: "clamp(8px,3vh,32px)" }}>
-            <p style={{ fontSize: 13.5, fontWeight: 600, color: "#8A7F6C", margin: "0 0 16px" }}>Fig. 1</p>
-            <p style={{ fontFamily: serif, fontWeight: 300, fontStyle: "italic", fontSize: "clamp(17px,1.7vw,21px)", lineHeight: 1.55, color: "#3A342C", margin: "0 0 18px", maxWidth: "40ch" }}>
+            <p style={{ fontFamily: sans, fontWeight: 600, fontSize: 17, lineHeight: 1.6, color: "#221D18", margin: "0 0 14px", maxWidth: "40ch" }}>
               Dr. Charles Ofei-Palm, Director of Pharmacy, with the Niora implementation team at Korle-Bu.
             </p>
-            <p style={{ fontSize: 14.5, lineHeight: 1.66, color: "#6F6658", margin: 0, maxWidth: "40ch" }}>
+            <p style={{ fontFamily: sans, fontSize: 15.5, lineHeight: 1.7, color: "#4A443B", margin: 0, maxWidth: "42ch" }}>
               Korle Bu&apos;s pharmacy procures essential medicines for a 2,000-bed referral hospital serving millions of patients each year.
             </p>
           </figcaption>
         </div>
       </section>
 
-      {/* Drop-cap prose */}
-      <section style={{ padding: "clamp(64px,10vh,120px) clamp(34px,6vw,96px) 0" }}>
-        <div style={{ maxWidth: 1060, margin: "0 auto" }}>
+      {/* Prose */}
+      <section style={{ padding: "clamp(64px,10vh,120px) clamp(24px,5vw,64px) 0" }}>
+        <div style={{ maxWidth: 1180, margin: "0 auto" }}>
           <div style={{ maxWidth: "64ch" }}>
-            <p style={{ fontFamily: serif, fontWeight: 300, fontSize: 20, lineHeight: 1.62, color: "#2F2A24", margin: "0 0 24px" }}>
-              <span style={{ float: "left", fontSize: 66, lineHeight: 0.82, fontWeight: 400, padding: "6px 12px 0 0", color: "#221D18" }}>M</span>
-              edicine availability depends not only on whether medicines exist in the market, but on whether health facilities can anticipate demand, procure stock in time, and pay suppliers predictably.
+            <p style={{ fontFamily: sans, fontSize: 16.5, lineHeight: 1.75, color: "#3A342C", margin: "0 0 20px" }}>
+              Medicine availability depends not only on whether medicines exist in the market, but on whether health facilities can anticipate demand, procure stock in time, and pay suppliers predictably.
             </p>
-            <p style={{ fontFamily: serif, fontWeight: 300, fontSize: 20, lineHeight: 1.62, color: "#2F2A24", margin: "0 0 24px" }}>
+            <p style={{ fontFamily: sans, fontSize: 16.5, lineHeight: 1.75, color: "#3A342C", margin: "0 0 20px" }}>
               In Ghana, hospitals operate within a pharmaceutical supply chain affected by weak forecasting, long procurement lead times, fragmented distribution, financing constraints, and delayed payments. Payment delays can constrain facilities&apos; ability to replenish medicines and can make suppliers less willing to extend favorable terms or continue supplying on credit.
             </p>
-            <p style={{ fontFamily: serif, fontWeight: 300, fontSize: 20, lineHeight: 1.62, color: "#2F2A24", margin: 0 }}>
+            <p style={{ fontFamily: sans, fontSize: 16.5, lineHeight: 1.75, color: "#3A342C", margin: 0 }}>
               This study tests whether two interventions—better demand forecasting and more predictable procurement payments—can improve that cycle. The primary question is: do these changes lead to more efficient procurement and fewer or shorter medicine stockouts?
             </p>
           </div>
         </div>
       </section>
 
-      {/* Investigators accordion */}
-      <section style={{ padding: "clamp(64px,10vh,110px) clamp(34px,6vw,96px) 0" }}>
-        <div style={{ maxWidth: 1060, margin: "0 auto" }}>
-          <p style={{ fontSize: 13.5, fontWeight: 600, color: "#8A7F6C", margin: "0 0 clamp(28px,4vh,40px)" }}>Investigators</p>
-          <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
-            {INVESTIGATORS.map((person, n) => {
-              const isOpen = inv === n;
-              const isLast = n === INVESTIGATORS.length - 1;
-              return (
-                <div key={person.name} style={{ borderTop: "1px solid #DDD1B6", borderBottom: isLast ? "1px solid #DDD1B6" : "none" }}>
-                  <div
-                    onClick={() => toggleInv(n)}
-                    style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 20, padding: "clamp(24px,3.6vh,32px) 0 clamp(16px,2.4vh,22px)", cursor: "pointer" }}
-                  >
-                    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(240px,1fr))", columnGap: "clamp(24px,4vw,56px)", rowGap: 6, alignItems: "baseline", flex: 1 }}>
-                      <h3 style={{ fontFamily: serif, fontWeight: 400, fontSize: "clamp(24px,2.8vw,32px)", lineHeight: 1.18, letterSpacing: "-.01em", color: "#221D18", margin: 0 }}>{person.name}</h3>
-                      <p style={{ fontSize: 14.5, lineHeight: 1.6, color: "#6F6658", margin: 0 }}>
-                        {person.role} <span style={{ color: "#A79B85" }}>·</span> {person.institution}
-                      </p>
-                    </div>
-                    {/* Plus/minus mark */}
-                    <span aria-hidden style={{
-                      flex: "0 0 11px", width: 11, height: 11, position: "relative", display: "block",
-                      background: isOpen
-                        ? `linear-gradient(${ACCENT},${ACCENT}) center/11px 1.5px no-repeat`
-                        : `linear-gradient(${ACCENT},${ACCENT}) center/11px 1.5px no-repeat, linear-gradient(${ACCENT},${ACCENT}) center/1.5px 11px no-repeat`,
-                    }} />
-                  </div>
-                  {isOpen && (
-                    <p style={{ fontSize: 16.5, lineHeight: 1.72, color: "#3A342C", margin: 0, padding: "0 40px clamp(30px,4vh,38px) 0", maxWidth: "62ch" }}>
-                      {person.bio}
-                    </p>
-                  )}
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
       {/* What the study measures — dark section */}
-      <section style={{ background: "#221D18", marginTop: "clamp(70px,11vh,120px)", padding: "clamp(76px,13vh,130px) clamp(34px,6vw,96px)" }}>
-        <div style={{ maxWidth: 1060, margin: "0 auto" }}>
-          <h2 style={{ fontWeight: 600, fontSize: "clamp(28px,3.4vw,44px)", lineHeight: 1.14, letterSpacing: "-.02em", color: "#F4EFE2", margin: "0 0 clamp(36px,6vh,56px)", maxWidth: "24ch" }}>
+      <section style={{ background: "#221D18", marginTop: "clamp(70px,11vh,120px)", padding: "clamp(76px,13vh,130px) clamp(24px,5vw,64px)" }}>
+        <div style={{ maxWidth: 1180, margin: "0 auto" }}>
+          <h2 style={{ fontFamily: sans, fontWeight: 600, fontSize: "clamp(28px,3.4vw,44px)", lineHeight: 1.14, letterSpacing: "-.02em", color: "#F4EFE2", margin: "0 0 clamp(36px,6vh,56px)", maxWidth: "24ch" }}>
             What the study measures
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", columnGap: "clamp(40px,6vw,80px)", rowGap: "clamp(32px,5vh,44px)", alignItems: "start" }}>
-            {/* Row selector */}
             <div style={{ display: "flex", flexDirection: "column", gap: 0, borderTop: "1px solid #3E362E" }}>
               {[
                 "Medicine availability",
@@ -202,15 +162,14 @@ export default function ResearchPage() {
                   <span style={{ fontSize: 13, fontWeight: 600, color: "#8E7A55", letterSpacing: ".02em" }}>
                     {String(n + 1).padStart(2, "0")}
                   </span>
-                  <h3 style={{ fontWeight: 600, fontSize: "clamp(19px,2vw,24px)", lineHeight: 1.24, letterSpacing: "-.012em", margin: 0, color: "inherit" }}>
+                  <h3 style={{ fontFamily: serif, fontWeight: 400, fontSize: "clamp(21px,2.3vw,28px)", lineHeight: 1.2, letterSpacing: "-.01em", margin: 0, color: "inherit" }}>
                     {label}
                   </h3>
                 </div>
               ))}
             </div>
-            {/* Body */}
             <div style={{ paddingTop: "clamp(20px,4vh,34px)" }}>
-              <p style={{ fontFamily: serif, fontWeight: 300, fontSize: "clamp(20px,2.2vw,27px)", lineHeight: 1.5, color: "#EDE6D8", margin: 0, maxWidth: "38ch" }}>
+              <p style={{ fontFamily: sans, fontSize: "clamp(17px,1.7vw,19px)", lineHeight: 1.7, color: "#EDE6D8", margin: 0, maxWidth: "42ch" }}>
                 {MEASURES[measure].body}
               </p>
             </div>
@@ -219,41 +178,80 @@ export default function ResearchPage() {
       </section>
 
       {/* Niora's role */}
-      <section style={{ padding: "clamp(70px,11vh,120px) clamp(34px,6vw,96px) 0" }}>
-        <div style={{ maxWidth: 1060, margin: "0 auto" }}>
-          <h2 style={{ fontFamily: serif, fontWeight: 300, fontSize: "clamp(26px,3.4vw,42px)", lineHeight: 1.18, letterSpacing: "-.012em", color: "#221D18", margin: "0 0 clamp(36px,5vh,52px)", maxWidth: "34ch" }}>
+      <section style={{ padding: "clamp(70px,11vh,120px) clamp(24px,5vw,64px) 0" }}>
+        <div style={{ maxWidth: 1180, margin: "0 auto" }}>
+          <h2 style={{ fontFamily: sans, fontWeight: 700, fontSize: "clamp(28px,3.4vw,42px)", lineHeight: 1.16, letterSpacing: "-.02em", color: "#221D18", margin: "0 0 clamp(32px,5vh,46px)", maxWidth: "30ch" }}>
             Niora builds and deploys the intervention. The research team evaluates it independently.
           </h2>
           <div style={{ maxWidth: "64ch", display: "flex", flexDirection: "column", gap: 26 }}>
-            <p style={{ fontSize: 17, lineHeight: 1.72, color: "#3A342C", margin: 0 }}>
+            <p style={{ fontFamily: sans, fontSize: 16.5, lineHeight: 1.75, color: "#3A342C", margin: 0 }}>
               Niora Systems is the study&apos;s <strong style={{ fontWeight: 600, color: "#221D18" }}>implementation partner</strong>. Under the protocol, Niora develops and deploys the forecasting and procurement intervention used at the study sites.
             </p>
-            <p style={{ fontSize: 17, lineHeight: 1.72, color: "#3A342C", margin: 0 }}>
+            <p style={{ fontFamily: sans, fontSize: 16.5, lineHeight: 1.75, color: "#3A342C", margin: 0 }}>
               The intervention is being introduced in <strong>two phases</strong>. The first deploys a procurement system with stock visibility and automated reorder alerts. The second introduces a payment system designed to create more predictable procurement payment schedules and reduce emergency purchasing volatility.
             </p>
-            <p style={{ fontSize: 17, lineHeight: 1.72, color: "#3A342C", margin: 0 }}>
+            <p style={{ fontFamily: sans, fontSize: 16.5, lineHeight: 1.75, color: "#3A342C", margin: 0 }}>
               Niora does <strong style={{ fontWeight: 600, color: "#221D18" }}>not</strong> design the study, collect the research data, analyze the results, interpret the findings, or control publication decisions. Those responsibilities remain with the independent research team.
             </p>
-            <p style={{ fontSize: 17, lineHeight: 1.72, color: "#3A342C", margin: 0 }}>
+            <p style={{ fontFamily: sans, fontSize: 16.5, lineHeight: 1.75, color: "#3A342C", margin: 0 }}>
               Findings are intended for peer-reviewed publication and presentation to participating hospitals, with a policy brief planned for Ghana&apos;s Ministry of Health and National Health Insurance Authority.
             </p>
           </div>
         </div>
       </section>
 
+      {/* Investigators accordion */}
+      <section style={{ padding: "clamp(64px,10vh,110px) clamp(24px,5vw,64px) 0" }}>
+        <div style={{ maxWidth: 1180, margin: "0 auto" }}>
+          <p style={{ fontSize: 13.5, fontWeight: 600, color: "#8A7F6C", margin: "0 0 clamp(28px,4vh,40px)" }}>Investigators</p>
+          <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
+            {INVESTIGATORS.map((person, n) => {
+              const isOpen = inv === n;
+              const isLast = n === INVESTIGATORS.length - 1;
+              return (
+                <div key={person.name} style={{ borderTop: "1px solid #DDD1B6", borderBottom: isLast ? "1px solid #DDD1B6" : "none" }}>
+                  <div
+                    onClick={() => toggleInv(n)}
+                    style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 20, padding: "clamp(24px,3.6vh,32px) 0 clamp(16px,2.4vh,22px)", cursor: "pointer" }}
+                  >
+                    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(240px,1fr))", columnGap: "clamp(24px,4vw,56px)", rowGap: 6, alignItems: "baseline", flex: 1 }}>
+                      <h3 style={{ fontFamily: sans, fontWeight: 600, fontSize: "clamp(20px,2.1vw,24px)", lineHeight: 1.22, letterSpacing: "-.015em", color: "#221D18", margin: 0 }}>{person.name}</h3>
+                      <p style={{ fontSize: 14.5, lineHeight: 1.6, color: "#6F6658", margin: 0 }}>
+                        {person.role} <span style={{ color: "#A79B85" }}>·</span> {person.institution}
+                      </p>
+                    </div>
+                    <span aria-hidden style={{
+                      flex: "0 0 11px", width: 11, height: 11, position: "relative", display: "block",
+                      background: isOpen
+                        ? `linear-gradient(${ACCENT},${ACCENT}) center/11px 1.5px no-repeat`
+                        : `linear-gradient(${ACCENT},${ACCENT}) center/11px 1.5px no-repeat, linear-gradient(${ACCENT},${ACCENT}) center/1.5px 11px no-repeat`,
+                    }} />
+                  </div>
+                  {isOpen && (
+                    <p style={{ fontFamily: sans, fontSize: 15.5, lineHeight: 1.75, color: "#4A443B", margin: 0, padding: "0 40px clamp(30px,4vh,38px) 0", maxWidth: "62ch" }}>
+                      {person.bio}
+                    </p>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
       {/* Collaboration CTA */}
-      <section style={{ padding: "clamp(70px,11vh,120px) clamp(34px,6vw,96px) clamp(76px,12vh,130px)" }}>
-        <div style={{ maxWidth: 1060, margin: "0 auto", borderTop: "1px solid #C9BCA4", paddingTop: "clamp(36px,5vh,52px)", display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))", columnGap: "clamp(36px,5vw,72px)", rowGap: 28, alignItems: "end" }}>
+      <section style={{ padding: "clamp(70px,11vh,120px) clamp(24px,5vw,64px) clamp(76px,12vh,130px)" }}>
+        <div style={{ maxWidth: 1180, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))", columnGap: "clamp(36px,5vw,72px)", rowGap: 28, alignItems: "end" }}>
           <p style={{ fontFamily: serif, fontWeight: 300, fontSize: "clamp(24px,3vw,36px)", lineHeight: 1.26, letterSpacing: "-.01em", color: "#221D18", margin: 0, maxWidth: "26ch" }}>
             Niora partners with leading institutions to advance <em style={{ fontStyle: "italic", borderBottom: `1px solid #C08A2E`, paddingBottom: 2 }}>supply chains</em>.
           </p>
           <div>
-            <p style={{ fontSize: 16.5, lineHeight: 1.66, color: "#5C554A", margin: "0 0 20px", maxWidth: "36ch" }}>
+            <p style={{ fontFamily: sans, fontSize: 15.5, lineHeight: 1.7, color: "#4A443B", margin: "0 0 20px", maxWidth: "38ch" }}>
               For research collaborations, institutional pilots, or questions about the study protocol.
             </p>
             <Link
               href="/contact"
-              style={{ display: "inline-flex", alignItems: "center", gap: 10, fontSize: 16, fontWeight: 600, color: "#221D18", textDecoration: "none", borderBottom: `1px solid #C08A2E`, paddingBottom: 4 }}
+              style={{ display: "inline-flex", alignItems: "center", gap: 10, fontSize: 16, fontWeight: 600, color: "#221D18", textDecoration: "none", borderBottom: "1px solid #221D18", paddingBottom: 4 }}
               onMouseEnter={(e) => (e.currentTarget.style.color = ACCENT)}
               onMouseLeave={(e) => (e.currentTarget.style.color = "#221D18")}
             >
@@ -264,7 +262,7 @@ export default function ResearchPage() {
       </section>
 
       {/* Footer */}
-      <footer style={{ borderTop: "1px solid #DDD1B6", padding: "clamp(28px,4vh,40px) clamp(34px,6vw,96px)" }}>
+      <footer style={{ borderTop: "1px solid #DDD1B6", padding: "clamp(28px,4vh,40px) clamp(24px,5vw,64px)" }}>
         <div style={{ maxWidth: 1180, margin: "0 auto", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 16 }}>
           <span style={{ fontFamily: sans, fontSize: 13, color: "#9A8E73" }}>© 2026 Niora Systems</span>
           <div style={{ display: "flex", gap: 26 }}>
