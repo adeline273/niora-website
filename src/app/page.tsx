@@ -340,7 +340,7 @@ export default function Home() {
           <div>
             <p style={{ fontFamily: sans, fontWeight: 700, fontSize: 15, color: "#221D18", margin: "0 0 16px" }}>Site</p>
             <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-              {[["/platform", "Platform"], ["/markets/ghana", "Ghana"], ["/research", "Research"], ["/careers", "Careers"], ["#contact", "Contact"]].map(([href, label]) => (
+              {[["/approach", "Approach"], ["/markets/ghana", "Ghana"], ["/research", "Research"], ["/careers", "Careers"], ["/contact", "Contact"]].map(([href, label]) => (
                 <FooterLink key={href} href={href}>{label}</FooterLink>
               ))}
             </div>

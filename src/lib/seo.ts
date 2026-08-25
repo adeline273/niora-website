@@ -8,8 +8,18 @@ export type PublicRoute = {
   path: string;
   title: string;
   description: string;
+  keywords?: string[];
   priority?: number;
 };
+
+const DEFAULT_KEYWORDS = [
+  "pharmaceutical procurement",
+  "hospital procurement",
+  "medicine availability",
+  "healthcare supply chain",
+  "Ghana health technology",
+  "Niora Systems",
+];
 
 export const publicRoutes: PublicRoute[] = [
   {
@@ -24,6 +34,13 @@ export const publicRoutes: PublicRoute[] = [
     title: "Pharmaceutical Procurement Platform | Niora Systems",
     description:
       "See how Niora coordinates inventory signals, demand planning, procurement, supplier coordination, financing, ordering, delivery and accountable records.",
+    priority: 0.9,
+  },
+  {
+    path: "/approach",
+    title: "How Niora Improves Pharmaceutical Procurement | Niora Systems",
+    description:
+      "Explore Niora's approach to pharmaceutical procurement infrastructure for hospitals, suppliers, demand forecasting, payment reliability and medicine availability.",
     priority: 0.9,
   },
   {
@@ -49,10 +66,17 @@ export const publicRoutes: PublicRoute[] = [
   },
   {
     path: "/research",
-    title: "Pharmaceutical Procurement Research | Niora Systems",
+    title: "Pharmaceutical Procurement Research in Ghana | Niora Systems",
     description:
-      "Niora studies pharmaceutical procurement through real-world implementation, health-system collaboration and original research references.",
+      "Niora supports implementation research on demand forecasting, procurement payment reliability and medicine availability in Ghanaian hospitals.",
     priority: 0.75,
+  },
+  {
+    path: "/contact",
+    title: "Contact Niora Systems | Pharmaceutical Procurement Infrastructure",
+    description:
+      "Contact Niora Systems for institutional partnerships, research collaboration, support or access to pharmaceutical procurement infrastructure.",
+    priority: 0.65,
   },
   {
     path: "/careers",
@@ -87,6 +111,23 @@ export function routeMetadata(route: PublicRoute): Metadata {
   return {
     title: route.title,
     description: route.description,
+    applicationName: SITE_NAME,
+    authors: [{ name: SITE_NAME, url: SITE_URL }],
+    creator: SITE_NAME,
+    publisher: SITE_NAME,
+    category: "healthcare technology",
+    keywords: [...DEFAULT_KEYWORDS, ...(route.keywords ?? [])],
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+        "max-video-preview": -1,
+      },
+    },
     alternates: {
       canonical: url,
     },

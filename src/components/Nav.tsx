@@ -4,12 +4,10 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 
 const LINKS = [
-  { href: "/platform", label: "Platform", key: "platform" },
-  { href: "/solutions/hospitals", label: "Hospitals", key: "hospitals" },
-  { href: "/#approach", label: "Approach", key: "approach" },
+  { href: "/approach", label: "Approach", key: "approach" },
   { href: "/research", label: "Research", key: "research" },
   { href: "/careers", label: "Careers", key: "careers" },
-  { href: "/#contact", label: "Contact", key: "contact" },
+  { href: "/contact", label: "Contact", key: "contact" },
 ];
 
 interface NavProps {
