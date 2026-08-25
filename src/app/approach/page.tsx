@@ -103,7 +103,7 @@ export default function ApproachPage() {
       <Nav forceSolid activeLink="approach" />
 
       {/* Hero */}
-      <section style={{ padding: "clamp(140px,18vh,180px) clamp(24px,5vw,64px) clamp(64px,9vh,96px)" }}>
+      <section style={{ padding: "clamp(140px,18vh,180px) clamp(24px,5vw,64px) clamp(40px,5vh,56px)" }}>
         <div style={{ maxWidth: 720, margin: "0 auto 0 0" }}>
           <h1 style={{ fontFamily: sans, fontWeight: 700, fontSize: "clamp(38px,5.5vw,64px)", lineHeight: 1.04, letterSpacing: "-.025em", color: "#221D18", margin: "0 0 24px" }}>
             Our system
@@ -140,7 +140,7 @@ export default function ApproachPage() {
         <div style={{ maxWidth: 1180, margin: "0 auto" }}>
           {/* Header + toggle */}
           <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", flexWrap: "wrap", gap: 32, margin: "0 0 clamp(48px,7vh,76px)" }}>
-            <h2 style={{ fontFamily: serif, fontWeight: 400, fontSize: "clamp(28px,3.6vw,46px)", lineHeight: 1.18, letterSpacing: "-.012em", color: "#28231E", margin: 0, maxWidth: "22ch" }}>
+            <h2 style={{ fontFamily: sans, fontWeight: 700, fontSize: "clamp(24px,3vw,40px)", lineHeight: 1.1, letterSpacing: "-.02em", color: "#28231E", margin: 0, maxWidth: "22ch" }}>
               What changes when you run on Niora.
             </h2>
             <div style={{ display: "flex", gap: 8, background: "#E7DFCF", borderRadius: 999, padding: 6 }}>
