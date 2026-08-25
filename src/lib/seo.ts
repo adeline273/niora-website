@@ -8,6 +8,7 @@ export type PublicRoute = {
   path: string;
   title: string;
   description: string;
+  ogDescription?: string;
   keywords?: string[];
   priority?: number;
 };
@@ -24,9 +25,11 @@ const DEFAULT_KEYWORDS = [
 export const publicRoutes: PublicRoute[] = [
   {
     path: "/",
-    title: "Pharmaceutical Procurement Infrastructure | Niora Systems",
+    title: "Niora Systems | Infrastructure for Reliable Medicine Procurement",
     description:
-      "Niora Systems builds pharmaceutical procurement infrastructure connecting hospitals, suppliers, inventory, financing, ordering and delivery, starting in Ghana.",
+      "Niora builds pharmaceutical procurement infrastructure connecting healthcare institutions and suppliers across procurement, financing, inventory, and delivery.",
+    ogDescription:
+      "Building the infrastructure for reliable institutional procurement in emerging markets.",
     priority: 1,
   },
   {
@@ -107,6 +110,7 @@ export function canonicalUrl(path: string) {
 
 export function routeMetadata(route: PublicRoute): Metadata {
   const url = canonicalUrl(route.path);
+  const socialDescription = route.ogDescription ?? route.description;
 
   return {
     title: route.title,
@@ -133,7 +137,7 @@ export function routeMetadata(route: PublicRoute): Metadata {
     },
     openGraph: {
       title: route.title,
-      description: route.description,
+      description: socialDescription,
       url,
       siteName: SITE_NAME,
       type: "website",
@@ -149,7 +153,7 @@ export function routeMetadata(route: PublicRoute): Metadata {
     twitter: {
       card: "summary_large_image",
       title: route.title,
-      description: route.description,
+      description: socialDescription,
       images: [DEFAULT_OG_IMAGE],
     },
   };
