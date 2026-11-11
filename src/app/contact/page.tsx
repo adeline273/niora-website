@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Nav from "@/components/Nav";
+import { APP_SIGNUP_URL } from "@/lib/links";
 
 const serif = "var(--font-newsreader), Georgia, serif";
 const sans = "var(--font-franklin), system-ui, sans-serif";
@@ -148,7 +149,7 @@ export default function ContactPage() {
               </div>
             ) : purpose === "access" ? (
               <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 20 }}>
-                <Link href="/signup"
+                <Link href={APP_SIGNUP_URL}
                   style={{ fontFamily: sans, fontSize: 15, fontWeight: 600, letterSpacing: ".01em", color: "#F4EFE2", background: "#15110D", padding: "14px 30px", borderRadius: 999, textDecoration: "none", whiteSpace: "nowrap" }}
                   onMouseEnter={(e) => (e.currentTarget.style.background = ACCENT)}
                   onMouseLeave={(e) => (e.currentTarget.style.background = "#15110D")}

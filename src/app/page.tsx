@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import Nav from "@/components/Nav";
+import { APP_SIGNUP_URL } from "@/lib/links";
 import CompoundingNetwork from "@/components/CompoundingNetwork";
 import PlatformFigure from "@/components/PlatformFigure";
 import Image from "next/image";
@@ -97,7 +98,7 @@ export default function Home() {
             Across the world's fastest-growing economies, Niora connects procurement, financing, and delivery into one coordinated system — so the institutions and suppliers building the future can rely on the medicine beneath it.
           </p>
           <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "16px 30px" }}>
-            <a href="/signup"
+            <a href={APP_SIGNUP_URL}
               style={{ fontFamily: sans, fontWeight: 600, fontSize: 15, letterSpacing: ".01em", color: "#15110D", background: "#E9C589", padding: "12px 24px", borderRadius: 8, textDecoration: "none", transition: "background .3s ease" }}
               onMouseEnter={(e) => (e.currentTarget.style.background = "#F2D69E")}
               onMouseLeave={(e) => (e.currentTarget.style.background = "#E9C589")}>

@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import { APP_SIGNUP_URL } from "@/lib/links";
 
 const LINKS = [
   { href: "/approach", label: "Approach", key: "approach" },
@@ -137,7 +138,7 @@ export default function Nav({ forceSolid = false, activeLink }: NavProps) {
 
           {/* Desktop CTA */}
           <Link
-            href="/signup"
+            href={APP_SIGNUP_URL}
             className="nav-open-app"
             style={{
               fontSize: 14,
@@ -235,7 +236,7 @@ export default function Nav({ forceSolid = false, activeLink }: NavProps) {
             );
           })}
           <Link
-            href="/signup"
+            href={APP_SIGNUP_URL}
             onClick={() => setMenuOpen(false)}
             style={{
               marginTop: 18,

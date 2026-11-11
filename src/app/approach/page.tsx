@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Nav from "@/components/Nav";
+import { APP_SIGNUP_URL } from "@/lib/links";
 
 const serif = "var(--font-newsreader), Georgia, serif";
 const sans = "var(--font-franklin), system-ui, sans-serif";
@@ -385,7 +386,7 @@ export default function ApproachPage() {
             </h2>
             <div>
               <p style={{ fontSize: 18, lineHeight: 1.6, color: "#4C4436", margin: "0 0 26px", maxWidth: "34ch" }}>Start procuring in minutes. Get approved to join the Niora platform.</p>
-              <Link href="/signup"
+              <Link href={APP_SIGNUP_URL}
                 style={{ display: "inline-block", fontFamily: sans, fontWeight: 600, fontSize: 15, letterSpacing: ".01em", color: "#F4EFE2", background: "#15110D", padding: "14px 30px", borderRadius: 999, textDecoration: "none" }}
                 onMouseEnter={(e) => (e.currentTarget.style.background = ACCENT)}
                 onMouseLeave={(e) => (e.currentTarget.style.background = "#15110D")}
