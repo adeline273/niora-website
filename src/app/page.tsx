@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Nav from "@/components/Nav";
 import CompoundingNetwork from "@/components/CompoundingNetwork";
 import PlatformFigure from "@/components/PlatformFigure";
@@ -35,6 +35,33 @@ const HORIZON_ITEMS = [
   { title: "Financing partners", desc: "Underwrite procurement against a shared, accountable record.", cx: 101, cy: 208 },
 ];
 
+function HeroVideo() {
+  const ref = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = ref.current;
+    if (!video) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    const start = () => {
+      video.src = "/assets/hero-video.mp4";
+      video.play().catch(() => {});
+    };
+
+    if (document.readyState === "complete") {
+      start();
+      return;
+    }
+    window.addEventListener("load", start, { once: true });
+    return () => window.removeEventListener("load", start);
+  }, []);
+
+  return (
+    <video ref={ref} muted loop playsInline preload="none" poster="/assets/hero-poster.webp" aria-hidden="true"
+      style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", zIndex: 0, filter: "saturate(.9) contrast(1.02) brightness(.88)" }} />
+  );
+}
+
 export default function Home() {
   const [demoSelected, setDemoSelected] = useState(0);
   const [horizonSelected, setHorizonSelected] = useState(0);
@@ -59,10 +86,8 @@ export default function Home() {
 
       {/* Hero */}
       <section id="top" style={{ position: "relative", overflow: "hidden", minHeight: "100vh", display: "flex", alignItems: "center", background: "#15110D" }}>
-        <video autoPlay muted loop playsInline preload="auto" poster="/assets/hero-poster.png" aria-hidden="true"
-          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", zIndex: 0, filter: "saturate(.9) contrast(1.02) brightness(.88)" }}>
-          <source src="/assets/hero-video.mp4" type="video/mp4" />
-        </video>
+        {/* Video src is attached after window load so it doesn't compete with the JS bundles (see HeroVideo below). */}
+        <HeroVideo />
         <div aria-hidden="true" style={{ position: "absolute", inset: 0, zIndex: 1, background: "rgba(21,17,13,.62)" }} />
         <div style={{ position: "relative", zIndex: 2, width: "100%", maxWidth: 1180, margin: "0 auto", padding: "clamp(124px,20vh,210px) clamp(34px,6vw,96px) clamp(96px,16vh,168px)" }}>
           <h1 style={{ fontFamily: serif, fontWeight: 400, fontSize: "clamp(40px,5.6vw,78px)", lineHeight: 1.06, letterSpacing: "-.018em", color: "#F7F2E7", margin: "0 0 30px", maxWidth: "17ch", textWrap: "balance" as React.CSSProperties["textWrap"] }}>
@@ -119,7 +144,7 @@ export default function Home() {
 
       {/* In the Field */}
       <section aria-label="In the field" style={{ position: "relative", overflow: "hidden", background: "#28231E" }}>
-        <Image src="/assets/field-photo.png" alt="Night distribution: stock being moved into a supply point"
+        <Image src="/assets/field-photo.webp" alt="Night distribution: stock being moved into a supply point"
           fill sizes="100vw" style={{ objectFit: "cover", objectPosition: "center 46%", opacity: 0.5 }} loading="lazy" />
         <div aria-hidden="true" style={{ position: "absolute", inset: 0, background: "rgba(28,23,18,.62)" }} />
         <div style={{ position: "relative", maxWidth: 1180, margin: "0 auto", padding: "clamp(110px,22vh,220px) clamp(34px,6vw,96px)" }}>
@@ -148,7 +173,7 @@ export default function Home() {
             </div>
             <figure className="approach-photo" style={{ margin: 0 }}>
               <div style={{ borderRadius: 6, overflow: "hidden" }}>
-                <Image src="/assets/pharmacy-dakar.png"
+                <Image src="/assets/pharmacy-dakar.webp"
                   alt="A pharmacy at street level in Dakar, where reliable supply meets the people who depend on it"
                   width={890} height={1124}
                   style={{ display: "block", width: "100%", height: "auto", aspectRatio: "4/5", objectFit: "cover" }} loading="lazy" />
@@ -303,7 +328,7 @@ export default function Home() {
 
       {/* Contact */}
       <section id="contact" style={{ position: "relative", overflow: "hidden", padding: "clamp(96px,17vh,184px) clamp(34px,6vw,96px)", background: "#241F1A", scrollMarginTop: 72 }}>
-        <Image src="/assets/contact-bg.png" alt="" aria-hidden="true" fill sizes="100vw"
+        <Image src="/assets/contact-bg.webp" alt="" aria-hidden="true" fill sizes="100vw"
           style={{ objectFit: "cover", objectPosition: "72% 38%", opacity: 0.4 }} loading="lazy" />
         <div aria-hidden="true" style={{ position: "absolute", inset: 0, background: "rgba(28,23,18,.72)" }} />
         <div style={{ position: "relative", maxWidth: 980, margin: "0 auto" }}>
