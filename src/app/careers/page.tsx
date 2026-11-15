@@ -8,6 +8,17 @@ const serif = "var(--font-newsreader), Georgia, serif";
 const sans = "var(--font-franklin), system-ui, sans-serif";
 const ACCENT = "#8E6C2E";
 
+// Native select arrows sit flush against the border and differ per browser,
+// so draw our own chevron inset to match the 18px text padding.
+const CHEVRON = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%235A5247' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")`;
+
+const selectStyle: React.CSSProperties = {
+  fontFamily: sans, fontSize: 15, color: "#2A2521",
+  backgroundColor: "#FBF9F3", backgroundImage: CHEVRON, backgroundRepeat: "no-repeat", backgroundPosition: "right 18px center",
+  border: "1px solid #D8CBA8", borderRadius: 8, padding: "12px 46px 12px 18px", minWidth: 180, cursor: "pointer",
+  appearance: "none", WebkitAppearance: "none", MozAppearance: "none",
+};
+
 const ALL_ROLES = [
   { title: "Business Development Lead", team: "Business Development", location: "Accra", href: "/careers/business-development-lead" },
 ];
@@ -83,16 +94,14 @@ export default function CareersPage() {
 
         {/* Filters */}
         <div style={{ display: "flex", flexWrap: "wrap", gap: 14, margin: "0 0 clamp(44px,6vh,64px)" }}>
-          <select value={teamFilter} onChange={(e) => setTeamFilter(e.target.value)}
-            style={{ fontFamily: sans, fontSize: 15, color: "#2A2521", background: "#FBF9F3", border: "1px solid #D8CBA8", borderRadius: 8, padding: "12px 18px", minWidth: 180, cursor: "pointer" }}>
+          <select value={teamFilter} onChange={(e) => setTeamFilter(e.target.value)} style={selectStyle}>
             <option value="All Teams">All Teams</option>
             <option value="Business Development">Business Development</option>
             <option value="Engineering">Engineering</option>
             <option value="Operations">Operations</option>
             <option value="Partnerships">Partnerships</option>
           </select>
-          <select value={officeFilter} onChange={(e) => setOfficeFilter(e.target.value)}
-            style={{ fontFamily: sans, fontSize: 15, color: "#2A2521", background: "#FBF9F3", border: "1px solid #D8CBA8", borderRadius: 8, padding: "12px 18px", minWidth: 180, cursor: "pointer" }}>
+          <select value={officeFilter} onChange={(e) => setOfficeFilter(e.target.value)} style={selectStyle}>
             <option value="All Offices">All Offices</option>
             <option value="Accra">Accra</option>
             <option value="Stanford">Stanford</option>
@@ -104,7 +113,7 @@ export default function CareersPage() {
         </div>
 
         {/* Table header */}
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 160px 140px 100px", padding: "0 4px 12px", borderBottom: "1px solid #DDD1B6" }} className="careers-table-header">
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 220px 140px 100px", padding: "0 4px 12px", borderBottom: "1px solid #DDD1B6" }} className="careers-table-header">
           {["Role", "Team", "Location"].map((col) => (
             <span key={col} style={{ fontFamily: sans, fontSize: 12, fontWeight: 600, letterSpacing: ".12em", textTransform: "uppercase", color: "#9A8E73" }}>{col}</span>
           ))}
@@ -114,7 +123,7 @@ export default function CareersPage() {
         {/* Role rows */}
         {roles.map((role) => (
           <Link key={role.href} href={role.href} className="careers-row"
-            style={{ display: "grid", gridTemplateColumns: "1fr 160px 140px 100px", alignItems: "center", padding: "22px 4px", borderBottom: "1px solid #DDD1B6", textDecoration: "none", color: "inherit" }}>
+            style={{ display: "grid", gridTemplateColumns: "1fr 220px 140px 100px", alignItems: "center", padding: "22px 4px", borderBottom: "1px solid #DDD1B6", textDecoration: "none", color: "inherit" }}>
             <span style={{ fontFamily: serif, fontSize: 20, color: "#28231E" }}>{role.title}</span>
             <span style={{ fontFamily: sans, fontSize: 14.5, color: "#857B6C" }}>{role.team}</span>
             <span style={{ fontFamily: sans, fontSize: 14.5, color: "#857B6C" }}>{role.location}</span>
