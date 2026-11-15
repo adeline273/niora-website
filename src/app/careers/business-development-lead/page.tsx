@@ -73,7 +73,7 @@ export default function BusinessDevelopmentLeadPage() {
         <div style={{ display: "flex", flexWrap: "wrap", gap: "10px 18px", margin: "0 0 clamp(40px,6vh,56px)", fontFamily: sans, fontSize: 14.5, color: "#857B6C" }}>
           <span>Business Development</span>
           <span>·</span>
-          <span>Accra, Ghana · Flexible remote</span>
+          <span>Accra, Ghana · Hybrid</span>
           <span>·</span>
           <span>Full-time</span>
         </div>
