@@ -41,7 +41,7 @@ const SECTIONS = [
   {
     heading: "Work Environment",
     items: [
-      "Based in Accra, Ghana, with flexibility for remote work and regular in-person meetings with suppliers and partners.",
+      "Based in Accra, Ghana, with remote work and regular in-person meetings with suppliers and partners.",
       "Small team, high trust, high autonomy, and direct accountability for commercial results.",
       "Direct collaboration with the founder, partnerships team, and institutional customers.",
       "Opportunity to take ownership of supplier growth at an early-stage company and help build its commercial operations as we expand into new markets.",
@@ -111,7 +111,7 @@ export default function BusinessDevelopmentLeadPage() {
 
           {/* CTA */}
           <a
-            href="https://forms.gle/hSLHo3yrvsGvEKb86"
+            href="https://forms.gle/rVhbWFopjJq1EfNa7"
             target="_blank"
             rel="noopener noreferrer"
             style={{ display: "inline-block", fontFamily: sans, fontWeight: 600, fontSize: 15, color: "#F4EFE2", background: "#15110D", textDecoration: "none", padding: "14px 28px", borderRadius: 999 }}
