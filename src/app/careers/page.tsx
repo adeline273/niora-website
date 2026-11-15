@@ -9,7 +9,7 @@ const sans = "var(--font-franklin), system-ui, sans-serif";
 const ACCENT = "#8E6C2E";
 
 const ALL_ROLES = [
-  { title: "Full-Stack Engineer", team: "Engineering", location: "Accra", href: "/careers/full-stack-engineer" },
+  { title: "Business Development Lead", team: "Business Development", location: "Accra", href: "/careers/business-development-lead" },
 ];
 
 const FAQ = [
@@ -86,6 +86,7 @@ export default function CareersPage() {
           <select value={teamFilter} onChange={(e) => setTeamFilter(e.target.value)}
             style={{ fontFamily: sans, fontSize: 15, color: "#2A2521", background: "#FBF9F3", border: "1px solid #D8CBA8", borderRadius: 8, padding: "12px 18px", minWidth: 180, cursor: "pointer" }}>
             <option value="All Teams">All Teams</option>
+            <option value="Business Development">Business Development</option>
             <option value="Engineering">Engineering</option>
             <option value="Operations">Operations</option>
             <option value="Partnerships">Partnerships</option>
