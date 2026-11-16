@@ -8,7 +8,7 @@ const sans = "var(--font-franklin), system-ui, sans-serif";
 const ACCENT = "#8E6C2E";
 
 const ROLE_PARAGRAPHS = [
-  "We are looking for a Business Development Lead to drive supplier acquisition and commercial growth at Niora. You will be responsible for turning existing supplier relationships and new opportunities into active customers, managing the sales process from initial outreach through onboarding and recurring transactions.",
+  "We are looking for a Commercial Lead to drive supplier acquisition and commercial growth at Niora. You will be responsible for turning existing supplier relationships and new opportunities into active customers, managing the sales process from initial outreach through onboarding and recurring transactions.",
   "You'll join at an early stage, working directly with the founder and our team to build Niora's commercial operations. This is a hands-on sales role with significant ownership, not a marketing or advisory position. You'll be expected to speak directly with suppliers, understand their businesses, negotiate agreements, and close deals.",
   "This role is ideal for someone who has demonstrated success in B2B sales and wants the opportunity to build a commercial operation from the ground up. As Niora expands, you'll have the opportunity to shape our sales strategy, develop new markets, and grow into a broader commercial leadership role.",
 ];
@@ -54,7 +54,7 @@ const bodyStyle: React.CSSProperties = { fontFamily: sans, fontSize: 16, lineHei
 const listStyle: React.CSSProperties = { margin: "0 0 clamp(32px,4.5vh,44px)", padding: "0 0 0 20px", fontFamily: sans, fontSize: 16.5, lineHeight: 1.75, color: "#4C463D", listStyleType: "disc" };
 const divider = <div style={{ height: 1, background: "#E4D9C2", margin: "clamp(28px,4vh,40px) 0" }} />;
 
-export default function BusinessDevelopmentLeadPage() {
+export default function CommercialLeadPage() {
   return (
     <div style={{ minHeight: "100vh", background: "#F4F1EA", color: "#2A2521", fontFamily: sans }}>
       <Nav forceSolid activeLink="careers" />
@@ -68,7 +68,7 @@ export default function BusinessDevelopmentLeadPage() {
         </Link>
 
         <h1 style={{ fontFamily: sans, fontWeight: 700, fontSize: "clamp(32px,4.4vw,48px)", letterSpacing: "-.015em", color: "#221D18", margin: "0 0 18px" }}>
-          Business Development Lead
+          Commercial Lead
         </h1>
         <div style={{ display: "flex", flexWrap: "wrap", gap: "10px 18px", margin: "0 0 clamp(40px,6vh,56px)", fontFamily: sans, fontSize: 14.5, color: "#857B6C" }}>
           <span>Business Development</span>
