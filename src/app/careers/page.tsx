@@ -20,7 +20,7 @@ const selectStyle: React.CSSProperties = {
 };
 
 const ALL_ROLES = [
-  { title: "Commercial Lead", team: "Business Development", location: "Accra", href: "/careers/commercial-lead" },
+  { title: "Commercial Director", team: "Business Development", location: "Accra", href: "/careers/commercial-director" },
 ];
 
 const FAQ = [

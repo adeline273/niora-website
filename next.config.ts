@@ -8,8 +8,9 @@ const nextConfig: NextConfig = {
     return [
       // Full-Stack Engineer role was closed; send old links to the careers listing.
       { source: "/careers/full-stack-engineer", destination: "/careers", permanent: false },
-      // Business Development Lead was renamed Commercial Lead.
-      { source: "/careers/business-development-lead", destination: "/careers/commercial-lead", permanent: true },
+      // Business Development Lead -> Commercial Lead -> Commercial Director.
+      { source: "/careers/business-development-lead", destination: "/careers/commercial-director", permanent: true },
+      { source: "/careers/commercial-lead", destination: "/careers/commercial-director", permanent: true },
     ];
   },
 };
