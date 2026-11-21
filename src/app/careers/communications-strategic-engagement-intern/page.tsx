@@ -51,8 +51,7 @@ const SECTIONS: { heading: string; items: Item[]; after?: string }[] = [
   {
     heading: "Work Environment",
     items: [
-      "Remote, part-time, with flexible hours that can accommodate an academic schedule.",
-      "Unpaid internship, with an emphasis on substantive experience, direct mentorship, and ownership of meaningful projects.",
+      "Remote, unpaid, part-time, with flexible hours that can accommodate an academic schedule.",
       "Direct collaboration with the founder and partnerships team.",
       "Exposure to early-stage company strategy, fundraising, international business, and institutional partnerships.",
       "Opportunity to build a portfolio of published writing, communications materials, and successful media or speaking outreach.",
