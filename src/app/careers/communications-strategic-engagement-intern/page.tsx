@@ -84,7 +84,7 @@ export default function CommunicationsInternPage() {
           Communications &amp; Strategic Engagement Intern
         </h1>
         <div style={{ display: "flex", flexWrap: "wrap", gap: "10px 18px", margin: "0 0 clamp(40px,6vh,56px)", fontFamily: sans, fontSize: 14.5, color: "#857B6C" }}>
-          <span>Communications &amp; Public Relations</span>
+          <span>Public Relations</span>
           <span>·</span>
           <span>Remote</span>
           <span>·</span>
