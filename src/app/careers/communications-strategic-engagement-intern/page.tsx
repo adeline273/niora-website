@@ -13,7 +13,7 @@ const INTRO = [
 ];
 
 const ROLE_PARAGRAPHS = [
-  "We are looking for a Communications & Strategic Engagement Intern to work directly with Niora's founder and CEO on the company's external communications, media relations, public positioning, and strategic opportunities.",
+  "We are looking for a Communications & Strategic Engagement Intern to work directly with Niora on the company's external communications, media relations, public positioning, and strategic opportunities.",
   "You'll help shape how Niora's work is communicated to journalists, investors, industry leaders, and the broader public. This includes identifying and pitching compelling stories to major publications, researching speaking opportunities and conferences, developing communications materials, and helping articulate our company's long-term vision.",
   "This is not a conventional social media internship. You'll be working on the communications and public positioning of an early-stage company building commercial infrastructure in one of the world's most challenging and interesting markets.",
   "You'll have the independence to develop ideas, pursue opportunities, and help determine which stories are worth telling. You'll work directly with the founder, have visibility into the strategic decisions behind building a company, and have the opportunity to see your work translate into real media coverage, speaking engagements, and relationships.",
