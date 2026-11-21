@@ -21,6 +21,7 @@ const selectStyle: React.CSSProperties = {
 
 const ALL_ROLES = [
   { title: "Commercial Director", team: "Business Development", location: "Accra", href: "/careers/commercial-director" },
+  { title: "Communications & Strategic Engagement Intern", team: "Communications & Public Relations", location: "Remote", href: "/careers/communications-strategic-engagement-intern" },
 ];
 
 const FAQ = [
@@ -97,6 +98,7 @@ export default function CareersPage() {
           <select value={teamFilter} onChange={(e) => setTeamFilter(e.target.value)} style={selectStyle}>
             <option value="All Teams">All Teams</option>
             <option value="Business Development">Business Development</option>
+            <option value="Communications & Public Relations">Communications &amp; Public Relations</option>
             <option value="Engineering">Engineering</option>
             <option value="Operations">Operations</option>
             <option value="Partnerships">Partnerships</option>
@@ -113,7 +115,7 @@ export default function CareersPage() {
         </div>
 
         {/* Table header */}
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 220px 140px 100px", padding: "0 4px 12px", borderBottom: "1px solid #DDD1B6" }} className="careers-table-header">
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 250px 120px 100px", padding: "0 4px 12px", borderBottom: "1px solid #DDD1B6" }} className="careers-table-header">
           {["Role", "Team", "Location"].map((col) => (
             <span key={col} style={{ fontFamily: sans, fontSize: 12, fontWeight: 600, letterSpacing: ".12em", textTransform: "uppercase", color: "#9A8E73" }}>{col}</span>
           ))}
@@ -123,7 +125,7 @@ export default function CareersPage() {
         {/* Role rows */}
         {roles.map((role) => (
           <Link key={role.href} href={role.href} className="careers-row"
-            style={{ display: "grid", gridTemplateColumns: "1fr 220px 140px 100px", alignItems: "center", padding: "22px 4px", borderBottom: "1px solid #DDD1B6", textDecoration: "none", color: "inherit" }}>
+            style={{ display: "grid", gridTemplateColumns: "1fr 250px 120px 100px", alignItems: "center", padding: "22px 4px", borderBottom: "1px solid #DDD1B6", textDecoration: "none", color: "inherit" }}>
             <span style={{ fontFamily: serif, fontSize: 20, color: "#28231E" }}>{role.title}</span>
             <span style={{ fontFamily: sans, fontSize: 14.5, color: "#857B6C" }}>{role.team}</span>
             <span style={{ fontFamily: sans, fontSize: 14.5, color: "#857B6C" }}>{role.location}</span>
